@@ -4,44 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>(clone)우푸 | 믿을 수 있는 도그워커, 방문 펫시터, 캣시터</title>
+  <link rel="stylesheet" href="/testHtml/css/index.css">
 </head>
 <body>
   <header class="header">
-    <h1 class="logo">
+    <h1 class="header__logo">
       <a href="/"><img src="/src/assets/img/img_logo.png" alt=""></a>
     </h1>
-    <nav class="gnb">
+    <nav class="header__gnb">
       <a href="/">첫 이용 할인</a>
       <a href="/">서비스 소개</a>
       <a href="/">고객센터</a>
       <a href="/">우푸 버디 지원하기</a>
     </nav>
   </header>
-  <div class="mainWrap">
+  <div class="mainWrapper">
     <main class="reserve">
-      <h2 class="reserve__title nonVisible">서비스 예약</h2>
-      <p>
-        반려동물 힐링케어 <strong>우푸!</strong>
-        맞춤 펫시터를 만나보세요!
-      </p>
-      <form action="/" method="post" class="reserve__form">
-        <fieldset class="reserve__form__category">
-          <legend>서비스</legend>
-          <input type="button" value="도그워킹">
-          <input type="button" value="방문돌봄">
-          <input type="button" value="펫시팅">
-          <input type="button" value="데이케어">
-        </fieldset>
-        <fieldset class="reserve__form__address">
-          <legend>주소</legend>
-          <input type="text" placeholder="서비스가 필요한 지역이 어디신가요?">
-        </fieldset>
-        <fieldset class="reserve__form__date">
-          <legend>날짜</legend>
-          <input type="text" placeholder="언제 서비스가 필요하신가요?">
-        </fieldset>
-        <input type="submit" value="우리집 근처 버디 조회">
-      </form>
+      <div class="reserve__contents">
+        <h2 class="reserve__contents__title">반려동물 힐링케어 <strong>우푸!</strong>
+          맞춤 펫시터를 만나보세요!
+        </h2>
+        <form action="/" method="post" class="reserve__contents__form">
+          <fieldset class="reserve__contents__form__category">
+            <legend>서비스</legend>
+            <input type="button" value="도그워킹">
+            <input type="button" value="방문돌봄">
+            <input type="button" value="펫시팅">
+            <input type="button" value="데이케어">
+          </fieldset>
+          <fieldset class="reserve__contents__form__address">
+            <legend>주소</legend>
+            <input type="text" placeholder="서비스가 필요한 지역이 어디신가요?">
+          </fieldset>
+          <fieldset class="reserve__contents__form__date">
+            <legend>날짜</legend>
+            <input type="text" placeholder="언제 서비스가 필요하신가요?">
+          </fieldset>
+          <input type="submit" value="우리집 근처 버디 조회">
+        </form>
+      </div>
     </main>
     <section class="introBuddy">
       <h2 class="introBuddy__title">믿고 맡기는 우푸 버디</h2>

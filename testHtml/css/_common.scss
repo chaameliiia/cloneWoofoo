@@ -1,0 +1,100 @@
+@import "_variables"; // 변수 파일
+@import "_atRules"; // @ 규칙 파일
+
+@font-face {
+  font-family: 'HangultuelGothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_ten@1.10/HangultuelGothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// font: font-style font-variant font-weight font-size/line-height font-family|caption|icon|menu|message-box|small-caption|status-bar|initial|inherit;
+
+* {
+  color: $black;
+  font: 18px/1.5 'HangultuelGothic';
+  margin: 0;
+  padding: 0;
+}
+
+a,
+input,
+span,
+strong {
+  display: inline-block;
+}
+
+body,
+html {
+  width: 100%;
+}
+
+li,
+ul {
+  display: inline-block;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+input {
+  background: none;
+  border: none;
+}
+
+input::placeholder {
+  color: $lightGray;
+}
+
+.nonVisible {
+  display: none;
+}
+
+// --------------------- header ---------------------
+.header {
+  @include positionFixed;
+  border: 1px solid $black;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: .5rem 10%;
+  width: 100%;
+
+  &__logo {
+    height: 52px;
+    margin-right: 1em;
+    width: 52px;
+
+    a {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__gnb {
+    width: 100%;
+
+    a {
+      font-size: 16px;
+      margin-right: 1em;
+      padding: .25em .5em;
+
+      &:last-of-type {
+        border: 1px solid $pointColor;
+        border-radius: 5px;
+        color: $pointColor;
+        margin-right: 0;
+      }
+    }
+  }
+}

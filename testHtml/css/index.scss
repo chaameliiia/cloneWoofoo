@@ -1,0 +1,27 @@
+@import "common";
+
+.mainWrapper {
+  width: 100%;
+
+  .reserve {
+    border: 1px solid #f00;
+    background: url(/src/assets/img/main/img_bgMain.jpg) center/auto 960px no-repeat;
+    min-height: 960px;
+    width: 100%;
+
+    &__title {
+      font-size: $biggest;
+      white-space: pre-line;
+
+      strong {
+        color: $pointColor;
+        font-size: $biggest;
+      }
+    }
+
+    &__form {
+      background: $white;
+      width: 50%;
+    }
+  }
+}

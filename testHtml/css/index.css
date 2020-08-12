@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'HangultuelGothic';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_ten@1.10/HangultuelGothic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+* {
+  color: #333;
+  font: 18px/1.5 'HangultuelGothic';
+  margin: 0;
+  padding: 0; }
+
+a,
+input,
+span,
+strong {
+  display: inline-block; }
+
+body,
+html {
+  width: 100%; }
+
+li,
+ul {
+  display: inline-block;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+button {
+  background: none;
+  border: none; }
+
+input {
+  background: none;
+  border: none; }
+
+input::placeholder {
+  color: #b1b1b3; }
+
+.nonVisible {
+  display: none; }
+
+.header {
+  left: 0;
+  position: fixed;
+  top: 0;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: .5rem 10%;
+  width: 100%; }
+  .header__logo {
+    height: 52px;
+    margin-right: 1em;
+    width: 52px; }
+    .header__logo a {
+      width: 100%; }
+      .header__logo a img {
+        width: 100%; }
+  .header__gnb {
+    width: 100%; }
+    .header__gnb a {
+      font-size: 16px;
+      margin-right: 1em;
+      padding: .25em .5em; }
+      .header__gnb a:last-of-type {
+        border: 1px solid #24B570;
+        border-radius: 5px;
+        color: #24B570;
+        margin-right: 0; }
+
+.mainWrapper {
+  width: 100%; }
+  .mainWrapper .reserve {
+    border: 1px solid #f00;
+    background: url(/src/assets/img/main/img_bgMain.jpg) center/auto 960px no-repeat;
+    min-height: 960px;
+    width: 100%; }
+    .mainWrapper .reserve__title {
+      font-size: 40px;
+      white-space: pre-line; }
+      .mainWrapper .reserve__title strong {
+        color: #24B570;
+        font-size: 40px; }
+    .mainWrapper .reserve__form {
+      background: #fff;
+      width: 50%; }
+
+/*# sourceMappingURL=index.css.map */
