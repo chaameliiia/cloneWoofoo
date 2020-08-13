@@ -29,12 +29,6 @@ button {
   background: none;
   border: none; }
 
-fieldset {
-  border: none; }
-
-legend {
-  font-weight: 600; }
-
 input {
   background: none;
   border: none; }
@@ -104,13 +98,16 @@ input[type=checkbox] {
         width: 100%; }
         .mainBox .reserve__box__form__category {
           border: 1px solid #333;
-          display: flex;
           width: 100%; }
-          .mainBox .reserve__box__form__category span {
-            width: 24%; }
-            .mainBox .reserve__box__form__category span label {
-              border: 1px solid #b1b1b3;
-              text-align: center;
-              width: 100%; }
+          .mainBox .reserve__box__form__category ul {
+            display: flex;
+            justify-content: space-around;
+            width: 100%; }
+            .mainBox .reserve__box__form__category ul li {
+              width: 24%; }
+              .mainBox .reserve__box__form__category ul li label {
+                border: 1px solid #b1b1b3;
+                text-align: center;
+                width: 100%; }
 
 /*# sourceMappingURL=index.css.map */

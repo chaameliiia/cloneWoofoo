@@ -34,21 +34,25 @@
 
         &__category {
           border: 1px solid $black;
-          display: flex;
           width: 100%;
 
-          span {
-            width: 24%;
+          ul {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
 
-            label {
-              border: 1px solid $lightGray;
-              text-align: center;
-              width: 100%;
+            li {
+              width: 24%;
+            
+              label {
+                border: 1px solid $lightGray;
+                text-align: center;
+                width: 100%;
+              }
             }
           }
         }
       }
     }
-
   }
 }

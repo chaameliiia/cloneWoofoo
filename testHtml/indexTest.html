@@ -20,38 +20,40 @@
   </header>
   <div class="mainBox">
     <main class="reserve">
-      <div class="reserve__box">
+      <section class="reserve__box">
         <h2 class="reserve__box__title">반려동물 힐링케어 <strong>우푸!</strong>
           맞춤 펫시터를 만나보세요!
         </h2>
         <form action="/" method="post" class="reserve__box__form" id="reservation">
-          <fieldset class="reserve__box__form__category">
-            <legend>서비스</legend>
-            <span>
-              <input type="checkbox" id="dogWalking" name="dogWalking" value="도그워킹">
-              <label for="dogWalking">도그워킹</label>
-            </span>
-            <span>
-              <input type="checkbox" id="doorToDoor" name="doorToDoor" value="방문돌봄">
-              <label for="doorToDoor">방문돌봄</label>
-            </span>
-            <span>
-              <input type="checkbox" id="privatCare" name="privatCare" value="펫시팅" class="nonActive">
-              <label for="privatCare">펫시팅</label>
-            </span>
-            <span>
-              <input type="checkbox" id="dayCare" name="dayCare" value="데이케어" class="nonActive">
-              <label for="dayCare">데이케어</label>
-            </span>
-          </fieldset>
-          <fieldset class="reserve__box__form__address">
-            <legend>주소</legend>
+          <div class="reserve__box__form__category">
+            <h4>서비스</h4>
+            <ul>
+              <li>
+                <input type="checkbox" id="dogWalking" name="dogWalking" value="도그워킹">
+                <label for="dogWalking">도그워킹</label>
+              </li>
+              <li>
+                <input type="checkbox" id="doorToDoor" name="doorToDoor" value="방문돌봄">
+                <label for="doorToDoor">방문돌봄</label>
+              </li>
+              <li>
+                <input type="checkbox" id="privatCare" name="privatCare" value="펫시팅" class="nonActive">
+                <label for="privatCare">펫시팅</label>
+              </li>
+              <li>
+                <input type="checkbox" id="dayCare" name="dayCare" value="데이케어" class="nonActive">
+                <label for="dayCare">데이케어</label>
+              </li>
+            </ul>
+          </div>
+          <div class="reserve__box__form__address">
+            <h4>주소</h4>
             <input type="text" placeholder="서비스가 필요한 지역이 어디신가요?">
-          </fieldset>
-          <fieldset class="reserve__box__form__date">
-            <legend>날짜</legend>
+          </div>
+          <div class="reserve__box__form__date">
+            <h4>날짜</h4>
             <input type="text" placeholder="언제 서비스가 필요하신가요?">
-          </fieldset>
+          </div>
           <input type="submit" value="우리집 근처 버디 조회">
         </form>
       </div>
