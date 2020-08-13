@@ -1,16 +1,14 @@
-@font-face {
-  font-family: 'HangultuelGothic';
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_ten@1.10/HangultuelGothic.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap");
 * {
+  box-sizing: border-box;
   color: #333;
-  font: 18px/1.5 'HangultuelGothic';
+  font: 18px/1.5 'Noto Sans KR', sans-serif;
   margin: 0;
   padding: 0; }
 
 a,
 input,
+label,
 span,
 strong {
   display: inline-block; }
@@ -31,12 +29,21 @@ button {
   background: none;
   border: none; }
 
+fieldset {
+  border: none; }
+
+legend {
+  font-weight: 600; }
+
 input {
   background: none;
   border: none; }
 
 input::placeholder {
   color: #b1b1b3; }
+
+input[type=checkbox] {
+  display: none; }
 
 .nonVisible {
   display: none; }
@@ -71,21 +78,39 @@ input::placeholder {
         color: #24B570;
         margin-right: 0; }
 
-.mainWrapper {
+.mainBox {
   width: 100%; }
-  .mainWrapper .reserve {
+  .mainBox .reserve {
     border: 1px solid #f00;
     background: url(/src/assets/img/main/img_bgMain.jpg) center/auto 960px no-repeat;
     min-height: 960px;
     width: 100%; }
-    .mainWrapper .reserve__title {
-      font-size: 40px;
-      white-space: pre-line; }
-      .mainWrapper .reserve__title strong {
-        color: #24B570;
-        font-size: 40px; }
-    .mainWrapper .reserve__form {
+    .mainBox .reserve__box {
       background: #fff;
-      width: 50%; }
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      margin: 0 8em;
+      padding: 6em 1em 2em;
+      width: 40%; }
+      .mainBox .reserve__box__title {
+        font-size: 40px;
+        text-align: center;
+        padding-bottom: 2rem;
+        white-space: pre-line; }
+        .mainBox .reserve__box__title strong {
+          color: #24B570;
+          font-size: inherit; }
+      .mainBox .reserve__box__form {
+        width: 100%; }
+        .mainBox .reserve__box__form__category {
+          border: 1px solid #333;
+          display: flex;
+          width: 100%; }
+          .mainBox .reserve__box__form__category span {
+            width: 24%; }
+            .mainBox .reserve__box__form__category span label {
+              border: 1px solid #b1b1b3;
+              text-align: center;
+              width: 100%; }
 
 /*# sourceMappingURL=index.css.map */

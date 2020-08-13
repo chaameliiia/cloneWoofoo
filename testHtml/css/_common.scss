@@ -1,24 +1,26 @@
 @import "_variables"; // 변수 파일
 @import "_atRules"; // @ 규칙 파일
 
-@font-face {
-  font-family: 'HangultuelGothic';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_ten@1.10/HangultuelGothic.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-// font: font-style font-variant font-weight font-size/line-height font-family|caption|icon|menu|message-box|small-caption|status-bar|initial|inherit;
+// @font-face { // 한글틀고딕 > 서버 이상
+//   font-family: 'HangultuelGothic';
+//   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_ten@1.10/HangultuelGothic.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap'); // noto sans kr
 
 * {
+  box-sizing: border-box;
   color: $black;
-  font: 18px/1.5 'HangultuelGothic';
+  // font: 18px/1.5 'HangultuelGothic';
+  font: 18px/1.5 'Noto Sans KR', sans-serif;
   margin: 0;
   padding: 0;
 }
 
 a,
 input,
+label,
 span,
 strong {
   display: inline-block;
@@ -44,6 +46,14 @@ button {
   border: none;
 }
 
+fieldset {
+  border: none;
+}
+
+legend {
+  font-weight: 600;
+}
+
 input {
   background: none;
   border: none;
@@ -51,6 +61,10 @@ input {
 
 input::placeholder {
   color: $lightGray;
+}
+
+input[type=checkbox] {
+  display: none;
 }
 
 .nonVisible {
@@ -85,7 +99,7 @@ input::placeholder {
     width: 100%;
 
     a {
-      font-size: 16px;
+      font-size: $smallest;
       margin-right: 1em;
       padding: .25em .5em;
 

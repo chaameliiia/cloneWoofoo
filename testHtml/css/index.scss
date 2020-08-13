@@ -1,6 +1,6 @@
-@import "common";
+@import "_common";
 
-.mainWrapper {
+.mainBox {
   width: 100%;
 
   .reserve {
@@ -9,19 +9,46 @@
     min-height: 960px;
     width: 100%;
 
-    &__title {
-      font-size: $biggest;
-      white-space: pre-line;
+    &__box {
+      background: $white;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      margin: 0 8em;
+      padding: 6em 1em 2em;
+      width: 40%;
 
-      strong {
-        color: $pointColor;
+      &__title {
         font-size: $biggest;
+        text-align: center;
+        padding-bottom: 2rem;
+        white-space: pre-line;
+
+        strong {
+          color: $pointColor;
+          font-size: inherit;
+        }
+      }
+
+      &__form {
+        width: 100%;
+
+        &__category {
+          border: 1px solid $black;
+          display: flex;
+          width: 100%;
+
+          span {
+            width: 24%;
+
+            label {
+              border: 1px solid $lightGray;
+              text-align: center;
+              width: 100%;
+            }
+          }
+        }
       }
     }
 
-    &__form {
-      background: $white;
-      width: 50%;
-    }
   }
 }
