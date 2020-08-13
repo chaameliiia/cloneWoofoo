@@ -99,6 +99,9 @@ input[type=checkbox] {
         .mainBox .reserve__box__form__category {
           border: 1px solid #333;
           width: 100%; }
+          .mainBox .reserve__box__form__category h4 {
+            font-size: 16px;
+            font-weight: 600; }
           .mainBox .reserve__box__form__category ul {
             display: flex;
             justify-content: space-around;
@@ -106,7 +109,9 @@ input[type=checkbox] {
             .mainBox .reserve__box__form__category ul li {
               width: 24%; }
               .mainBox .reserve__box__form__category ul li label {
-                border: 1px solid #b1b1b3;
+                border: 1px solid #EEEEEE;
+                border-radius: 4px;
+                padding: 2rem 1rem .5rem;
                 text-align: center;
                 width: 100%; }
 
