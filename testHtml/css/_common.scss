@@ -46,13 +46,19 @@ button {
   border: none;
 }
 
+h2 {
+  font-size: $fontLargest;
+  font-weight: 600;
+  text-align: center;
+}
+
 input {
   background: none;
   border: none;
 }
 
 input::placeholder {
-  color: $darkGray;
+  color: $grayDark;
 }
 
 input[type=checkbox] {
@@ -90,14 +96,14 @@ input[type=checkbox] {
     width: 100%;
 
     a {
-      font-size: $smallest;
+      font-size: $fontSmall;
       margin-right: 1em;
       padding: .25em .5em;
 
       &:last-of-type {
-        border: 1px solid $highlight;
+        border: 1px solid $greenDark;
         border-radius: 5px;
-        color: $highlight;
+        color: $greenDark;
         margin-right: 0;
       }
     }
@@ -106,5 +112,5 @@ input[type=checkbox] {
 
 .fixed {
   background: $white;
-  border-bottom: 1px dotted $darkGray;
+  border-bottom: 1px dotted $grayDark;
 }

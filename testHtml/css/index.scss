@@ -1,9 +1,11 @@
 @import "_common";
 
 .mainBox {
+  // 본문 시작
   width: 100%;
 
   .reserve {
+    // 서비스 예약 시작
     background: url(/src/assets/img/main/img_bgMain.jpg) center/auto 960px no-repeat;
     min-height: 960px;
     width: 100%;
@@ -17,13 +19,11 @@
       width: 45%;
 
       &__title {
-        font-size: $biggest;
-        text-align: center;
         padding-bottom: 2rem;
         white-space: pre-line;
 
         strong {
-          color: $highlight;
+          color: $greenDark;
           font-size: inherit;
         }
       }
@@ -32,7 +32,7 @@
         width: 100%;
         
         h4 {
-          font-size: $smallest;
+          font-size: $fontSmall;
           font-weight: 600;
           padding-bottom: 1rem;
         }
@@ -56,9 +56,9 @@
               width: 23%;
             
               label {
-                border: 1px solid $lightGray;
+                border: 1px solid $grayLight;
                 border-radius: 4px;
-                font-size: $smallest;
+                font-size: $fontSmall;
                 padding: 2.5rem 0 .5rem;
                 text-align: center;
                 width: 100%;
@@ -85,15 +85,15 @@
 
             .nonActive {
               label {
-                background-color: $lightGray;
-                color: $darkGray;
+                background-color: $grayLight;
+                color: $grayDark;
               }
             }
 
             .selected {
               label {
                 background-image: url(/src/assets/img/main/ic_label1_selected.png);
-                border: 1px solid $highlight;
+                border: 1px solid $greenDark;
               }
             }
           }
@@ -101,7 +101,7 @@
 
         &__address {
           input {
-            border: 1px solid $lightGray;
+            border: 1px solid $grayLight;
             border-radius: 4px;
             padding: .5rem 1rem;
             width: 100%;
@@ -110,7 +110,7 @@
 
         &__date {
           input {
-            border: 1px solid $lightGray;
+            border: 1px solid $grayLight;
             border-radius: 4px;
             padding: .5rem 1rem;
             width: 100%;
@@ -118,7 +118,7 @@
         }
 
         input[type=submit] {
-          background: $highlight;
+          background: $greenDark;
           border-radius: 4px;
           color: $white;
           margin-top: 1rem;
@@ -127,5 +127,112 @@
         }
       }
     }
+    // 서비스 예약 끝
   }
+
+  .introBuddy {
+    // 버디 소개 시작
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    width: 70%;
+
+    &__title {
+      padding: 3rem 0;
+    }
+
+    &__contents {
+      border-bottom: 1px solid $grayLight;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 5rem;
+      width: 100%;
+
+      li {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+        width: 30%;
+
+        img {
+          padding-bottom: 2rem;
+          width: 140px;
+        }
+
+        p {
+          text-align: center;
+          white-space: pre-line;
+        }
+      }
+    }
+    // 버디 소개 끝
+  }
+
+  .introService {
+    // 우푸 특징 소개 시작
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    width: 70%;
+
+    &__title {
+      padding-bottom: 3rem;
+    }
+
+    &__category {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+
+      li {
+        font-size: $fontMedium;
+        padding-bottom: .2em;
+      
+        &.selected {
+          border-bottom: 4px solid $greenLight;
+        }
+      }
+    }
+
+    &__details {
+      width: 100%;
+      
+      li {
+        align-items: center;
+        border-bottom: 1px solid $grayLight;
+        display: flex;
+        padding: 5rem 0;
+        width: 100%;
+
+        img {
+          width: 60%;
+        }
+
+        p {
+          padding: 0 2rem;
+          width: 100%;
+          word-break: keep-all;
+
+          strong {
+            color: $greenDark;
+            font-size: $fontLarger;
+            padding-bottom: 1rem;
+            width: 100%;
+          }
+        }
+      }
+    }
+    // 우푸 특징 소개 끝
+  }
+
+  .review {
+    // 소비자 후기 시작
+    margin: 0 auto;
+    width: 70%;
+    
+    &__title {
+      padding-bottom: 3rem;
+    }
+    // 소비자 후기 끝
+  }
+  // 본문 끝
 }

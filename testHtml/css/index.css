@@ -29,6 +29,11 @@ button {
   background: none;
   border: none; }
 
+h2 {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center; }
+
 input {
   background: none;
   border: none; }
@@ -89,8 +94,6 @@ input[type=checkbox] {
       padding: 6em 1em 2.5em;
       width: 45%; }
       .mainBox .reserve__box__title {
-        font-size: 40px;
-        text-align: center;
         padding-bottom: 2rem;
         white-space: pre-line; }
         .mainBox .reserve__box__title strong {
@@ -163,5 +166,68 @@ input[type=checkbox] {
           margin-top: 1rem;
           padding: .5rem 0;
           width: 100%; }
+  .mainBox .introBuddy {
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    width: 70%; }
+    .mainBox .introBuddy__title {
+      padding: 3rem 0; }
+    .mainBox .introBuddy__contents {
+      border-bottom: 1px solid #EEEEEE;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 5rem;
+      width: 100%; }
+      .mainBox .introBuddy__contents li {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+        width: 30%; }
+        .mainBox .introBuddy__contents li img {
+          padding-bottom: 2rem;
+          width: 140px; }
+        .mainBox .introBuddy__contents li p {
+          text-align: center;
+          white-space: pre-line; }
+  .mainBox .introService {
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    width: 70%; }
+    .mainBox .introService__title {
+      padding-bottom: 3rem; }
+    .mainBox .introService__category {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%; }
+      .mainBox .introService__category li {
+        font-size: 20px;
+        padding-bottom: .2em; }
+        .mainBox .introService__category li.selected {
+          border-bottom: 4px solid #5FC997; }
+    .mainBox .introService__details {
+      width: 100%; }
+      .mainBox .introService__details li {
+        align-items: center;
+        border-bottom: 1px solid #EEEEEE;
+        display: flex;
+        padding: 5rem 0;
+        width: 100%; }
+        .mainBox .introService__details li img {
+          width: 60%; }
+        .mainBox .introService__details li p {
+          padding: 0 2rem;
+          width: 100%;
+          word-break: keep-all; }
+          .mainBox .introService__details li p strong {
+            color: #24B570;
+            font-size: 26px;
+            padding-bottom: 1rem;
+            width: 100%; }
+  .mainBox .review {
+    margin: 0 auto;
+    width: 70%; }
+    .mainBox .review__title {
+      padding-bottom: 3rem; }
 
 /*# sourceMappingURL=index.css.map */
