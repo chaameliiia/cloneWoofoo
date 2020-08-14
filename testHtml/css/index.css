@@ -225,18 +225,24 @@ input[type=checkbox] {
             padding-bottom: 1rem;
             width: 100%; }
   .mainBox .review {
-    padding: 0 12%;
-    width: 100%; }
+    border: 1px solid #f00;
+    margin: 0 auto;
+    width: 90%; }
     .mainBox .review__title {
       padding-bottom: 3rem; }
     .mainBox .review__contents {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
       width: 100%; }
       .mainBox .review__contents__page {
-        border: 1px solid #b1b1b3;
-        border-radius: 4px;
+        border: 1px solid #00f;
         width: 100%; }
+        .mainBox .review__contents__page ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          width: 100%; }
+          .mainBox .review__contents__page ul li {
+            border: 1px solid #b1b1b3;
+            border-radius: 4px;
+            width: 32%; }
 
 /*# sourceMappingURL=index.css.map */
