@@ -66,7 +66,6 @@ input[type=checkbox] {
 // --------------------- header ---------------------
 .header {
   @include positionFixed;
-  border: 1px solid $black;
   display: flex;
   align-items: center;
   margin: 0 auto;
@@ -75,7 +74,7 @@ input[type=checkbox] {
 
   &__logo {
     height: 52px;
-    margin-right: 1em;
+    margin-right: .5em;
     width: 52px;
 
     a {
@@ -96,11 +95,16 @@ input[type=checkbox] {
       padding: .25em .5em;
 
       &:last-of-type {
-        border: 1px solid $pointColor;
+        border: 1px solid $highlight;
         border-radius: 5px;
-        color: $pointColor;
+        color: $highlight;
         margin-right: 0;
       }
     }
   }
+}
+
+.fixed {
+  background: $white;
+  border-bottom: 1px dotted $darkGray;
 }
