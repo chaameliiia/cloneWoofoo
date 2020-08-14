@@ -225,9 +225,18 @@ input[type=checkbox] {
             padding-bottom: 1rem;
             width: 100%; }
   .mainBox .review {
-    margin: 0 auto;
-    width: 70%; }
+    padding: 0 12%;
+    width: 100%; }
     .mainBox .review__title {
       padding-bottom: 3rem; }
+    .mainBox .review__contents {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%; }
+      .mainBox .review__contents__page {
+        border: 1px solid #b1b1b3;
+        border-radius: 4px;
+        width: 100%; }
 
 /*# sourceMappingURL=index.css.map */

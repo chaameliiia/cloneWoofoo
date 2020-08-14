@@ -226,11 +226,26 @@
 
   .review {
     // 소비자 후기 시작
-    margin: 0 auto;
-    width: 70%;
-    
+    padding: 0 12%;
+    width: 100%;
+
     &__title {
       padding-bottom: 3rem;
+    }
+
+    &__contents {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+
+      &__page {
+        border: 1px solid $grayDark;
+        border-radius: 4px;
+        width: 100%;
+
+
+      }
     }
     // 소비자 후기 끝
   }
