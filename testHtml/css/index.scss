@@ -228,7 +228,7 @@
     // 소비자 후기 시작
     border: 1px solid #f00;
     margin: 0 auto;
-    width: 90%;
+    width: 75%;
 
     &__title {
       padding-bottom: 3rem;
@@ -250,9 +250,18 @@
           li {
             border: 1px solid $grayDark;
             border-radius: 4px;
+            min-height: 400px;
             width: 32%;
 
-            
+            .reviewer {
+              width: 100%;
+              
+              img {
+                border-radius: 50%;
+                height: 44px;
+                width: 44px;
+              }
+            }
           }
         }
 

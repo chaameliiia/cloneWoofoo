@@ -227,7 +227,7 @@ input[type=checkbox] {
   .mainBox .review {
     border: 1px solid #f00;
     margin: 0 auto;
-    width: 90%; }
+    width: 75%; }
     .mainBox .review__title {
       padding-bottom: 3rem; }
     .mainBox .review__contents {
@@ -243,6 +243,13 @@ input[type=checkbox] {
           .mainBox .review__contents__page ul li {
             border: 1px solid #b1b1b3;
             border-radius: 4px;
+            min-height: 400px;
             width: 32%; }
+            .mainBox .review__contents__page ul li .reviewer {
+              width: 100%; }
+              .mainBox .review__contents__page ul li .reviewer img {
+                border-radius: 50%;
+                height: 44px;
+                width: 44px; }
 
 /*# sourceMappingURL=index.css.map */
