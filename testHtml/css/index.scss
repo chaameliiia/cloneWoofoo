@@ -262,10 +262,12 @@
             border: 1px solid $grayDark;
             border-radius: 4px;
             min-height: 350px;
+            padding: 1rem;
             width: 32%;
 
             .profile {
               display: flex;
+              margin-bottom: 1rem;
               width: 100%;
               
               &__pic {
@@ -275,8 +277,26 @@
               }
 
               &__details {
-                border: 1px solid #00f;
+                display: flex;
+                flex-direction: column;
+                padding-left: .5rem;
                 width: 100%;
+
+                div {
+                  width: 100%;
+
+                  span {
+                    height: auto;
+                    color: $grayDark;
+                    font-size: $fontSmall;
+
+                    img {
+                      height: auto;
+                      vertical-align: middle;
+                      width: 16px;
+                    }
+                  }
+                }
               }
             }
           }
