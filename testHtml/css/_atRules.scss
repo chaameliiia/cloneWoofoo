@@ -1,5 +1,12 @@
-@mixin positionFixed {
+@mixin setFixed {
   left: 0;
   position: fixed;
   top: 0;
+}
+
+@mixin setAbsolute($left, $top, $xPos) {
+  left: $left;
+  position: absolute;
+  top: $top;
+  transform: translate($xPos, 0);
 }

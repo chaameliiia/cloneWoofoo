@@ -119,6 +119,7 @@ input[type=checkbox] {
             .mainBox .reserve__box__form__category ul li label {
               border: 1px solid #EEEEEE;
               border-radius: 4px;
+              cursor: pointer;
               font-size: 16px;
               padding: 2.5rem 0 .5rem;
               text-align: center;
@@ -145,7 +146,8 @@ input[type=checkbox] {
             background-repeat: no-repeat; }
           .mainBox .reserve__box__form__category ul .nonActive label {
             background-color: #EEEEEE;
-            color: #b1b1b3; }
+            color: #b1b1b3;
+            cursor: auto; }
           .mainBox .reserve__box__form__category ul .selected label {
             background-image: url(/src/assets/img/main/ic_label1_selected.png);
             border: 1px solid #24B570; }
@@ -201,6 +203,7 @@ input[type=checkbox] {
       justify-content: space-evenly;
       width: 100%; }
       .mainBox .introService__category li {
+        cursor: pointer;
         font-size: 20px;
         padding-bottom: .2em; }
         .mainBox .introService__category li.selected {
@@ -226,14 +229,20 @@ input[type=checkbox] {
             width: 100%; }
   .mainBox .review {
     border: 1px solid #f00;
-    margin: 0 auto;
-    width: 75%; }
+    padding: 0 12%;
+    position: relative;
+    width: 100%; }
     .mainBox .review__title {
       padding-bottom: 3rem; }
     .mainBox .review__contents {
+      height: 350px;
+      overflow: hidden;
+      position: relative;
+      vertical-align: top;
       width: 100%; }
       .mainBox .review__contents__page {
-        border: 1px solid #00f;
+        font-size: 0;
+        height: auto;
         width: 100%; }
         .mainBox .review__contents__page ul {
           display: flex;
@@ -243,7 +252,7 @@ input[type=checkbox] {
           .mainBox .review__contents__page ul li {
             border: 1px solid #b1b1b3;
             border-radius: 4px;
-            min-height: 400px;
+            min-height: 350px;
             width: 32%; }
             .mainBox .review__contents__page ul li .reviewer {
               width: 100%; }
@@ -251,5 +260,61 @@ input[type=checkbox] {
                 border-radius: 50%;
                 height: 44px;
                 width: 44px; }
+      .mainBox .review__contents__page:nth-of-type(1) {
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translate(calc(100% * 0), 0); }
+      .mainBox .review__contents__page:nth-of-type(2) {
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translate(calc(100% * 1), 0); }
+      .mainBox .review__contents__page:nth-of-type(3) {
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translate(calc(100% * 2), 0); }
+      .mainBox .review__contents__page:nth-of-type(4) {
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translate(calc(100% * 3), 0); }
+      .mainBox .review__contents__page:nth-of-type(5) {
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translate(calc(100% * 4), 0); }
+      .mainBox .review__contents__page:nth-of-type(6) {
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translate(calc(100% * 5), 0); }
+      .mainBox .review__contents__page:nth-of-type(7) {
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translate(calc(100% * 6), 0); }
+    .mainBox .review__btn {
+      left: 0;
+      position: absolute;
+      top: 25%;
+      transform: translate(0, 0);
+      align-items: center;
+      display: flex;
+      height: 350px;
+      justify-content: space-between;
+      padding: 0 5%;
+      width: 100%; }
+      .mainBox .review__btn button {
+        border-radius: 50%;
+        cursor: pointer;
+        height: 80px;
+        padding: 0;
+        width: 80px; }
+      .mainBox .review__btn button:nth-of-type(1) {
+        background: url(/src/assets/img/main/ic_arrowLeft.png) center/contain no-repeat; }
+      .mainBox .review__btn button:nth-of-type(2) {
+        background: url(/src/assets/img/main/ic_arrowRight.png) center/contain no-repeat; }
 
 /*# sourceMappingURL=index.css.map */

@@ -58,6 +58,7 @@
               label {
                 border: 1px solid $grayLight;
                 border-radius: 4px;
+                cursor: pointer;
                 font-size: $fontSmall;
                 padding: 2.5rem 0 .5rem;
                 text-align: center;
@@ -65,14 +66,14 @@
               }
             }
 
-            $url: (
+            $labelUrl: (
               1: '/src/assets/img/main/ic_label1.png',
               2: '/src/assets/img/main/ic_label2.png',
               3: '/src/assets/img/main/ic_label3.png',
               4: '/src/assets/img/main/ic_label4.png'
             );
 
-            @each $idx, $val in $url {
+            @each $idx, $val in $labelUrl {
               li:nth-of-type(#{$idx}) {
                 label {
                   background-image: url(#{$val});
@@ -87,6 +88,7 @@
               label {
                 background-color: $grayLight;
                 color: $grayDark;
+                cursor: auto;
               }
             }
 
@@ -184,6 +186,7 @@
       width: 100%;
 
       li {
+        cursor: pointer;
         font-size: $fontMedium;
         padding-bottom: .2em;
       
@@ -227,18 +230,26 @@
   .review {
     // 소비자 후기 시작
     border: 1px solid #f00;
-    margin: 0 auto;
-    width: 75%;
+    padding: 0 12%;
+    position: relative;
+    width: 100%;
 
     &__title {
       padding-bottom: 3rem;
     }
 
     &__contents {
+      // 소비자 후기 전체 컨테이너 시작
+      height: 350px;
+      overflow: hidden;
+      position: relative;
+      vertical-align: top;
       width: 100%;
 
       &__page {
-        border: 1px solid #00f;
+        // 소비자 후기 페이지 별 컨테이너 시작
+        font-size: 0; // 페이지 번호 숨김
+        height: auto;
         width: 100%;
 
         ul {
@@ -250,7 +261,7 @@
           li {
             border: 1px solid $grayDark;
             border-radius: 4px;
-            min-height: 400px;
+            min-height: 350px;
             width: 32%;
 
             .reviewer {
@@ -264,9 +275,55 @@
             }
           }
         }
-
-
+        // 소비자 후기 페이지 별 컨테이너 끝
       }
+
+      $count: (
+        1: 0,
+        2: 1,
+        3: 2,
+        4: 3,
+        5: 4,
+        6: 5,
+        7: 6,
+      );
+
+      @each $idx, $val in $count {
+        &__page:nth-of-type(#{$idx}) {
+          @include setAbsolute (0, 0, calc(100% * #{$val}));
+        }
+      };
+
+      // 소비자 후기 전체 컨테이너 끝
+    }
+
+    &__btn {
+      @include setAbsolute(0, 25%, 0);
+      align-items: center;
+      display: flex;
+      height: 350px;
+      justify-content: space-between;
+      padding: 0 5%;
+      width: 100%;
+
+      button {
+        border-radius: 50%;
+        cursor: pointer;
+        height: 80px;
+        padding: 0;
+        width: 80px;
+      }
+
+      $btnUrl: (
+        1: '/src/assets/img/main/ic_arrowLeft.png',
+        2: '/src/assets/img/main/ic_arrowRight.png',
+      );
+
+      @each $idx, $val in $btnUrl {
+        button:nth-of-type(#{$idx}) {
+          background: url(#{$val}) center/contain no-repeat;
+        }
+      };
     }
     // 소비자 후기 끝
   }

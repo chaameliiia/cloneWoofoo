@@ -71,7 +71,7 @@ input[type=checkbox] {
 
 // --------------------- header ---------------------
 .header {
-  @include positionFixed;
+  @include setFixed;
   display: flex;
   align-items: center;
   margin: 0 auto;
