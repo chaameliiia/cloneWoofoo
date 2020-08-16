@@ -254,12 +254,16 @@ input[type=checkbox] {
             border-radius: 4px;
             min-height: 350px;
             width: 32%; }
-            .mainBox .review__contents__page ul li .reviewer {
+            .mainBox .review__contents__page ul li .profile {
+              display: flex;
               width: 100%; }
-              .mainBox .review__contents__page ul li .reviewer img {
+              .mainBox .review__contents__page ul li .profile__pic {
                 border-radius: 50%;
                 height: 44px;
                 width: 44px; }
+              .mainBox .review__contents__page ul li .profile__details {
+                border: 1px solid #00f;
+                width: 100%; }
       .mainBox .review__contents__page:nth-of-type(1) {
         left: 0;
         position: absolute;

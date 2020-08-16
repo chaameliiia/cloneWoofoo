@@ -264,13 +264,19 @@
             min-height: 350px;
             width: 32%;
 
-            .reviewer {
+            .profile {
+              display: flex;
               width: 100%;
               
-              img {
+              &__pic {
                 border-radius: 50%;
                 height: 44px;
                 width: 44px;
+              }
+
+              &__details {
+                border: 1px solid #00f;
+                width: 100%;
               }
             }
           }
