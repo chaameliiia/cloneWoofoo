@@ -402,12 +402,13 @@
           }
         }
 
-        button {
+        a {
           background: $greenDark;
           border-radius: 32px;
           color: $white;
           font-size: $font20;
           padding: .8rem 1.5rem;
+          text-align: center;
           width: 235px;
 
           &:hover {
@@ -465,7 +466,7 @@
         font-size: inherit;
       }
 
-      button {
+      a {
         background: url(/src/assets/img/ic_arrowRight.png) 100%/35px no-repeat;
         font-size: inherit;
         padding-right: 2rem;
