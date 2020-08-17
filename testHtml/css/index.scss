@@ -19,6 +19,7 @@
       width: 45%;
 
       &__title {
+        font-weight: 400;
         padding-bottom: 2rem;
         white-space: pre-line;
 
@@ -32,7 +33,7 @@
         width: 100%;
         
         h4 {
-          font-size: $fontSmall;
+          font-size: $font16;
           font-weight: 600;
           padding-bottom: 1rem;
         }
@@ -59,7 +60,7 @@
                 border: 1px solid $grayLight;
                 border-radius: 4px;
                 cursor: pointer;
-                font-size: $fontSmall;
+                font-size: $font16;
                 padding: 2.5rem 0 .5rem;
                 text-align: center;
                 width: 100%;
@@ -88,7 +89,7 @@
               label {
                 background-color: $grayLight;
                 color: $grayDark;
-                cursor: auto;
+                cursor: default;
               }
             }
 
@@ -126,6 +127,14 @@
           margin-top: 1rem;
           padding: .5rem 0;
           width: 100%;
+
+          &:hover {
+            background: $greenLight;
+          }
+
+          &:active {
+            background: $greenDark;
+          }
         }
       }
     }
@@ -187,7 +196,7 @@
 
       li {
         cursor: pointer;
-        font-size: $fontMedium;
+        font-size: $font20;
         padding-bottom: .2em;
       
         &.selected {
@@ -217,7 +226,7 @@
 
           strong {
             color: $greenDark;
-            font-size: $fontLarger;
+            font-size: $font26;
             padding-bottom: 1rem;
             width: 100%;
           }
@@ -229,8 +238,7 @@
 
   .review {
     // 소비자 후기 시작
-    border: 1px solid #f00;
-    padding: 0 12%;
+    padding: 0 12% 2rem;
     position: relative;
     width: 100%;
 
@@ -288,7 +296,7 @@
                   span {
                     height: auto;
                     color: $grayDark;
-                    font-size: $fontSmall;
+                    font-size: $font16;
 
                     img {
                       height: auto;
@@ -316,15 +324,14 @@
 
       @each $idx, $val in $count {
         &__page:nth-of-type(#{$idx}) {
-          @include setAbsolute (0, 0, calc(100% * #{$val}));
+          @include setAbsolTop (0, 0, calc(100% * #{$val}));
         }
       };
-
       // 소비자 후기 전체 컨테이너 끝
     }
 
     &__btn {
-      @include setAbsolute(0, 25%, 0);
+      @include setAbsolTop(0, 25%, 0);
       align-items: center;
       display: flex;
       height: 350px;
@@ -334,7 +341,6 @@
 
       button {
         border-radius: 50%;
-        cursor: pointer;
         height: 80px;
         padding: 0;
         width: 80px;
@@ -353,5 +359,265 @@
     }
     // 소비자 후기 끝
   }
+
+  .bannerMain {
+    // 앱 다운로드 배너 시작
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: flex-end;
+    margin-top: 5rem;
+    width: 100%;
+
+    &__background {
+      align-items: flex-end;
+      background: $grayLighter;
+      display: flex;
+      height: 310px;
+      justify-content: center;
+      width: 100%;
+
+      img {
+        height: 400px;
+        width: auto;
+      }
+
+      &__text {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 3rem 0 0 3rem;
+        width: 25%;
+        
+        span {
+          font-size: $font32;
+          margin-bottom: 2rem;
+          text-align: center;
+          width: 100%;
+          
+          strong {
+            color: $greenDark;
+            font-size: inherit;
+          }
+        }
+
+        button {
+          background: $greenDark;
+          border-radius: 32px;
+          color: $white;
+          font-size: $font20;
+          padding: .8rem 1.5rem;
+          width: 235px;
+
+          &:hover {
+            background: $greenLight;
+          }
+        }
+      }
+    }
+    // 앱 다운로드 배너 끝
+  }
   // 본문 끝
+}
+
+.support {
+  // 고객센터 배너 시작
+  align-items: center;
+  display: flex;
+  height: 300px;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 60%;
+
+  &__descript {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+
+    img {
+      height: auto;
+      width: 74px;
+    }
+
+    span {
+      font-weight: 600;
+      padding-top: 1rem;
+      text-align: center;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+  }
+
+  &__contact {
+    font-size: $font32;
+    text-align: center;
+    width: 55%;
+
+    div {
+      display: flex;
+      font-size: inherit;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+
+      span {
+        font-size: inherit;
+      }
+
+      button {
+        background: url(/src/assets/img/ic_arrowRight.png) 100%/35px no-repeat;
+        font-size: inherit;
+        padding-right: 2rem;
+      }
+    }
+
+    p {
+      color: $grayDark;
+      font-size: $font26
+    }
+  }
+  // 고객센터 배너 끝
+}
+
+.quickMenu {
+  @include setFixed(90%, 50%, 0, -50%);
+  height: auto;
+  transform: translate(150%, -50%);
+  width: 100px;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    li {
+      height: 100px;
+      width: 100%;
+      margin-bottom: -4px;
+      
+      button {
+        font-size: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    $quickMenuUrl: (
+      1: '/src/assets/img/ic_downloadApp.png',
+      2: '/src/assets/img/ic_applyBuddy.png',
+      3: '/src/assets/img/ic_supportKakao.png',
+      4: '/src/assets/img/ic_goTop.png'
+    );
+
+    @each $idx, $val in $quickMenuUrl {
+      li:nth-of-type(#{$idx}) {
+        button {
+          background-image: url(#{$val});
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+  &.hover {
+    transform: translate(0, -50%);
+  }
+}
+
+.footer {
+  // 푸터 시작
+  align-items: flex-end;
+  background: $grayLight;
+  border-top: 1px solid $grayDark;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 10rem;
+  width: 100%;
+  
+  &__info{
+    // 업체 정보 시작
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 170px;
+    }
+
+    &__siteMenu {
+      color: $grayDark;
+      font-size: $font16;
+      padding: 1rem 0;
+
+      li {
+        color: inherit;
+        font-size: inherit;
+        vertical-align: middle;
+
+        a {
+          color: inherit;
+          font-size: inherit;
+        }
+      }
+
+      $setMargin: (
+        1: 'right',
+        2: 'left'
+      );
+
+      @each $idx, $val in $setMargin {
+        li:nth-of-type(#{$idx}) {
+          a{
+            margin-#{$val}: .5em;
+          }
+        }
+      }
+    }
+
+    &__company {
+      color: $grayDark;
+      font-size: $font16;
+      white-space: pre-line;
+    }
+    // 업체 정보 끝
+  }
+
+  &__socialChannels {
+    // 소셜미디어 시작
+
+    li {
+      padding-right: 1rem;
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+
+      a {
+        height: 36px;
+        vertical-align: bottom;
+        width: 36px;
+      }
+    }
+
+    $socialUrl: (
+      1: '/src/assets/img/ic_naverBlog.png',
+      2: '/src/assets/img/ic_faceBook.png',
+      3: '/src/assets/img/ic_instagram.png'
+    );
+
+    @each $idx, $val in $socialUrl {
+      li:nth-of-type(#{$idx}) {
+        a {
+          background-image: url(#{$val});
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+    // 소셜미디어 끝
+  }
+  //푸터 끝
 }

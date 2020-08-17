@@ -27,7 +27,10 @@ a {
 
 button {
   background: none;
-  border: none; }
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  outline-style: none; }
 
 h2 {
   font-size: 40px;
@@ -36,7 +39,8 @@ h2 {
 
 input {
   background: none;
-  border: none; }
+  border: none;
+  outline-style: none; }
 
 input::placeholder {
   color: #b1b1b3; }
@@ -44,13 +48,18 @@ input::placeholder {
 input[type=checkbox] {
   display: none; }
 
+input[type=submit] {
+  cursor: pointer; }
+
 .nonVisible {
-  display: none; }
+  display: none;
+  font-size: 0; }
 
 .header {
   left: 0;
   position: fixed;
   top: 0;
+  transform: translate(0, 0);
   display: flex;
   align-items: center;
   margin: 0 auto;
@@ -75,10 +84,13 @@ input[type=checkbox] {
         border-radius: 5px;
         color: #24B570;
         margin-right: 0; }
-
-.fixed {
-  background: #fff;
-  border-bottom: 1px dotted #b1b1b3; }
+        .header__gnb a:last-of-type:hover {
+          background: #24B570;
+          color: #fff; }
+  .header.fixed {
+    background: #fff;
+    border-bottom: 1px dotted #b1b1b3;
+    z-index: 10; }
 
 .mainBox {
   width: 100%; }
@@ -94,6 +106,7 @@ input[type=checkbox] {
       padding: 6em 1em 2.5em;
       width: 45%; }
       .mainBox .reserve__box__title {
+        font-weight: 400;
         padding-bottom: 2rem;
         white-space: pre-line; }
         .mainBox .reserve__box__title strong {
@@ -147,7 +160,7 @@ input[type=checkbox] {
           .mainBox .reserve__box__form__category ul .nonActive label {
             background-color: #EEEEEE;
             color: #b1b1b3;
-            cursor: auto; }
+            cursor: default; }
           .mainBox .reserve__box__form__category ul .selected label {
             background-image: url(/src/assets/img/main/ic_label1_selected.png);
             border: 1px solid #24B570; }
@@ -168,6 +181,10 @@ input[type=checkbox] {
           margin-top: 1rem;
           padding: .5rem 0;
           width: 100%; }
+          .mainBox .reserve__box__form input[type=submit]:hover {
+            background: #5FC997; }
+          .mainBox .reserve__box__form input[type=submit]:active {
+            background: #24B570; }
   .mainBox .introBuddy {
     margin: 0 auto;
     margin-bottom: 5rem;
@@ -228,8 +245,7 @@ input[type=checkbox] {
             padding-bottom: 1rem;
             width: 100%; }
   .mainBox .review {
-    border: 1px solid #f00;
-    padding: 0 12%;
+    padding: 0 12% 2rem;
     position: relative;
     width: 100%; }
     .mainBox .review__title {
@@ -326,7 +342,6 @@ input[type=checkbox] {
       width: 100%; }
       .mainBox .review__btn button {
         border-radius: 50%;
-        cursor: pointer;
         height: 80px;
         padding: 0;
         width: 80px; }
@@ -334,5 +349,185 @@ input[type=checkbox] {
         background: url(/src/assets/img/main/ic_arrowLeft.png) center/contain no-repeat; }
       .mainBox .review__btn button:nth-of-type(2) {
         background: url(/src/assets/img/main/ic_arrowRight.png) center/contain no-repeat; }
+  .mainBox .bannerMain {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: flex-end;
+    margin-top: 5rem;
+    width: 100%; }
+    .mainBox .bannerMain__background {
+      align-items: flex-end;
+      background: #F7F7F7;
+      display: flex;
+      height: 310px;
+      justify-content: center;
+      width: 100%; }
+      .mainBox .bannerMain__background img {
+        height: 400px;
+        width: auto; }
+      .mainBox .bannerMain__background__text {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 3rem 0 0 3rem;
+        width: 25%; }
+        .mainBox .bannerMain__background__text span {
+          font-size: 32px;
+          margin-bottom: 2rem;
+          text-align: center;
+          width: 100%; }
+          .mainBox .bannerMain__background__text span strong {
+            color: #24B570;
+            font-size: inherit; }
+        .mainBox .bannerMain__background__text button {
+          background: #24B570;
+          border-radius: 32px;
+          color: #fff;
+          font-size: 20px;
+          padding: .8rem 1.5rem;
+          width: 235px; }
+          .mainBox .bannerMain__background__text button:hover {
+            background: #5FC997; }
+
+.support {
+  align-items: center;
+  display: flex;
+  height: 300px;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 60%; }
+  .support__descript {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 30%; }
+    .support__descript img {
+      height: auto;
+      width: 74px; }
+    .support__descript span {
+      font-weight: 600;
+      padding-top: 1rem;
+      text-align: center;
+      white-space: pre-line;
+      word-break: keep-all; }
+  .support__contact {
+    font-size: 32px;
+    text-align: center;
+    width: 55%; }
+    .support__contact div {
+      display: flex;
+      font-size: inherit;
+      justify-content: space-between;
+      padding-bottom: 1rem; }
+      .support__contact div span {
+        font-size: inherit; }
+      .support__contact div button {
+        background: url(/src/assets/img/ic_arrowRight.png) 100%/35px no-repeat;
+        font-size: inherit;
+        padding-right: 2rem; }
+    .support__contact p {
+      color: #b1b1b3;
+      font-size: 26px; }
+
+.quickMenu {
+  left: 90%;
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: auto;
+  transform: translate(150%, -50%);
+  width: 100px; }
+  .quickMenu__box {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+    .quickMenu__box li {
+      height: 100px;
+      width: 100%;
+      margin-bottom: -4px; }
+      .quickMenu__box li button {
+        font-size: 0;
+        height: 100%;
+        width: 100%; }
+    .quickMenu__box li:nth-of-type(1) button {
+      background-image: url(/src/assets/img/ic_downloadApp.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .quickMenu__box li:nth-of-type(2) button {
+      background-image: url(/src/assets/img/ic_applyBuddy.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .quickMenu__box li:nth-of-type(3) button {
+      background-image: url(/src/assets/img/ic_supportKakao.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .quickMenu__box li:nth-of-type(4) button {
+      background-image: url(/src/assets/img/ic_goTop.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+  .quickMenu.hover {
+    transform: translate(0, -50%); }
+
+.footer {
+  align-items: flex-end;
+  background: #EEEEEE;
+  border-top: 1px solid #b1b1b3;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 10rem;
+  width: 100%; }
+  .footer__info {
+    display: flex;
+    flex-direction: column; }
+    .footer__info img {
+      width: 170px; }
+    .footer__info__siteMenu {
+      color: #b1b1b3;
+      font-size: 16px;
+      padding: 1rem 0; }
+      .footer__info__siteMenu li {
+        color: inherit;
+        font-size: inherit;
+        vertical-align: middle; }
+        .footer__info__siteMenu li a {
+          color: inherit;
+          font-size: inherit; }
+      .footer__info__siteMenu li:nth-of-type(1) a {
+        margin-right: .5em; }
+      .footer__info__siteMenu li:nth-of-type(2) a {
+        margin-left: .5em; }
+    .footer__info__company {
+      color: #b1b1b3;
+      font-size: 16px;
+      white-space: pre-line; }
+  .footer__socialChannels li {
+    padding-right: 1rem; }
+    .footer__socialChannels li:last-of-type {
+      padding-right: 0; }
+    .footer__socialChannels li a {
+      height: 36px;
+      vertical-align: bottom;
+      width: 36px; }
+  .footer__socialChannels li:nth-of-type(1) a {
+    background-image: url(/src/assets/img/ic_naverBlog.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .footer__socialChannels li:nth-of-type(2) a {
+    background-image: url(/src/assets/img/ic_faceBook.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .footer__socialChannels li:nth-of-type(3) a {
+    background-image: url(/src/assets/img/ic_instagram.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
 
 /*# sourceMappingURL=index.css.map */
