@@ -73,6 +73,10 @@ input[type=submit] {
   cursor: pointer;
 }
 
+img {
+  vertical-align: middle;
+}
+
 .nonVisible {
   display: none;
   font-size: 0;
@@ -122,10 +126,220 @@ input[type=submit] {
       }
     }
   }
+  
+  &.pageService {
+    a {
+      color: $white;
+    }
+  }
 
   &.fixed {
     background: $white;
     border-bottom: 1px dotted $grayDark;
     z-index: 10;
   }
+}
+
+// --------------------- 고객센터 ---------------------
+.support {
+  // 고객센터 배너 시작
+  align-items: center;
+  display: flex;
+  height: 300px;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 60%;
+
+  &__descript {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+
+    img {
+      height: auto;
+      width: 74px;
+    }
+
+    span {
+      font-weight: 600;
+      padding-top: 1rem;
+      text-align: center;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+  }
+
+  &__contact {
+    font-size: $font32;
+    text-align: center;
+    width: 55%;
+
+    div {
+      display: flex;
+      font-size: inherit;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+
+      span {
+        font-size: inherit;
+      }
+
+      a {
+        background: url(/src/assets/img/ic_arrowRight.png) 100%/35px no-repeat;
+        font-size: inherit;
+        padding-right: 2rem;
+      }
+    }
+
+    p {
+      color: $grayDark;
+      font-size: $font26
+    }
+  }
+  // 고객센터 배너 끝
+}
+
+// --------------------- 퀵 메뉴 ---------------------
+.quickMenu {
+  @include setFixed(90%, 50%, 0, -50%);
+  // height: auto;
+  transform: translate(150%, -50%);
+  width: 100px;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    li {
+      height: 100px;
+      margin-bottom: -4px;
+      width: 100%;
+      
+      button {
+        font-size: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    $quickMenuUrl: (
+      1: '/src/assets/img/ic_downloadApp.png',
+      2: '/src/assets/img/ic_applyBuddy.png',
+      3: '/src/assets/img/ic_supportKakao.png',
+      4: '/src/assets/img/ic_goTop.png'
+    );
+
+    @each $idx, $val in $quickMenuUrl {
+      li:nth-of-type(#{$idx}) {
+        button {
+          background-image: url(#{$val});
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+  &.hover {
+    transform: translate(0, -50%);
+  }
+}
+
+// --------------------- 푸터 ---------------------
+.footer {
+  // 푸터 시작
+  align-items: flex-end;
+  background: $grayBack;
+  border-top: 1px solid $grayDark;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 10rem;
+  width: 100%;
+  
+  &__info{
+    // 업체 정보 시작
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 170px;
+    }
+
+    &__serviceTerms {
+      color: $grayDark;
+      font-size: $font16;
+      padding: 1rem 0;
+
+      li {
+        color: inherit;
+        font-size: inherit;
+        vertical-align: middle;
+
+        a {
+          color: inherit;
+          font-size: inherit;
+        }
+      }
+
+      $setMargin: (
+        1: 'right',
+        2: 'left'
+      );
+
+      @each $idx, $val in $setMargin {
+        li:nth-of-type(#{$idx}) {
+          a{
+            margin-#{$val}: .5em;
+          }
+        }
+      }
+    }
+
+    &__company {
+      color: $grayDark;
+      font-size: $font16;
+      white-space: pre-line;
+    }
+    // 업체 정보 끝
+  }
+
+  &__socialChannels {
+    // 소셜미디어 시작
+
+    li {
+      padding-right: 1rem;
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+
+      a {
+        height: 36px;
+        vertical-align: bottom;
+        width: 36px;
+      }
+    }
+
+    $socialUrl: (
+      1: '/src/assets/img/ic_naverBlog.png',
+      2: '/src/assets/img/ic_faceBook.png',
+      3: '/src/assets/img/ic_instagram.png'
+    );
+
+    @each $idx, $val in $socialUrl {
+      li:nth-of-type(#{$idx}) {
+        a {
+          background-image: url(#{$val});
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+    // 소셜미디어 끝
+  }
+  //푸터 끝
 }

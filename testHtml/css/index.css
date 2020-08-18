@@ -51,6 +51,9 @@ input[type=checkbox] {
 input[type=submit] {
   cursor: pointer; }
 
+img {
+  vertical-align: middle; }
+
 .nonVisible {
   display: none;
   font-size: 0; }
@@ -87,10 +90,150 @@ input[type=submit] {
         .header__gnb a:last-of-type:hover {
           background: #24B570;
           color: #fff; }
+  .header.pageService a {
+    color: #fff; }
   .header.fixed {
     background: #fff;
     border-bottom: 1px dotted #b1b1b3;
     z-index: 10; }
+
+.support {
+  align-items: center;
+  display: flex;
+  height: 300px;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 60%; }
+  .support__descript {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 30%; }
+    .support__descript img {
+      height: auto;
+      width: 74px; }
+    .support__descript span {
+      font-weight: 600;
+      padding-top: 1rem;
+      text-align: center;
+      white-space: pre-line;
+      word-break: keep-all; }
+  .support__contact {
+    font-size: 32px;
+    text-align: center;
+    width: 55%; }
+    .support__contact div {
+      display: flex;
+      font-size: inherit;
+      justify-content: space-between;
+      padding-bottom: 1rem; }
+      .support__contact div span {
+        font-size: inherit; }
+      .support__contact div a {
+        background: url(/src/assets/img/ic_arrowRight.png) 100%/35px no-repeat;
+        font-size: inherit;
+        padding-right: 2rem; }
+    .support__contact p {
+      color: #b1b1b3;
+      font-size: 26px; }
+
+.quickMenu {
+  left: 90%;
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  transform: translate(150%, -50%);
+  width: 100px; }
+  .quickMenu__box {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+    .quickMenu__box li {
+      height: 100px;
+      margin-bottom: -4px;
+      width: 100%; }
+      .quickMenu__box li button {
+        font-size: 0;
+        height: 100%;
+        width: 100%; }
+    .quickMenu__box li:nth-of-type(1) button {
+      background-image: url(/src/assets/img/ic_downloadApp.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .quickMenu__box li:nth-of-type(2) button {
+      background-image: url(/src/assets/img/ic_applyBuddy.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .quickMenu__box li:nth-of-type(3) button {
+      background-image: url(/src/assets/img/ic_supportKakao.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .quickMenu__box li:nth-of-type(4) button {
+      background-image: url(/src/assets/img/ic_goTop.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+  .quickMenu.hover {
+    transform: translate(0, -50%); }
+
+.footer {
+  align-items: flex-end;
+  background: #EEEEEE;
+  border-top: 1px solid #b1b1b3;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 10rem;
+  width: 100%; }
+  .footer__info {
+    display: flex;
+    flex-direction: column; }
+    .footer__info img {
+      width: 170px; }
+    .footer__info__serviceTerms {
+      color: #b1b1b3;
+      font-size: 16px;
+      padding: 1rem 0; }
+      .footer__info__serviceTerms li {
+        color: inherit;
+        font-size: inherit;
+        vertical-align: middle; }
+        .footer__info__serviceTerms li a {
+          color: inherit;
+          font-size: inherit; }
+      .footer__info__serviceTerms li:nth-of-type(1) a {
+        margin-right: .5em; }
+      .footer__info__serviceTerms li:nth-of-type(2) a {
+        margin-left: .5em; }
+    .footer__info__company {
+      color: #b1b1b3;
+      font-size: 16px;
+      white-space: pre-line; }
+  .footer__socialChannels li {
+    padding-right: 1rem; }
+    .footer__socialChannels li:last-of-type {
+      padding-right: 0; }
+    .footer__socialChannels li a {
+      height: 36px;
+      vertical-align: bottom;
+      width: 36px; }
+  .footer__socialChannels li:nth-of-type(1) a {
+    background-image: url(/src/assets/img/ic_naverBlog.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .footer__socialChannels li:nth-of-type(2) a {
+    background-image: url(/src/assets/img/ic_faceBook.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .footer__socialChannels li:nth-of-type(3) a {
+    background-image: url(/src/assets/img/ic_instagram.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
 
 .mainBox {
   width: 100%; }
@@ -138,22 +281,22 @@ input[type=submit] {
               text-align: center;
               width: 100%; }
           .mainBox .reserve__box__form__category ul li:nth-of-type(1) label {
-            background-image: url(/src/assets/img/main/ic_label1.png);
+            background-image: url(/src/assets/img/ic_label1.png);
             background-position: 50% 20%;
             background-size: 28px;
             background-repeat: no-repeat; }
           .mainBox .reserve__box__form__category ul li:nth-of-type(2) label {
-            background-image: url(/src/assets/img/main/ic_label2.png);
+            background-image: url(/src/assets/img/ic_label2.png);
             background-position: 50% 20%;
             background-size: 28px;
             background-repeat: no-repeat; }
           .mainBox .reserve__box__form__category ul li:nth-of-type(3) label {
-            background-image: url(/src/assets/img/main/ic_label3.png);
+            background-image: url(/src/assets/img/ic_label3.png);
             background-position: 50% 20%;
             background-size: 28px;
             background-repeat: no-repeat; }
           .mainBox .reserve__box__form__category ul li:nth-of-type(4) label {
-            background-image: url(/src/assets/img/main/ic_label4.png);
+            background-image: url(/src/assets/img/ic_label4.png);
             background-position: 50% 20%;
             background-size: 28px;
             background-repeat: no-repeat; }
@@ -292,7 +435,6 @@ input[type=submit] {
                     font-size: 16px; }
                     .mainBox .review__contents__page ul li .profile__details div span img {
                       height: auto;
-                      vertical-align: middle;
                       width: 16px; }
       .mainBox .review__contents__page:nth-of-type(1) {
         left: 0;
@@ -391,144 +533,5 @@ input[type=submit] {
           width: 235px; }
           .mainBox .bannerMain__background__text a:hover {
             background: #5FC997; }
-
-.support {
-  align-items: center;
-  display: flex;
-  height: 300px;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 60%; }
-  .support__descript {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 30%; }
-    .support__descript img {
-      height: auto;
-      width: 74px; }
-    .support__descript span {
-      font-weight: 600;
-      padding-top: 1rem;
-      text-align: center;
-      white-space: pre-line;
-      word-break: keep-all; }
-  .support__contact {
-    font-size: 32px;
-    text-align: center;
-    width: 55%; }
-    .support__contact div {
-      display: flex;
-      font-size: inherit;
-      justify-content: space-between;
-      padding-bottom: 1rem; }
-      .support__contact div span {
-        font-size: inherit; }
-      .support__contact div a {
-        background: url(/src/assets/img/ic_arrowRight.png) 100%/35px no-repeat;
-        font-size: inherit;
-        padding-right: 2rem; }
-    .support__contact p {
-      color: #b1b1b3;
-      font-size: 26px; }
-
-.quickMenu {
-  left: 90%;
-  position: fixed;
-  top: 50%;
-  transform: translate(0, -50%);
-  height: auto;
-  transform: translate(150%, -50%);
-  width: 100px; }
-  .quickMenu__box {
-    display: flex;
-    flex-direction: column;
-    width: 100%; }
-    .quickMenu__box li {
-      height: 100px;
-      width: 100%;
-      margin-bottom: -4px; }
-      .quickMenu__box li button {
-        font-size: 0;
-        height: 100%;
-        width: 100%; }
-    .quickMenu__box li:nth-of-type(1) button {
-      background-image: url(/src/assets/img/ic_downloadApp.png);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat; }
-    .quickMenu__box li:nth-of-type(2) button {
-      background-image: url(/src/assets/img/ic_applyBuddy.png);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat; }
-    .quickMenu__box li:nth-of-type(3) button {
-      background-image: url(/src/assets/img/ic_supportKakao.png);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat; }
-    .quickMenu__box li:nth-of-type(4) button {
-      background-image: url(/src/assets/img/ic_goTop.png);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat; }
-  .quickMenu.hover {
-    transform: translate(0, -50%); }
-
-.footer {
-  align-items: flex-end;
-  background: #EEEEEE;
-  border-top: 1px solid #b1b1b3;
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem 10rem;
-  width: 100%; }
-  .footer__info {
-    display: flex;
-    flex-direction: column; }
-    .footer__info img {
-      width: 170px; }
-    .footer__info__siteMenu {
-      color: #b1b1b3;
-      font-size: 16px;
-      padding: 1rem 0; }
-      .footer__info__siteMenu li {
-        color: inherit;
-        font-size: inherit;
-        vertical-align: middle; }
-        .footer__info__siteMenu li a {
-          color: inherit;
-          font-size: inherit; }
-      .footer__info__siteMenu li:nth-of-type(1) a {
-        margin-right: .5em; }
-      .footer__info__siteMenu li:nth-of-type(2) a {
-        margin-left: .5em; }
-    .footer__info__company {
-      color: #b1b1b3;
-      font-size: 16px;
-      white-space: pre-line; }
-  .footer__socialChannels li {
-    padding-right: 1rem; }
-    .footer__socialChannels li:last-of-type {
-      padding-right: 0; }
-    .footer__socialChannels li a {
-      height: 36px;
-      vertical-align: bottom;
-      width: 36px; }
-  .footer__socialChannels li:nth-of-type(1) a {
-    background-image: url(/src/assets/img/ic_naverBlog.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
-  .footer__socialChannels li:nth-of-type(2) a {
-    background-image: url(/src/assets/img/ic_faceBook.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
-  .footer__socialChannels li:nth-of-type(3) a {
-    background-image: url(/src/assets/img/ic_instagram.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
 
 /*# sourceMappingURL=index.css.map */
