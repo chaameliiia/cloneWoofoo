@@ -68,7 +68,9 @@
             }
 
             $categoryUrl: (
-              1: '/src/assets/img/ic_label1.png',
+              // 1: '/src/assets/img/ic_label1.png',
+              1: '/src/assets/img/ic_label1_selected.png',
+                // 라벨 선택 시 이미지 
               2: '/src/assets/img/ic_label2.png',
               3: '/src/assets/img/ic_label3.png',
               4: '/src/assets/img/ic_label4.png'
@@ -93,9 +95,9 @@
               }
             }
 
-            .selected {
+            .active {
               label {
-                background-image: url(/src/assets/img/main/ic_label1_selected.png);
+                background: url(/src/assets/img/ic_label1_selected.png);
                 border: 1px solid $greenDark;
               }
             }
@@ -190,17 +192,20 @@
     }
 
     &__category {
-      display: flex;
-      justify-content: space-evenly;
+      text-align: center;
       width: 100%;
 
       li {
+        color: $grayDark;
         cursor: pointer;
         font-size: $font20;
+        line-height: 1.25em;
+        margin-right: 1.5rem;
         padding-bottom: .2em;
       
-        &.selected {
+        &.active {
           border-bottom: 4px solid $greenLight;
+          color: $black;
         }
       }
     }
@@ -211,7 +216,7 @@
       li {
         align-items: center;
         border-bottom: 1px solid $grayLight;
-        display: flex;
+        display: none;
         padding: 5rem 0;
         width: 100%;
 
@@ -230,6 +235,10 @@
             padding-bottom: 1rem;
             width: 100%;
           }
+        }
+
+        &.active {
+          display: flex;
         }
       }
     }
@@ -267,6 +276,7 @@
           width: 100%;
 
           li {
+            // 사용자별 컨테이너 시작
             border: 1px solid $grayDark;
             border-radius: 4px;
             min-height: 350px;
@@ -274,6 +284,7 @@
             width: 32%;
 
             .profile {
+              // 프로필 정보 시작
               display: flex;
               margin-bottom: 1rem;
               width: 100%;
@@ -305,7 +316,16 @@
                   }
                 }
               }
+              // 프로필 정보 끝
             }
+
+            .descript {
+              // 후기 내용 시작
+              font-size: $font16;
+              word-break: keep-all;
+              // 후기 내용 끝
+            }
+            // 사용자별 컨테이너 끝
           }
         }
         // 소비자 후기 페이지 별 컨테이너 끝

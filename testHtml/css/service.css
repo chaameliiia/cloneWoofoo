@@ -81,7 +81,7 @@ img {
     .header__gnb a {
       font-size: 16px;
       margin-right: 1em;
-      padding: .25em .5em; }
+      padding: .15em .5em; }
       .header__gnb a:last-of-type {
         border: 1px solid #24B570;
         border-radius: 5px;
@@ -126,7 +126,7 @@ img {
       display: flex;
       font-size: inherit;
       justify-content: space-between;
-      padding-bottom: 1rem; }
+      padding-bottom: .5rem; }
       .support__contact div span {
         font-size: inherit; }
       .support__contact div a {
@@ -135,7 +135,7 @@ img {
         padding-right: 2rem; }
     .support__contact p {
       color: #b1b1b3;
-      font-size: 26px; }
+      font-size: 20px; }
 
 .quickMenu {
   left: 90%;
@@ -184,17 +184,19 @@ img {
   background: #FAFAFC;
   border-top: 1px solid #b1b1b3;
   display: flex;
+  font-size: 14px;
   justify-content: space-between;
   padding: 2rem 10rem;
   width: 100%; }
   .footer__info {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    font-size: inherit; }
     .footer__info img {
       width: 170px; }
     .footer__info__serviceTerms {
       color: #b1b1b3;
-      font-size: 16px;
+      font-size: inherit;
       padding: 1rem 0; }
       .footer__info__serviceTerms li {
         color: inherit;
@@ -209,7 +211,7 @@ img {
         margin-left: .5em; }
     .footer__info__company {
       color: #b1b1b3;
-      font-size: 16px;
+      font-size: inherit;
       white-space: pre-line; }
   .footer__socialChannels li {
     padding-right: 1rem; }
@@ -255,12 +257,12 @@ img {
           font-size: 100px;
           font-weight: 600;
           line-height: 1.25em;
-          padding: 5rem 0 3rem;
+          padding: 7rem 0 3rem;
           white-space: pre-line; }
         .mainBox .services__vision__detail p {
           color: inherit;
           font-size: 20px;
-          padding-bottom: 5rem;
+          padding-bottom: 4rem;
           white-space: pre-line;
           word-break: keep-all; }
       .mainBox .services__vision button {
@@ -269,7 +271,7 @@ img {
         border-radius: 30px;
         color: #24B570;
         font-size: 24px;
-        padding: .4rem 1rem; }
+        padding: .4rem 2.5rem; }
         .mainBox .services__vision button:hover {
           background: #24B570;
           color: #fff; }
@@ -284,7 +286,7 @@ img {
         cursor: pointer;
         font-size: 24px;
         height: 160px;
-        padding: 5.5rem 4rem 0; }
+        padding: 5.5rem 3.5rem 0; }
       .mainBox .services__category li:nth-of-type(1) {
         background-image: url(/src/assets/img/ic_label1.png);
         background-position: 50% 25%;
@@ -305,121 +307,125 @@ img {
         background-position: 50% 25%;
         background-size: 60px;
         background-repeat: no-repeat; }
-      .mainBox .services__category li.selected {
+      .mainBox .services__category li.active {
         background: url(/src/assets/img/ic_label1_selected.png) 50% 25%/60px no-repeat;
         color: #24B570; }
-    .mainBox .services__contents section:nth-of-type(1) {
+    .mainBox .services__contents section {
       margin: 0 auto;
       text-align: center;
       width: 80%; }
-      .mainBox .services__contents section:nth-of-type(1) .dogWalking__descript {
+    .mainBox .services__contents .dogWalking {
+      display: none; }
+      .mainBox .services__contents .dogWalking__descript {
         font-size: 20px;
         margin: 0 auto;
         padding: 3rem 0;
         white-space: pre-line;
         width: 50%;
         word-break: keep-all; }
-        .mainBox .services__contents section:nth-of-type(1) .dogWalking__descript h3 {
+        .mainBox .services__contents .dogWalking__descript h3 {
           font-size: 32px;
           font-weight: 600;
-          padding-bottom: 2rem;
+          padding: 1rem 0 2rem;
           white-space: pre-line; }
-      .mainBox .services__contents section:nth-of-type(1) .dogWalking__figures {
+      .mainBox .services__contents .dogWalking__figures {
         display: flex;
         justify-content: space-between;
         width: 100%; }
-        .mainBox .services__contents section:nth-of-type(1) .dogWalking__figures li {
+        .mainBox .services__contents .dogWalking__figures li {
           width: 32.5%; }
-          .mainBox .services__contents section:nth-of-type(1) .dogWalking__figures li img {
+          .mainBox .services__contents .dogWalking__figures li img {
             width: 100%; }
-          .mainBox .services__contents section:nth-of-type(1) .dogWalking__figures li span {
+          .mainBox .services__contents .dogWalking__figures li span {
             font-size: 26px;
             padding: 1rem 2rem;
             word-break: keep-all; }
-    .mainBox .services__contents section:nth-of-type(2) {
-      margin: 0 auto;
-      text-align: center;
-      width: 80%; }
-      .mainBox .services__contents section:nth-of-type(2) .doorToDoor__descript {
+      .mainBox .services__contents .dogWalking.active {
+        display: block; }
+    .mainBox .services__contents .doorToDoor {
+      display: none; }
+      .mainBox .services__contents .doorToDoor__descript {
         font-size: 20px;
         margin: 0 auto;
         padding: 3rem 0;
         white-space: pre-line;
         width: 50%;
         word-break: keep-all; }
-        .mainBox .services__contents section:nth-of-type(2) .doorToDoor__descript h3 {
+        .mainBox .services__contents .doorToDoor__descript h3 {
           font-size: 32px;
           font-weight: 600;
-          padding-bottom: 2rem;
+          padding: 1rem 0 2rem;
           white-space: pre-line; }
-      .mainBox .services__contents section:nth-of-type(2) .doorToDoor__figures {
+      .mainBox .services__contents .doorToDoor__figures {
         display: flex;
         justify-content: space-between;
         width: 100%; }
-        .mainBox .services__contents section:nth-of-type(2) .doorToDoor__figures li {
+        .mainBox .services__contents .doorToDoor__figures li {
           width: 32.5%; }
-          .mainBox .services__contents section:nth-of-type(2) .doorToDoor__figures li img {
+          .mainBox .services__contents .doorToDoor__figures li img {
             width: 100%; }
-          .mainBox .services__contents section:nth-of-type(2) .doorToDoor__figures li span {
+          .mainBox .services__contents .doorToDoor__figures li span {
             font-size: 26px;
             padding: 1rem 2rem;
             word-break: keep-all; }
-    .mainBox .services__contents section:nth-of-type(3) {
-      margin: 0 auto;
-      text-align: center;
-      width: 80%; }
-      .mainBox .services__contents section:nth-of-type(3) .privateCare__descript {
+      .mainBox .services__contents .doorToDoor.active {
+        display: block; }
+    .mainBox .services__contents .privateCare {
+      display: none; }
+      .mainBox .services__contents .privateCare__descript {
         font-size: 20px;
         margin: 0 auto;
         padding: 3rem 0;
         white-space: pre-line;
         width: 50%;
         word-break: keep-all; }
-        .mainBox .services__contents section:nth-of-type(3) .privateCare__descript h3 {
+        .mainBox .services__contents .privateCare__descript h3 {
           font-size: 32px;
           font-weight: 600;
-          padding-bottom: 2rem;
+          padding: 1rem 0 2rem;
           white-space: pre-line; }
-      .mainBox .services__contents section:nth-of-type(3) .privateCare__figures {
+      .mainBox .services__contents .privateCare__figures {
         display: flex;
         justify-content: space-between;
         width: 100%; }
-        .mainBox .services__contents section:nth-of-type(3) .privateCare__figures li {
+        .mainBox .services__contents .privateCare__figures li {
           width: 32.5%; }
-          .mainBox .services__contents section:nth-of-type(3) .privateCare__figures li img {
+          .mainBox .services__contents .privateCare__figures li img {
             width: 100%; }
-          .mainBox .services__contents section:nth-of-type(3) .privateCare__figures li span {
+          .mainBox .services__contents .privateCare__figures li span {
             font-size: 26px;
             padding: 1rem 2rem;
             word-break: keep-all; }
-    .mainBox .services__contents section:nth-of-type(4) {
-      margin: 0 auto;
-      text-align: center;
-      width: 80%; }
-      .mainBox .services__contents section:nth-of-type(4) .dayCare__descript {
+      .mainBox .services__contents .privateCare.active {
+        display: block; }
+    .mainBox .services__contents .dayCare {
+      display: none; }
+      .mainBox .services__contents .dayCare__descript {
         font-size: 20px;
         margin: 0 auto;
         padding: 3rem 0;
         white-space: pre-line;
         width: 50%;
         word-break: keep-all; }
-        .mainBox .services__contents section:nth-of-type(4) .dayCare__descript h3 {
+        .mainBox .services__contents .dayCare__descript h3 {
           font-size: 32px;
           font-weight: 600;
-          padding-bottom: 2rem;
+          padding: 1rem 0 2rem;
           white-space: pre-line; }
-      .mainBox .services__contents section:nth-of-type(4) .dayCare__figures {
+      .mainBox .services__contents .dayCare__figures {
         display: flex;
         justify-content: space-between;
         width: 100%; }
-        .mainBox .services__contents section:nth-of-type(4) .dayCare__figures li {
+        .mainBox .services__contents .dayCare__figures li {
           width: 32.5%; }
-          .mainBox .services__contents section:nth-of-type(4) .dayCare__figures li img {
+          .mainBox .services__contents .dayCare__figures li img {
             width: 100%; }
-          .mainBox .services__contents section:nth-of-type(4) .dayCare__figures li span {
+          .mainBox .services__contents .dayCare__figures li span {
             font-size: 26px;
             padding: 1rem 2rem;
             word-break: keep-all; }
+      .mainBox .services__contents .dayCare.active {
+        display: block; }
   .mainBox .features {
     margin: 0 auto;
     width: 65%; }
@@ -437,72 +443,88 @@ img {
         margin: 0 .5rem;
         padding-top: .5rem;
         width: 20%; }
-        .mainBox .features__category li.selected {
+        .mainBox .features__category li.active {
           border-bottom: 8px solid #5FC997;
           color: #333; }
     .mainBox .features__contents {
       text-align: center;
       width: 100%; }
-      .mainBox .features__contents .matchBuddy__title {
-        font-size: 32px;
-        font-weight: 600;
-        padding-bottom: .5rem;
-        width: 100%; }
-      .mainBox .features__contents .matchBuddy__descript {
-        font-size: 20px;
-        padding-bottom: 2rem;
-        white-space: pre-line;
-        width: 100%; }
-      .mainBox .features__contents img {
-        width: 100%; }
-        .mainBox .features__contents img.shallow {
-          margin: 0 auto;
-          width: 60%; }
-      .mainBox .features__contents .chatSystem__title {
-        font-size: 32px;
-        font-weight: 600;
-        padding-bottom: .5rem;
-        width: 100%; }
-      .mainBox .features__contents .chatSystem__descript {
-        font-size: 20px;
-        padding-bottom: 2rem;
-        white-space: pre-line;
-        width: 100%; }
-      .mainBox .features__contents img {
-        width: 100%; }
-        .mainBox .features__contents img.shallow {
-          margin: 0 auto;
-          width: 60%; }
-      .mainBox .features__contents .liveTracking__title {
-        font-size: 32px;
-        font-weight: 600;
-        padding-bottom: .5rem;
-        width: 100%; }
-      .mainBox .features__contents .liveTracking__descript {
-        font-size: 20px;
-        padding-bottom: 2rem;
-        white-space: pre-line;
-        width: 100%; }
-      .mainBox .features__contents img {
-        width: 100%; }
-        .mainBox .features__contents img.shallow {
-          margin: 0 auto;
-          width: 60%; }
-      .mainBox .features__contents .journal__title {
-        font-size: 32px;
-        font-weight: 600;
-        padding-bottom: .5rem;
-        width: 100%; }
-      .mainBox .features__contents .journal__descript {
-        font-size: 20px;
-        padding-bottom: 2rem;
-        white-space: pre-line;
-        width: 100%; }
-      .mainBox .features__contents img {
-        width: 100%; }
-        .mainBox .features__contents img.shallow {
-          margin: 0 auto;
-          width: 60%; }
+      .mainBox .features__contents .matchBuddy {
+        display: none; }
+        .mainBox .features__contents .matchBuddy__title {
+          font-size: 32px;
+          font-weight: 600;
+          padding-bottom: .5rem;
+          width: 100%; }
+        .mainBox .features__contents .matchBuddy__descript {
+          font-size: 20px;
+          padding-bottom: 2rem;
+          white-space: pre-line;
+          width: 100%; }
+        .mainBox .features__contents .matchBuddy img {
+          width: 100%; }
+          .mainBox .features__contents .matchBuddy img.shallow {
+            margin: 0 auto;
+            width: 60%; }
+        .mainBox .features__contents .matchBuddy.active {
+          display: block; }
+      .mainBox .features__contents .chatSystem {
+        display: none; }
+        .mainBox .features__contents .chatSystem__title {
+          font-size: 32px;
+          font-weight: 600;
+          padding-bottom: .5rem;
+          width: 100%; }
+        .mainBox .features__contents .chatSystem__descript {
+          font-size: 20px;
+          padding-bottom: 2rem;
+          white-space: pre-line;
+          width: 100%; }
+        .mainBox .features__contents .chatSystem img {
+          width: 100%; }
+          .mainBox .features__contents .chatSystem img.shallow {
+            margin: 0 auto;
+            width: 60%; }
+        .mainBox .features__contents .chatSystem.active {
+          display: block; }
+      .mainBox .features__contents .liveTracking {
+        display: none; }
+        .mainBox .features__contents .liveTracking__title {
+          font-size: 32px;
+          font-weight: 600;
+          padding-bottom: .5rem;
+          width: 100%; }
+        .mainBox .features__contents .liveTracking__descript {
+          font-size: 20px;
+          padding-bottom: 2rem;
+          white-space: pre-line;
+          width: 100%; }
+        .mainBox .features__contents .liveTracking img {
+          width: 100%; }
+          .mainBox .features__contents .liveTracking img.shallow {
+            margin: 0 auto;
+            width: 60%; }
+        .mainBox .features__contents .liveTracking.active {
+          display: block; }
+      .mainBox .features__contents .journal {
+        display: none; }
+        .mainBox .features__contents .journal__title {
+          font-size: 32px;
+          font-weight: 600;
+          padding-bottom: .5rem;
+          width: 100%; }
+        .mainBox .features__contents .journal__descript {
+          font-size: 20px;
+          padding-bottom: 2rem;
+          white-space: pre-line;
+          width: 100%; }
+        .mainBox .features__contents .journal img {
+          width: 100%; }
+          .mainBox .features__contents .journal img.shallow {
+            margin: 0 auto;
+            width: 60%; }
+        .mainBox .features__contents .journal.active {
+          display: block; }
 
 .bannerBox {
   background: #FAFAFC;

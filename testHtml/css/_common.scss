@@ -111,7 +111,7 @@ img {
     a {
       font-size: $font16;
       margin-right: 1em;
-      padding: .25em .5em;
+      padding: .15em .5em;
 
       &:last-of-type {
         border: 1px solid $greenDark;
@@ -179,7 +179,7 @@ img {
       display: flex;
       font-size: inherit;
       justify-content: space-between;
-      padding-bottom: 1rem;
+      padding-bottom: .5rem;
 
       span {
         font-size: inherit;
@@ -194,7 +194,7 @@ img {
 
     p {
       color: $grayDark;
-      font-size: $font26
+      font-size: $font20;
     }
   }
   // 고객센터 배너 끝
@@ -255,6 +255,7 @@ img {
   background: $grayBack;
   border-top: 1px solid $grayDark;
   display: flex;
+  font-size: $font14;
   justify-content: space-between;
   padding: 2rem 10rem;
   width: 100%;
@@ -263,6 +264,7 @@ img {
     // 업체 정보 시작
     display: flex;
     flex-direction: column;
+    font-size: inherit;
 
     img {
       width: 170px;
@@ -270,7 +272,7 @@ img {
 
     &__serviceTerms {
       color: $grayDark;
-      font-size: $font16;
+      font-size: inherit;
       padding: 1rem 0;
 
       li {
@@ -300,7 +302,7 @@ img {
 
     &__company {
       color: $grayDark;
-      font-size: $font16;
+      font-size: inherit;
       white-space: pre-line;
     }
     // 업체 정보 끝

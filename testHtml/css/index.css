@@ -81,7 +81,7 @@ img {
     .header__gnb a {
       font-size: 16px;
       margin-right: 1em;
-      padding: .25em .5em; }
+      padding: .15em .5em; }
       .header__gnb a:last-of-type {
         border: 1px solid #24B570;
         border-radius: 5px;
@@ -126,7 +126,7 @@ img {
       display: flex;
       font-size: inherit;
       justify-content: space-between;
-      padding-bottom: 1rem; }
+      padding-bottom: .5rem; }
       .support__contact div span {
         font-size: inherit; }
       .support__contact div a {
@@ -135,7 +135,7 @@ img {
         padding-right: 2rem; }
     .support__contact p {
       color: #b1b1b3;
-      font-size: 26px; }
+      font-size: 20px; }
 
 .quickMenu {
   left: 90%;
@@ -181,20 +181,22 @@ img {
 
 .footer {
   align-items: flex-end;
-  background: #EEEEEE;
+  background: #FAFAFC;
   border-top: 1px solid #b1b1b3;
   display: flex;
+  font-size: 14px;
   justify-content: space-between;
   padding: 2rem 10rem;
   width: 100%; }
   .footer__info {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    font-size: inherit; }
     .footer__info img {
       width: 170px; }
     .footer__info__serviceTerms {
       color: #b1b1b3;
-      font-size: 16px;
+      font-size: inherit;
       padding: 1rem 0; }
       .footer__info__serviceTerms li {
         color: inherit;
@@ -209,7 +211,7 @@ img {
         margin-left: .5em; }
     .footer__info__company {
       color: #b1b1b3;
-      font-size: 16px;
+      font-size: inherit;
       white-space: pre-line; }
   .footer__socialChannels li {
     padding-right: 1rem; }
@@ -281,7 +283,7 @@ img {
               text-align: center;
               width: 100%; }
           .mainBox .reserve__box__form__category ul li:nth-of-type(1) label {
-            background-image: url(/src/assets/img/ic_label1.png);
+            background-image: url(/src/assets/img/ic_label1_selected.png);
             background-position: 50% 20%;
             background-size: 28px;
             background-repeat: no-repeat; }
@@ -304,8 +306,8 @@ img {
             background-color: #EEEEEE;
             color: #b1b1b3;
             cursor: default; }
-          .mainBox .reserve__box__form__category ul .selected label {
-            background-image: url(/src/assets/img/main/ic_label1_selected.png);
+          .mainBox .reserve__box__form__category ul .active label {
+            background: url(/src/assets/img/ic_label1_selected.png);
             border: 1px solid #24B570; }
         .mainBox .reserve__box__form__address input {
           border: 1px solid #EEEEEE;
@@ -359,21 +361,24 @@ img {
     .mainBox .introService__title {
       padding-bottom: 3rem; }
     .mainBox .introService__category {
-      display: flex;
-      justify-content: space-evenly;
+      text-align: center;
       width: 100%; }
       .mainBox .introService__category li {
+        color: #b1b1b3;
         cursor: pointer;
         font-size: 20px;
+        line-height: 1.25em;
+        margin-right: 1.5rem;
         padding-bottom: .2em; }
-        .mainBox .introService__category li.selected {
-          border-bottom: 4px solid #5FC997; }
+        .mainBox .introService__category li.active {
+          border-bottom: 4px solid #5FC997;
+          color: #333; }
     .mainBox .introService__details {
       width: 100%; }
       .mainBox .introService__details li {
         align-items: center;
         border-bottom: 1px solid #EEEEEE;
-        display: flex;
+        display: none;
         padding: 5rem 0;
         width: 100%; }
         .mainBox .introService__details li img {
@@ -387,6 +392,8 @@ img {
             font-size: 26px;
             padding-bottom: 1rem;
             width: 100%; }
+        .mainBox .introService__details li.active {
+          display: flex; }
   .mainBox .review {
     padding: 0 12% 2rem;
     position: relative;
@@ -436,6 +443,9 @@ img {
                     .mainBox .review__contents__page ul li .profile__details div span img {
                       height: auto;
                       width: 16px; }
+            .mainBox .review__contents__page ul li .descript {
+              font-size: 16px;
+              word-break: keep-all; }
       .mainBox .review__contents__page:nth-of-type(1) {
         left: 0;
         position: absolute;
