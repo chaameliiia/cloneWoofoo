@@ -237,4 +237,126 @@ img {
     background-size: cover;
     background-repeat: no-repeat; }
 
+.mainBox {
+  height: auto;
+  width: 100%; }
+  .mainBox .incruitBuddy {
+    align-items: center;
+    background: url(/src/assets/img/incruit/img_bgIncruit.png) top/100% 100% no-repeat;
+    display: flex;
+    justify-content: center;
+    padding: 180px; }
+    .mainBox .incruitBuddy__text {
+      padding-right: 5rem;
+      text-align: center; }
+      .mainBox .incruitBuddy__text p {
+        font-size: 28px;
+        padding-bottom: 2rem;
+        white-space: pre-line; }
+        .mainBox .incruitBuddy__text p strong {
+          font-size: 48px; }
+      .mainBox .incruitBuddy__text button {
+        background: #24B570;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 24px;
+        padding: .5rem 0;
+        width: 260px; }
+    .mainBox .incruitBuddy img {
+      height: 440px; }
+  .mainBox .benefits {
+    margin: 0 auto;
+    padding-top: 125px;
+    width: 50%; }
+    .mainBox .benefits__title {
+      background: url(/src/assets/img/incruit/img_quotation1.png) left top/50px no-repeat, url(/src/assets/img/incruit/img_quotation2.png) right bottom/50px no-repeat;
+      margin-bottom: 5rem;
+      text-align: center; }
+      .mainBox .benefits__title span {
+        font-size: 32px;
+        font-weight: normal; }
+      .mainBox .benefits__title p {
+        font-size: 20px;
+        padding-top: .5rem; }
+    .mainBox .benefits__contents {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%; }
+      .mainBox .benefits__contents section {
+        padding-bottom: 5.5rem;
+        text-align: center;
+        width: 50%; }
+        .mainBox .benefits__contents section h4 {
+          font-size: 20px;
+          padding: 100px 0 1rem; }
+        .mainBox .benefits__contents section span {
+          font-size: 16px;
+          white-space: pre-line; }
+      .mainBox .benefits__contents section:nth-of-type(1) h4 {
+        background: url(/src/assets/img/incruit/ic_revenue.png) 50% 10px/80px no-repeat; }
+      .mainBox .benefits__contents section:nth-of-type(2) h4 {
+        background: url(/src/assets/img/incruit/ic_supervise.png) 50% 10px/80px no-repeat; }
+      .mainBox .benefits__contents section:nth-of-type(3) h4 {
+        background: url(/src/assets/img/incruit/ic_insuranceBuddy.png) 50% 10px/80px no-repeat; }
+      .mainBox .benefits__contents section:nth-of-type(4) h4 {
+        background: url(/src/assets/img/incruit/ic_education.png) 50% 10px/80px no-repeat; }
+  .mainBox .eligibility {
+    background: #FAFAFC;
+    padding-top: 7rem;
+    text-align: center;
+    width: 100%; }
+    .mainBox .eligibility__title {
+      background: url(/src/assets/img/incruit/img_quotation3.png) left top/50px no-repeat, url(/src/assets/img/incruit/img_quotation4.png) right bottom/50px no-repeat;
+      margin: 0 auto;
+      text-align: center;
+      width: 50%; }
+      .mainBox .eligibility__title span {
+        font-size: 32px;
+        font-weight: normal; }
+      .mainBox .eligibility__title p {
+        font-size: 20px;
+        margin-bottom: 5rem;
+        padding-top: .5rem; }
+    .mainBox .eligibility__details {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      padding-bottom: 4rem;
+      width: 25%; }
+      .mainBox .eligibility__details li {
+        background: url(/src/assets/img/incruit/ic_check.png) left/20px no-repeat;
+        margin-bottom: .5rem;
+        padding-left: 2rem;
+        text-align: left; }
+  .mainBox .process {
+    padding: 5rem 0 6rem;
+    width: 100%; }
+    .mainBox .process__title {
+      background: url(/src/assets/img/incruit/img_quotation1.png) left top/50px no-repeat, url(/src/assets/img/incruit/img_quotation2.png) right bottom/50px no-repeat;
+      font-size: 32px;
+      margin: 0 auto;
+      text-align: center;
+      width: 50%; }
+    .mainBox .process__details {
+      background: url(/src/assets/img/incruit/ic_arrowRight.png) 135px 70%/10px no-repeat, url(/src/assets/img/incruit/ic_arrowRight.png) calc(135px + 160px) 70%/10px no-repeat, url(/src/assets/img/incruit/ic_arrowRight.png) calc(135px + (160px * 2)) 70%/10px no-repeat, url(/src/assets/img/incruit/ic_arrowRight.png) calc(135px + (160px * 3)) 70%/10px no-repeat;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding-top: 5rem;
+      width: 60%; }
+      .mainBox .process__details li {
+        padding-top: 130px;
+        text-align: center;
+        width: 120px; }
+      .mainBox .process__details li:nth-of-type(1) {
+        background: url(/src/assets/img/incruit/ic_process1.png) center top/100% no-repeat; }
+      .mainBox .process__details li:nth-of-type(2) {
+        background: url(/src/assets/img/incruit/ic_process2.png) center top/100% no-repeat; }
+      .mainBox .process__details li:nth-of-type(3) {
+        background: url(/src/assets/img/incruit/ic_process3.png) center top/100% no-repeat; }
+      .mainBox .process__details li:nth-of-type(4) {
+        background: url(/src/assets/img/incruit/ic_process4.png) center top/100% no-repeat; }
+      .mainBox .process__details li:nth-of-type(5) {
+        background: url(/src/assets/img/incruit/ic_process5.png) center top/100% no-repeat; }
+
 /*# sourceMappingURL=incruit.css.map */
