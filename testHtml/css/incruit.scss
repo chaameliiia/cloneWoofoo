@@ -34,6 +34,10 @@
         font-size: $font24;
         padding: .5rem 0;
         width: 260px;
+
+        &:hover {
+          background: $greenLight;
+        }
       }
     }
 
@@ -175,7 +179,7 @@
       display: flex;
       justify-content: space-between;
       margin: 0 auto;
-      padding-top: 5rem;
+      padding-top: 4rem;
       width: 60%;
 
       li {

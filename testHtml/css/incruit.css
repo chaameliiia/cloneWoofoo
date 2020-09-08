@@ -262,6 +262,8 @@ img {
         font-size: 24px;
         padding: .5rem 0;
         width: 260px; }
+        .mainBox .incruitBuddy__text button:hover {
+          background: #5FC997; }
     .mainBox .incruitBuddy img {
       height: 440px; }
   .mainBox .benefits {
@@ -342,7 +344,7 @@ img {
       display: flex;
       justify-content: space-between;
       margin: 0 auto;
-      padding-top: 5rem;
+      padding-top: 4rem;
       width: 60%; }
       .mainBox .process__details li {
         padding-top: 130px;
