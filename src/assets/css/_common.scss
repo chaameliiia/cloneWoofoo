@@ -162,8 +162,9 @@ img {
     }
 
     span {
+      background: url(../img/ic_support.png) top/74px no-repeat;
       font-weight: 600;
-      padding-top: 1rem;
+      padding-top: 5rem;
       text-align: center;
       white-space: pre-line;
       word-break: keep-all;
@@ -186,7 +187,7 @@ img {
       }
 
       a {
-        background: url(/src/assets/img/ic_arrowRight.png) 100%/35px no-repeat;
+        background: url(../img/ic_arrowRight.png) 100%/35px no-repeat;
         font-size: inherit;
         padding-right: 2rem;
       }
