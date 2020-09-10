@@ -1,0 +1,19 @@
+@mixin setFixed($left, $top, $xPos, $yPos) {
+  left: $left;
+  position: fixed;
+  top: $top;
+  transform: translate($xPos, $yPos);
+}
+
+@mixin setAbsolTop($left, $top, $xPos) {
+  left: $left;
+  position: absolute;
+  top: $top;
+  transform: translate($xPos, 0);
+}
+
+@mixin setAbsolBottom {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}

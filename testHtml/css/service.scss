@@ -1,0 +1,291 @@
+@import "_common";
+
+.mainBox {
+  // 본문 시작
+  width: 100%;
+
+  .services {
+    // 우푸 서비스 소개 시작
+    width: 100%;
+
+    &__vision {
+      // 우푸 비전 소개 시작
+      align-items: center;
+      background: url(/src/assets/img/services/dogWalking/img_background.jpg) top/auto 820px no-repeat;
+      display: flex;
+      flex-direction: column;
+      min-height: 820px;
+      text-align: center;
+      width: 100%;
+
+      &__detail {
+        color: $white;
+        width: 60%;
+
+        strong {
+          color: inherit;
+          font-size: $font100;
+          font-weight: 600;
+          line-height: 1.25em;
+          padding: 7rem 0 3rem;
+          white-space: pre-line;
+        }
+
+        p {
+          color: inherit;
+          font-size: $font20;
+          padding-bottom: 4rem;
+          white-space: pre-line;
+          word-break: keep-all;
+        }
+      }
+
+      button {
+        background: $white;
+        border: 1px solid $greenDark;
+        border-radius: 30px;
+        color: $greenDark;
+        font-size: $font24;
+        padding: .4rem 2.5rem;
+
+        &:hover {
+          background: $greenDark;
+          color: $white;
+        }
+      }
+      // 우푸 비전 소개 끝
+    }
+
+    &__category {
+      // 서비스 카테고리 시작
+      border-bottom: 1px solid $grayDark;
+      display: flex;
+      justify-content: center;
+      font-size: 0;
+      width: 100%;
+
+      li {
+        color: $grayDark;
+        cursor: pointer;
+        font-size: $font24;
+        height: 160px;
+        padding: 5.5rem 3.5rem 0;
+      }
+
+      $categoryUrl: (
+        1: '/src/assets/img/ic_label1.png',
+        2: '/src/assets/img/ic_label2.png',
+        3: '/src/assets/img/ic_label3.png',
+        4: '/src/assets/img/ic_label4.png'
+      );
+
+      @each $idx, $val in $categoryUrl {
+        li:nth-of-type(#{$idx}) {
+          background-image: url(#{$val});
+          background-position: 50% 25%;
+          background-size: 60px;
+          background-repeat: no-repeat;
+        }
+      };
+      
+      li.active {
+        background: url(/src/assets/img/ic_label1_selected.png) 50% 25%/ 60px no-repeat;
+        color: $greenDark;
+      }
+      // 서비스 카테고리 끝
+    }
+
+    &__contents {
+      // 서비스별 소개 시작
+      $serviceClass: (
+        1: ".dogWalking",
+        2: ".doorToDoor",
+        3: ".privateCare",
+        4: ".dayCare",
+      );
+
+      section {
+        margin: 0 auto;
+        text-align: center;
+        width: 80%;
+      }
+
+      @each $idx, $val in $serviceClass {
+        #{$val} {
+          display: none;
+
+          &__descript {
+            font-size: $font20;
+            margin: 0 auto;
+            padding: 3rem 0;
+            white-space: pre-line;
+            width: 50%;
+            word-break: keep-all;
+
+            h3 {
+              font-size: $font32;
+              font-weight: 600;
+              padding:1rem 0 2rem;
+              white-space: pre-line;
+            }
+          }
+
+          &__figures {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            li {
+              width: 32.5%;
+
+              img {
+                width: 100%;
+              }
+
+              span {
+                font-size: $font26;
+                padding: 1rem 2rem;
+                word-break: keep-all;
+              }
+            }
+          }
+
+          &.active {
+            display: block;
+          }
+        }
+      }
+      // 서비스별 소개 끝
+    }
+    // 우푸 서비스 소개 끝
+  }
+
+  .features {
+    // 우푸 특징 소개 시작
+    margin: 0 auto;
+    width: 65%;
+
+    &__category {
+      // 우푸 특징 카테고리 시작
+      display: flex;
+      justify-content: center;
+      padding: 3rem 0;
+      text-align: center;
+      width: 100%;
+
+      li {
+        color: $grayDark;
+        cursor: pointer;
+        font-size: $font24;
+        line-height: 1.25em;
+        margin: 0 .5rem;
+        padding-top: .5rem;
+        width: 20%;
+
+        &.active {
+          border-bottom: 8px solid $greenLight;
+          color: $black;
+        }
+      }
+      // 우푸 특징 카테고리 끝
+    }
+
+    &__contents {
+      // 우푸 특징별 설명 시작
+      text-align: center;
+      width: 100%;
+
+      $featureClass: (
+        1: ".matchBuddy",
+        2: ".chatSystem",
+        3: ".liveTracking",
+        4: ".journal",
+      );
+
+      @each $idx, $val in $featureClass {
+        #{$val} {
+          display: none;
+
+          &__title {
+            font-size: $font32;
+            font-weight: 600;
+            padding-bottom: .5rem;
+            width: 100%;
+          }
+
+          &__descript {
+            font-size: $font20;
+            padding-bottom: 2rem;
+            white-space: pre-line;
+            width: 100%;
+          }
+          
+          img {
+            width: 100%;
+
+            &.shallow {
+              margin: 0 auto;
+              width: 60%;
+            }
+          }
+
+          &.active {
+            display: block;
+          }
+        }
+      }
+      // 우푸 특징별 설명 끝
+    }
+    // 우푸 특징 소개 끝
+  }
+  // 본문 끝
+}
+
+.bannerBox {
+  // 앱 다운로드 배너 시작
+  background: $grayBack;
+  padding: 2.5rem 0;
+  text-align: center;
+  width: 100%;
+
+  &__descript {
+    font-size: $font20;
+    font-weight: 600;
+    padding-bottom: 1rem;
+  }
+
+  &__btn {
+    button {
+      border: 1px solid $grayDark;
+      border-radius: 32px;
+      color: $grayDark;
+      font-size: $font16;
+      padding: .5rem 0;
+      text-align: left;
+      width: 240px;
+
+      &:nth-of-type(1) {
+        background: $white url(/src/assets/img/ic_playStore.png) 10% 50%/32px no-repeat;
+        padding-left: 3rem;
+        margin-right: 2rem;
+      }
+
+      &:nth-of-type(2) {
+        background: $white url(/src/assets/img/ic_appStore.png) 10% 50%/32px no-repeat;
+        padding-left: 3.5rem;
+      }
+
+      &:hover {
+        background-color: $grayDark;
+        color: $white;
+      }
+
+      &:active {
+        background-color: $grayLight;
+        border: 1px solid $grayLight;
+        color: $white;
+      }
+    }
+  }
+  // 앱 다운로드 배너 끝
+}

@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap");
+* {
+  box-sizing: border-box;
+  color: #333;
+  font: 18px/1.5 'Noto Sans KR', sans-serif;
+  margin: 0;
+  padding: 0; }
+
+a,
+input,
+label,
+span,
+strong {
+  display: inline-block; }
+
+body,
+html {
+  width: 100%; }
+
+li,
+ul {
+  display: inline-block;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  outline-style: none; }
+
+h2 {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center; }
+
+input {
+  background: none;
+  border: none;
+  outline-style: none; }
+
+input::placeholder {
+  color: #b1b1b3; }
+
+input[type=checkbox] {
+  display: none; }
+
+input[type=submit] {
+  cursor: pointer; }
+
+img {
+  vertical-align: middle; }
+
+.nonVisible {
+  display: none;
+  font-size: 0; }
+
+.header {
+  left: 0;
+  position: fixed;
+  top: 0;
+  transform: translate(0, 0);
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: .5rem 10%;
+  width: 100%; }
+  .header__logo {
+    height: 52px;
+    margin-right: .5em;
+    width: 52px; }
+    .header__logo a {
+      width: 100%; }
+      .header__logo a img {
+        width: 100%; }
+  .header__gnb {
+    width: 100%; }
+    .header__gnb a {
+      font-size: 16px;
+      margin-right: 1em;
+      padding: .15em .5em; }
+      .header__gnb a:last-of-type {
+        border: 1px solid #24B570;
+        border-radius: 5px;
+        color: #24B570;
+        margin-right: 0; }
+        .header__gnb a:last-of-type:hover {
+          background: #24B570;
+          color: #fff; }
+  .header.pageService a {
+    color: #fff; }
+  .header.fixed {
+    background: #fff;
+    border-bottom: 1px dotted #b1b1b3;
+    z-index: 10; }
+
+.support {
+  align-items: center;
+  display: flex;
+  height: 300px;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 60%; }
+  .support__descript {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 30%; }
+    .support__descript img {
+      height: auto;
+      width: 74px; }
+    .support__descript span {
+      font-weight: 600;
+      padding-top: 1rem;
+      text-align: center;
+      white-space: pre-line;
+      word-break: keep-all; }
+  .support__contact {
+    font-size: 32px;
+    text-align: center;
+    width: 55%; }
+    .support__contact div {
+      display: flex;
+      font-size: inherit;
+      justify-content: space-between;
+      padding-bottom: .5rem; }
+      .support__contact div span {
+        font-size: inherit; }
+      .support__contact div a {
+        background: url(/src/assets/img/ic_arrowRight.png) 100%/35px no-repeat;
+        font-size: inherit;
+        padding-right: 2rem; }
+    .support__contact p {
+      color: #b1b1b3;
+      font-size: 20px; }
+
+.quickMenu {
+  left: 90%;
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  transform: translate(150%, -50%);
+  width: 100px; }
+  .quickMenu__box {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+    .quickMenu__box li {
+      height: 100px;
+      margin-bottom: -4px;
+      width: 100%; }
+      .quickMenu__box li button {
+        font-size: 0;
+        height: 100%;
+        width: 100%; }
+    .quickMenu__box li:nth-of-type(1) button {
+      background-image: url(/src/assets/img/ic_downloadApp.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .quickMenu__box li:nth-of-type(2) button {
+      background-image: url(/src/assets/img/ic_applyBuddy.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .quickMenu__box li:nth-of-type(3) button {
+      background-image: url(/src/assets/img/ic_supportKakao.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .quickMenu__box li:nth-of-type(4) button {
+      background-image: url(/src/assets/img/ic_goTop.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+  .quickMenu.hover {
+    transform: translate(0, -50%); }
+
+.footer {
+  align-items: flex-end;
+  background: #FAFAFC;
+  border-top: 1px solid #b1b1b3;
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+  padding: 2rem 10rem;
+  width: 100%; }
+  .footer__info {
+    display: flex;
+    flex-direction: column;
+    font-size: inherit; }
+    .footer__info img {
+      width: 170px; }
+    .footer__info__serviceTerms {
+      color: #b1b1b3;
+      font-size: inherit;
+      padding: 1rem 0; }
+      .footer__info__serviceTerms li {
+        color: inherit;
+        font-size: inherit;
+        vertical-align: middle; }
+        .footer__info__serviceTerms li a {
+          color: inherit;
+          font-size: inherit; }
+      .footer__info__serviceTerms li:nth-of-type(1) a {
+        margin-right: .5em; }
+      .footer__info__serviceTerms li:nth-of-type(2) a {
+        margin-left: .5em; }
+    .footer__info__company {
+      color: #b1b1b3;
+      font-size: inherit;
+      white-space: pre-line; }
+  .footer__socialChannels li {
+    padding-right: 1rem; }
+    .footer__socialChannels li:last-of-type {
+      padding-right: 0; }
+    .footer__socialChannels li a {
+      height: 36px;
+      vertical-align: bottom;
+      width: 36px; }
+  .footer__socialChannels li:nth-of-type(1) a {
+    background-image: url(/src/assets/img/ic_naverBlog.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .footer__socialChannels li:nth-of-type(2) a {
+    background-image: url(/src/assets/img/ic_faceBook.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .footer__socialChannels li:nth-of-type(3) a {
+    background-image: url(/src/assets/img/ic_instagram.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+
+.mainBox {
+  height: auto;
+  width: 100%; }
+  .mainBox .incruitBuddy {
+    align-items: center;
+    background: url(/src/assets/img/incruit/img_bgIncruit.png) top/100% 100% no-repeat;
+    display: flex;
+    justify-content: center;
+    padding: 180px; }
+    .mainBox .incruitBuddy__text {
+      padding-right: 5rem;
+      text-align: center; }
+      .mainBox .incruitBuddy__text p {
+        font-size: 28px;
+        padding-bottom: 2rem;
+        white-space: pre-line; }
+        .mainBox .incruitBuddy__text p strong {
+          font-size: 48px; }
+      .mainBox .incruitBuddy__text button {
+        background: #24B570;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 24px;
+        padding: .5rem 0;
+        width: 260px; }
+        .mainBox .incruitBuddy__text button:hover {
+          background: #5FC997; }
+    .mainBox .incruitBuddy img {
+      height: 440px; }
+  .mainBox .benefits {
+    margin: 0 auto;
+    padding-top: 125px;
+    width: 50%; }
+    .mainBox .benefits__title {
+      background: url(/src/assets/img/incruit/img_quotation1.png) left top/50px no-repeat, url(/src/assets/img/incruit/img_quotation2.png) right bottom/50px no-repeat;
+      margin-bottom: 5rem;
+      text-align: center; }
+      .mainBox .benefits__title span {
+        font-size: 32px;
+        font-weight: normal; }
+      .mainBox .benefits__title p {
+        font-size: 20px;
+        padding-top: .5rem; }
+    .mainBox .benefits__contents {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%; }
+      .mainBox .benefits__contents section {
+        padding-bottom: 5.5rem;
+        text-align: center;
+        width: 50%; }
+        .mainBox .benefits__contents section h4 {
+          font-size: 20px;
+          padding: 100px 0 1rem; }
+        .mainBox .benefits__contents section span {
+          font-size: 16px;
+          white-space: pre-line; }
+      .mainBox .benefits__contents section:nth-of-type(1) h4 {
+        background: url(/src/assets/img/incruit/ic_revenue.png) 50% 10px/80px no-repeat; }
+      .mainBox .benefits__contents section:nth-of-type(2) h4 {
+        background: url(/src/assets/img/incruit/ic_supervise.png) 50% 10px/80px no-repeat; }
+      .mainBox .benefits__contents section:nth-of-type(3) h4 {
+        background: url(/src/assets/img/incruit/ic_insuranceBuddy.png) 50% 10px/80px no-repeat; }
+      .mainBox .benefits__contents section:nth-of-type(4) h4 {
+        background: url(/src/assets/img/incruit/ic_education.png) 50% 10px/80px no-repeat; }
+  .mainBox .eligibility {
+    background: #FAFAFC;
+    padding-top: 7rem;
+    text-align: center;
+    width: 100%; }
+    .mainBox .eligibility__title {
+      background: url(/src/assets/img/incruit/img_quotation3.png) left top/50px no-repeat, url(/src/assets/img/incruit/img_quotation4.png) right bottom/50px no-repeat;
+      margin: 0 auto;
+      text-align: center;
+      width: 50%; }
+      .mainBox .eligibility__title span {
+        font-size: 32px;
+        font-weight: normal; }
+      .mainBox .eligibility__title p {
+        font-size: 20px;
+        margin-bottom: 5rem;
+        padding-top: .5rem; }
+    .mainBox .eligibility__details {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      padding-bottom: 4rem;
+      width: 25%; }
+      .mainBox .eligibility__details li {
+        background: url(/src/assets/img/incruit/ic_check.png) left/20px no-repeat;
+        margin-bottom: .5rem;
+        padding-left: 2rem;
+        text-align: left; }
+  .mainBox .process {
+    padding: 5rem 0 6rem;
+    width: 100%; }
+    .mainBox .process__title {
+      background: url(/src/assets/img/incruit/img_quotation1.png) left top/50px no-repeat, url(/src/assets/img/incruit/img_quotation2.png) right bottom/50px no-repeat;
+      font-size: 32px;
+      margin: 0 auto;
+      text-align: center;
+      width: 50%; }
+    .mainBox .process__details {
+      background: url(/src/assets/img/incruit/ic_arrowRight.png) 135px 70%/10px no-repeat, url(/src/assets/img/incruit/ic_arrowRight.png) calc(135px + 160px) 70%/10px no-repeat, url(/src/assets/img/incruit/ic_arrowRight.png) calc(135px + (160px * 2)) 70%/10px no-repeat, url(/src/assets/img/incruit/ic_arrowRight.png) calc(135px + (160px * 3)) 70%/10px no-repeat;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding-top: 4rem;
+      width: 60%; }
+      .mainBox .process__details li {
+        padding-top: 130px;
+        text-align: center;
+        width: 120px; }
+      .mainBox .process__details li:nth-of-type(1) {
+        background: url(/src/assets/img/incruit/ic_process1.png) center top/100% no-repeat; }
+      .mainBox .process__details li:nth-of-type(2) {
+        background: url(/src/assets/img/incruit/ic_process2.png) center top/100% no-repeat; }
+      .mainBox .process__details li:nth-of-type(3) {
+        background: url(/src/assets/img/incruit/ic_process3.png) center top/100% no-repeat; }
+      .mainBox .process__details li:nth-of-type(4) {
+        background: url(/src/assets/img/incruit/ic_process4.png) center top/100% no-repeat; }
+      .mainBox .process__details li:nth-of-type(5) {
+        background: url(/src/assets/img/incruit/ic_process5.png) center top/100% no-repeat; }
+
+/*# sourceMappingURL=incruit.css.map */

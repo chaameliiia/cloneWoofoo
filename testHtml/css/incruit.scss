@@ -1,0 +1,209 @@
+@import "_common";
+
+.mainBox {
+  // 본문 시작
+  height: auto;
+  width: 100%;
+
+  .incruitBuddy {
+    // 버디 모집 공고 시작
+    align-items: center;
+    background: url(/src/assets/img/incruit/img_bgIncruit.png) top/100% 100% no-repeat;
+    display: flex;
+    justify-content: center;
+    padding: 180px;
+
+    &__text {
+      padding-right: 5rem;
+      text-align: center;
+
+      p {
+        font-size: $font28;
+        padding-bottom: 2rem;
+        white-space: pre-line;
+
+        strong {
+          font-size: $font48;
+        }
+      }
+      
+      button {
+        background: $greenDark;
+        border-radius: 8px;
+        color: $white;
+        font-size: $font24;
+        padding: .5rem 0;
+        width: 260px;
+
+        &:hover {
+          background: $greenLight;
+        }
+      }
+    }
+
+    img {
+      height: 440px;
+    }
+    // 버디 모집 공고 끝
+  }
+
+  .benefits {
+    // 버디 활동 혜택 시작
+    margin: 0 auto;
+    padding-top: 125px;
+    width: 50%;
+
+    &__title {
+      // 버디 활동 혜택 제목 시작
+      background: url(/src/assets/img/incruit/img_quotation1.png) left top/50px no-repeat, url(/src/assets/img/incruit/img_quotation2.png) right bottom/50px no-repeat;
+      margin-bottom: 5rem;
+      text-align: center;
+
+      span {
+        font-size: $font32;
+        font-weight: normal;
+      }
+
+      p {
+        font-size: $font20;
+        padding-top: .5rem;
+      }
+      // 버디 활동 혜택 제목 끝
+    }
+
+    &__contents {
+      // 버디 지원 혜택 내용 시작
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      section {
+        padding-bottom: 5.5rem;
+        text-align: center;
+        width: 50%;
+
+        h4 {
+          font-size: $font20;
+          padding: 100px 0 1rem;
+        }
+
+        span {
+          font-size: $font16;
+          white-space: pre-line;
+        }
+      }
+      
+      $benefitsUrl: (
+        1: '/src/assets/img/incruit/ic_revenue.png',
+        2: '/src/assets/img/incruit/ic_supervise.png',
+        3: '/src/assets/img/incruit/ic_insuranceBuddy.png',
+        4: '/src/assets/img/incruit/ic_education.png',
+      );
+
+      @each $idx, $val in $benefitsUrl {
+        section:nth-of-type(#{$idx}) {
+          h4 {
+            background: url(#{$val}) 50% 10px/80px no-repeat;
+          }
+        }
+      };
+      // 버디 지원 혜택 내용 끝
+    }
+    // 버디 활동 혜택 끝
+  }
+
+  .eligibility {
+    // 버디 지원 자격 시작
+    background: $grayBack;
+    padding-top: 7rem;
+    text-align: center;
+    width: 100%;
+
+    &__title {
+      // 버디 지원 자격 제목 시작
+      background: url(/src/assets/img/incruit/img_quotation3.png) left top/50px no-repeat, url(/src/assets/img/incruit/img_quotation4.png) right bottom/50px no-repeat;
+      margin: 0 auto;
+      text-align: center;
+      width: 50%;
+
+      span {
+        font-size: $font32;
+        font-weight: normal;
+      }
+
+      p {
+        font-size: $font20;
+        margin-bottom: 5rem;
+        padding-top: .5rem;
+      }
+      // 버디 지원 자격 제목 끝
+    }
+
+    &__details {
+      // 버디 지원 자격 내용 시작
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      padding-bottom: 4rem;
+      width: 25%;
+
+      li {
+        background: url(/src/assets/img/incruit/ic_check.png) left/20px no-repeat;
+        margin-bottom: .5rem;
+        padding-left: 2rem;
+        text-align: left;
+      }
+      // 버디 지원 자격 내용 끝
+    }
+    // 버디 지원 자격 끝
+  }
+
+  .process {
+    // 버디 지원 절차 시작
+    padding: 5rem 0 6rem;
+    width: 100%;
+
+    &__title {
+      // 버디 지원 절차 제목 시작
+      background: url(/src/assets/img/incruit/img_quotation1.png) left top/50px no-repeat, url(/src/assets/img/incruit/img_quotation2.png) right bottom/50px no-repeat;
+      font-size: $font32;
+      margin: 0 auto;
+      text-align: center;
+      width: 50%;
+      // 버디 지원 절차 제목 끝
+    }
+
+    &__details {
+      // 버디 지원 절차 내용 시작
+      background: url(/src/assets/img/incruit/ic_arrowRight.png) #{$arrowStart} 70%/10px no-repeat, url(/src/assets/img/incruit/ic_arrowRight.png) calc(#{$arrowStart} + 160px) 70%/10px no-repeat, url(/src/assets/img/incruit/ic_arrowRight.png) calc(#{$arrowStart} + (160px * 2)) 70%/10px no-repeat, url(/src/assets/img/incruit/ic_arrowRight.png) calc(#{$arrowStart} + (160px * 3)) 70%/10px no-repeat;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding-top: 4rem;
+      width: 60%;
+
+      li {
+        padding-top: 130px;
+        text-align: center;
+        width: 120px;
+      }
+
+      $processUrl: (
+        1: '/src/assets/img/incruit/ic_process1.png',
+        2: '/src/assets/img/incruit/ic_process2.png',
+        3: '/src/assets/img/incruit/ic_process3.png',
+        4: '/src/assets/img/incruit/ic_process4.png',
+        5: '/src/assets/img/incruit/ic_process5.png',
+      );
+
+      @each $idx, $val in $processUrl {
+        li:nth-of-type(#{$idx}) {
+          background: url(#{$val}) center top/100% no-repeat;
+        }
+      }
+      // 버디 지원 절차 내용 끝
+    }
+    // 버디 지원 절차 끝
+  }
+  // 본문 끝
+}
