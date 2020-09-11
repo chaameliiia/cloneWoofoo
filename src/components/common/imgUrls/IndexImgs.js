@@ -15,6 +15,12 @@
   import test from 'assets/img/main/ic_test.png';
   import identification from 'assets/img/main/ic_identification.png';
 
+  // 우푸 서비스 소개
+  import trainer from 'assets/img/main/ic_trainer.png';
+  import insurance from 'assets/img/main/ic_insurance.png';
+  import safetyZone from 'assets/img/main/ic_safetyZone.png';
+  import liveTracking from 'assets/img/main/ic_liveTracking.png';
+
   export {
     // 서비스 예약
     bgMain,
@@ -30,5 +36,11 @@
     // 버디 소개
     screening,
     test,
-    identification
+    identification,
+
+    // 우푸 서비스 소개
+    trainer,
+    insurance,
+    safetyZone,
+    liveTracking,
   };

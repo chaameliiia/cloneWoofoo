@@ -1,5 +1,4 @@
 import React from 'react';
-import Labels from './ServicesLists';
 
 const services = [
   {
@@ -30,14 +29,31 @@ const services = [
     kor: "데이케어",
     title: "서비스 예정입니다.",
   },
-]
+];
+
+const ServicesList = ({ _class, _eng, _kor, _title }) => {
+  return (
+    <li
+      className={_class}
+      title={_title}
+    >
+      <input
+        type="checkbox"
+        id={_eng}
+        name={_eng}
+        value={_kor}
+      />
+      <label for={_eng}>{_kor}</label>
+    </li>
+  );
+};
 
 const ServiceCategories = () => {
   return (
     <ul>
-      {services.map((v) => {
+      {services.map(v => {
         return (
-          <Labels
+          <ServicesList
             key={v.id}
             _class={v.class}
             _eng={v.eng}

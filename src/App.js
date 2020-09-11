@@ -5,7 +5,7 @@ import Header from 'components/common/Header';
 import Aside from 'components/common/Aside';
 import Footer from 'components/common/Footer';
 import Support from 'components/common/Support';
-import MainWrapper from 'components/common/IndexWrapper';
+import MainWrapper from 'components/common/MainWrapper';
 
 const App = () => {
   return (

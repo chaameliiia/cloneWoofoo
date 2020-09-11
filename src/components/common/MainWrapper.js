@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import ReserveWrapper from 'components/index/ReserveWrapper';
-import IntroBuddy from 'components/index/IntroBuddy';
+import IntroBuddyWrapper from 'components/index/IntroBuddyWrapper';
+import IntroWoofooWrapper from 'components/index/IntroWoofooWrapper';
 
 const Box = styled.div`
   border: 2px solid #f00;
   width: 100%;
 `;
 
-const IndexWrapper = ({ colors }) => {
+const MainWrapper = ({ colors }) => {
   return (
     <Box className="MainWrapper"
       colors={colors}
@@ -17,50 +18,12 @@ const IndexWrapper = ({ colors }) => {
       <ReserveWrapper
         colors={colors}
       />
-      <IntroBuddy
+      <IntroBuddyWrapper
         colors={colors}
       />
-      <section className="introService">
-        {/* <!-- 우푸 특징 소개 시작 --> */}
-        <h2 className="introService__title">언제나 안심되는 우푸 서비스</h2>
-        <ul className="introService__category">
-          <li className="active">전문 훈련사 출동 서비스</li>
-          <li>반려동물 안전 보험</li>
-          <li>안심존 케어</li>
-          <li>라이브 트래킹</li>
-        </ul>
-        <ul className="introService__details">
-          <li className="active">
-            <img src="/src/assets/img/main/ic_trainer.png" alt="" />
-            <p>
-              <strong>전문 훈련사 출동 서비스</strong>
-              서비스 진행 중 도움이 필요할 경우, 전문 훈련사가 직접 찾아갑니다.(수도권 한정)
-            </p>
-          </li>
-          <li>
-            <img src="/src/assets/img/main/ic_insurance.png" alt="" />
-            <p>
-              <strong>반려동물 안전 보험</strong>
-              서비스를 이용하는 모든 반려동물에게 우푸에서 제공하는 체계적인 안전 보험이 적용됩니다.
-            </p>
-          </li>
-          <li>
-            <img src="/src/assets/img/main/ic_safetyZone.png" alt="" />
-            <p>
-              <strong>안심존 케어</strong>
-              들어가지 않았으면 하는 공간은 안심 스티커를 붙여주세요. 버디는 보호자가 설정한 안심존에서만 서비스를 진행합니다.
-            </p>
-          </li>
-          <li>
-            <img src="/src/assets/img/main/ic_liveTracking.png" alt="" />
-            <p>
-              <strong>라이브 트래킹</strong>
-              실시간 위치 추적을 통해 반려동물의 현재 위치와 사진을 빠르게 확인하세요.
-            </p>
-          </li>
-        </ul>
-        {/* <!-- 우푸 특징 소개 끝 --> */}
-      </section>
+      <IntroWoofooWrapper
+        colors={colors}
+      />
       <section className="review">
         {/* <!-- 소비자 후기 시작 --> */}
         <h2 className="review__title">믿고 맡기는 100% 리얼 후기</h2>
@@ -574,4 +537,4 @@ const IndexWrapper = ({ colors }) => {
   );
 };
 
-export default IndexWrapper;
+export default MainWrapper;
