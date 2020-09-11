@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import * as urls from 'components/common/imgUrls/MainImgs';
+import FormCategories from './FormCategories';
+import FormInputs from './FormInputs';
 
 const ReserveWrap = styled.main`
   background: url(${urls.bgMain}) center/auto 960px no-repeat;
@@ -157,9 +159,10 @@ const ReserveWrapper = ({ colors }) => {
         colors={colors}
         className="reserve__box"
       >
-        <h2 className="reserve__box__title">반려동물 힐링케어 <strong>우푸!</strong>
-        <br />
-        맞춤 펫시터를 만나보세요!
+        <h2 className="reserve__box__title">
+          반려동물 힐링케어 <strong>우푸!</strong>
+          <br />
+          맞춤 펫시터를 만나보세요!
         </h2>
         <ReserveForm
           action="/"
@@ -168,36 +171,12 @@ const ReserveWrapper = ({ colors }) => {
           className="reserve__box__form"
           id="reservation"
         >
-          <div className="reserve__box__form__category">
-            <h4>서비스<strong>*</strong></h4>
-            <ul>
-              <li className="active">
-                <input type="checkbox" id="dogWalking" name="dogWalking" value="도그워킹" />
-                <label for="dogWalking">도그워킹</label>
-              </li>
-              <li>
-                <input type="checkbox" id="doorToDoor" name="doorToDoor" value="방문돌봄" />
-                <label for="doorToDoor">방문돌봄</label>
-              </li>
-              <li className="nonActive" title="서비스 예정입니다.">
-                <input type="checkbox" id="privatCare" name="privatCare" value="펫시팅" />
-                <label for="privatCare">펫시팅</label>
-              </li>
-              <li className="nonActive" title="서비스 예정입니다.">
-                <input type="checkbox" id="dayCare" name="dayCare" value="데이케어" />
-                <label for="dayCare">데이케어</label>
-              </li>
-            </ul>
-          </div>
-          <div className="reserve__box__form__address">
-            <h4>주소<strong>*</strong></h4>
-            <input type="text" placeholder="서비스가 필요한 지역이 어디신가요?" />
-          </div>
-          <div className="reserve__box__form__date">
-            <h4>날짜<strong>*</strong></h4>
-            <input type="text" placeholder="언제 서비스가 필요하신가요?" />
-          </div>
-          <input type="submit" value="우리집 근처 버디 조회" />
+          <FormCategories />
+          <FormInputs />
+          <input
+            type="submit"
+            value="우리집 근처 버디 조회"
+          />
         </ReserveForm>
       </ReserveBox>
     </ReserveWrap>

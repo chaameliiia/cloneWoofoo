@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import * as urls from 'components/common/imgUrls/MainImgs';
+import BuddyContents from './BuddyContents';
 
 const IntroBuddyWrapper = styled.section`
   margin: 0 auto;
@@ -61,29 +62,7 @@ const IntroBuddy = ({ colors }) => {
     >
       {/* <!-- 버디 소개 시작 --> */}
       <h2 className="introBuddy__title">믿고 맡기는 우푸 버디</h2>
-      <ul className="introBuddy__contents">
-        <li>
-          <p>
-            10단계로 진행되는
-            <br />
-            까다로운 선발 절차
-          </p>
-        </li>
-        <li>
-          <p>
-            도그워킹, 방문돌봄 전문 교육 수료
-            <br />
-            3개의 버디 테스트 모두 통과
-          </p>
-        </li>
-        <li>
-          <p>
-            3단계에 걸친
-            <br />
-            확실한 신원 인증
-          </p>
-        </li>
-      </ul>
+      <BuddyContents />
       {/* <!-- 버디 소개 끝 --> */}
     </IntroBuddyWrapper>
   );
