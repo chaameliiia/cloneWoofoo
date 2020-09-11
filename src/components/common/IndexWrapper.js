@@ -8,7 +8,7 @@ const Box = styled.div`
   width: 100%;
 `;
 
-const MainWrapper = ({ colors }) => {
+const IndexWrapper = ({ colors }) => {
   return (
     <Box className="MainWrapper"
       colors={colors}
@@ -574,4 +574,4 @@ const MainWrapper = ({ colors }) => {
   );
 };
 
-export default MainWrapper;
+export default IndexWrapper;

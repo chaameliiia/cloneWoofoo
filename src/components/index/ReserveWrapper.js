@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import * as urls from 'components/common/imgUrls/MainImgs';
+import * as urls from 'components/common/imgUrls/IndexImgs';
 import FormCategories from './FormCategories';
 import FormInputs from './FormInputs';
 
