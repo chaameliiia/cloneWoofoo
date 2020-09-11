@@ -1,6 +1,7 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
-import ReserveWrapper from '../index/ReserveWrapper';
+import styled from 'styled-components';
+import ReserveWrapper from 'components/index/ReserveWrapper';
+import IntroBuddy from 'components/index/IntroBuddy';
 
 const Box = styled.div`
   border: 2px solid #f00;
@@ -9,31 +10,16 @@ const Box = styled.div`
 
 const MainWrapper = ({ colors }) => {
   return (
-    <Box className="MainWrapper">
+    <Box className="MainWrapper"
+      colors={colors}
+    >
       {/* <!-- 본문 시작 --> */}
       <ReserveWrapper
         colors={colors}
       />
-      <section className="introBuddy">
-        {/* <!-- 버디 소개 시작 --> */}
-        <h2 className="introBuddy__title">믿고 맡기는 우푸 버디</h2>
-        <ul className="introBuddy__contents">
-          <li>
-            <img src="/src/assets/img/main/ic_screening.png" alt="" />
-            <p>10단계로 진행되는
-            까다로운 선발 절차</p>
-          </li>
-          <li>
-            <img src="/src/assets/img/main/ic_test.png" alt="" />
-            <p>도그워킹, 방문돌봄 전문 교육 수료 3개의 버디 테스트 모두 통과</p>
-          </li>
-          <li>
-            <img src="/src/assets/img/main/ic_identification.png" alt="" />
-            <p>3단계에 걸친 확실한 신원 인증</p>
-          </li>
-        </ul>
-        {/* <!-- 버디 소개 끝 --> */}
-      </section>
+      <IntroBuddy
+        colors={colors}
+      />
       <section className="introService">
         {/* <!-- 우푸 특징 소개 시작 --> */}
         <h2 className="introService__title">언제나 안심되는 우푸 서비스</h2>

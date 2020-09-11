@@ -1,6 +1,6 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
-import * as urls from '../common/ImgUrls';
+import styled from 'styled-components';
+import * as urls from 'components/common/imgUrls/MainImgs';
 
 const ReserveWrap = styled.main`
   background: url(${urls.bgMain}) center/auto 960px no-repeat;
