@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import * as urls from 'components/common/imgUrls/IndexImgs';
-import FormCategories from './FormCategories';
-import FormInputs from './FormInputs';
+import ReserveCategory from './ReserveCategory';
+import ReserveInputs from './ReserveInputs';
 
-const ReserveWrap = styled.main`
+const ReserveStyled = styled.main`
   background: url(${urls.bgMain}) center/auto 960px no-repeat;
   min-height: 960px;
   width: 100%;
@@ -30,7 +30,7 @@ const ReserveBox = styled.section`
   }
 `;
 
-const ReserveForm = styled.form`
+const ReserveFormStyled = styled.form`
   width: 100%;
         
   h4 {
@@ -45,88 +45,6 @@ const ReserveForm = styled.form`
 
     strong {
       color: ${props => props.colors.pointColor};
-    }
-  }
-
-  .reserve__box__form__category {
-    ul {
-      display: flex;
-      justify-content: space-around;
-      width: 100%;
-
-      li {
-        width: 23%;
-      
-        label {
-          background-position: 50% 20%;
-          background-repeat: no-repeat;
-          background-size: 28px;
-          border: 1px solid ${props => props.colors.grayLight};
-          border-radius: 4px;
-          cursor: pointer;
-          font-size: 16px;
-          padding: 2.5rem 0 .5rem;
-          text-align: center;
-          width: 100%;
-        }
-
-        &.nonActive {
-          label {
-            background-color: ${props => props.colors.grayLight};
-            color: ${props => props.colors.grayDark};
-            cursor: default;
-          }
-        }
-
-        &.active {
-          label {
-            background-image: url(${urls.label1Selected});
-            border: 1px solid ${props => props.colors.greenDark};
-          }
-        }
-      }
-
-      li:nth-of-type(1) {
-        label {
-          ${'' /* background-image: url(${urls.label1}); */}
-        }
-      }
-
-      li:nth-of-type(2) {
-        label {
-          background-image: url(${urls.label2});
-        }
-      }
-
-      li:nth-of-type(3) {
-        label {
-          background-image: url(${urls.label3});
-        }
-      }
-
-      li:nth-of-type(4) {
-        label {
-          background-image: url(${urls.label4});
-        }
-      }
-    }
-  }
-
-  .reserve__box__form__address {
-    input {
-      border: 1px solid ${props => props.colors.grayLight};
-      border-radius: 4px;
-      padding: .5rem 1rem;
-      width: 100%;
-    }
-  }
-
-  .reserve__box__form__date {
-    input {
-      border: 1px solid ${props => props.colors.grayLight};
-      border-radius: 4px;
-      padding: .5rem 1rem;
-      width: 100%;
     }
   }
 
@@ -150,7 +68,7 @@ const ReserveForm = styled.form`
 
 const ReserveWrapper = ({ colors }) => {
   return (
-    <ReserveWrap
+    <ReserveStyled
       colors={colors}
       className="reserve"
     >
@@ -164,22 +82,26 @@ const ReserveWrapper = ({ colors }) => {
           <br />
           맞춤 펫시터를 만나보세요!
         </h2>
-        <ReserveForm
+        <ReserveFormStyled
           action="/"
           method="post"
           colors={colors}
           className="reserve__box__form"
           id="reservation"
         >
-          <FormCategories />
-          <FormInputs />
+          <ReserveCategory
+            colors={colors}
+          />
+          <ReserveInputs
+            colors={colors}
+          />
           <input
             type="submit"
             value="우리집 근처 버디 조회"
           />
-        </ReserveForm>
+        </ReserveFormStyled>
       </ReserveBox>
-    </ReserveWrap>
+    </ReserveStyled>
     // <!-- 서비스 예약 끝 -->
   );
 };

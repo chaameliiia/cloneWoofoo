@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import WoofooCategories from './WoofooCategories';
-import WoofooDetails from './WoofooDetails';
+import IntroWfTitles from './IntroWfTitles';
+import IntroWfDetails from './IntroWfDetails';
 
-const IntroWoofooStyled = styled.section`
+const IntroWfStyled = styled.section`
   // 우푸 특징 소개 시작
   margin: 0 auto;
   margin-bottom: 5rem;
@@ -15,23 +15,23 @@ const IntroWoofooStyled = styled.section`
   // 우푸 특징 소개 끝
 `;
 
-const IntroWoofooWrapper = ({ colors }) => {
+const IntroWfWrapper = ({ colors }) => {
   return (
-    <IntroWoofooStyled
+    <IntroWfStyled
       colors={colors}
       className="introWoofoo"
     >
       {/* <!-- 우푸 특징 소개 시작 --> */}
       <h2 className="introWoofoo__title">언제나 안심되는 우푸 서비스</h2>
-      <WoofooCategories
+      <IntroWfTitles
         colors={colors}
       />
-      <WoofooDetails
+      <IntroWfDetails
         colors={colors}
       />  
       {/* <!-- 우푸 특징 소개 끝 --> */}
-    </IntroWoofooStyled>
+    </IntroWfStyled>
   );
 };
 
-export default IntroWoofooWrapper;
+export default IntroWfWrapper;

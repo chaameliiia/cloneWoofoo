@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const WoofooCategoriesStyled = styled.ul`
+const TitlesStyled = styled.ul`
   padding-bottom: 5rem;
   text-align: center;
   width: 100%;
@@ -21,7 +21,7 @@ const WoofooCategoriesStyled = styled.ul`
   }
 `;
 
-const categoryList = [
+const titlesList = [
   {
     id: 1,
     class: "active",
@@ -44,7 +44,7 @@ const categoryList = [
   },
 ];
 
-const WoofooCategoryTitle = ({ _class, _contents, colors }) => {
+const Title = ({ _class, _contents, colors }) => {
   return (
     <li
       colors={colors}
@@ -55,15 +55,15 @@ const WoofooCategoryTitle = ({ _class, _contents, colors }) => {
   );
 };
 
-const WoofooCategories = ({ colors }) => {
+const IntroWfTitles = ({ colors }) => {
   return (
-    <WoofooCategoriesStyled
+    <TitlesStyled
       colors={colors}
       className="introWoofoo__category"
     >
-      {categoryList.map(v => {
+      {titlesList.map(v => {
         return(
-          <WoofooCategoryTitle
+          <Title
             key={v.id}
             _class={v.class}
             _contents={v.contents}
@@ -71,8 +71,8 @@ const WoofooCategories = ({ colors }) => {
           />
         )
       })}
-    </WoofooCategoriesStyled>
+    </TitlesStyled>
   );
 };
 
-export default WoofooCategories;
+export default IntroWfTitles;

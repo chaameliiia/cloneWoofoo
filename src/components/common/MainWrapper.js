@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ReserveWrapper from 'components/index/ReserveWrapper';
 import IntroBuddyWrapper from 'components/index/IntroBuddyWrapper';
-import IntroWoofooWrapper from 'components/index/IntroWoofooWrapper';
+import IntroWfWrapper from 'components/index/IntroWfWrapper';
 
 const Box = styled.div`
   border: 2px solid #f00;
@@ -21,7 +21,7 @@ const MainWrapper = ({ colors }) => {
       <IntroBuddyWrapper
         colors={colors}
       />
-      <IntroWoofooWrapper
+      <IntroWfWrapper
         colors={colors}
       />
       <section className="review">

@@ -18,7 +18,7 @@ const featuresDetail = [
   },
 ];
 
-const FeaturesLists = ({ _firstLine, _secondLine }) => {
+const BuddyFeatures = ({ _firstLine, _secondLine }) => {
   return (
    <li>
       <p>
@@ -30,12 +30,12 @@ const FeaturesLists = ({ _firstLine, _secondLine }) => {
   );
 };
 
-const BuddyFeatures = () => {
+const IntroBuddy = () => {
   return (
     <ul className="introBuddy__contents">
       {featuresDetail.map(v => {
         return (
-          <FeaturesLists
+          <BuddyFeatures
             key={v.id}
             _firstLine={v.firstLine}
             _secondLine={v.secondLine}
@@ -46,4 +46,4 @@ const BuddyFeatures = () => {
   );
 };
 
-export default BuddyFeatures;
+export default IntroBuddy;

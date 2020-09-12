@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import * as urls from 'components/common/imgUrls/IndexImgs';
-import BuddyFeature from './BuddyFeatures';
+import IntroBuddy from './IntroBuddy';
 
-const IntroBuddy = styled.section`
+const IntroBuddyStyled = styled.section`
   margin: 0 auto;
   margin-bottom: 5rem;
   width: 70%;
@@ -56,15 +56,15 @@ const IntroBuddy = styled.section`
 
 const IntroBuddyWrapper = ({ colors }) => {
   return (
-    <IntroBuddy
+    <IntroBuddyStyled
       colors={colors}
       className="introBuddy"
     >
       {/* <!-- 버디 소개 시작 --> */}
       <h2 className="introBuddy__title">믿고 맡기는 우푸 버디</h2>
-      <BuddyFeature />
+      <IntroBuddy />
       {/* <!-- 버디 소개 끝 --> */}
-    </IntroBuddy>
+    </IntroBuddyStyled>
   );
 };
 
