@@ -1,6 +1,6 @@
 // 메인 페이지
   // 서비스 예약
-  import bgMain from 'assets/img/main/img_bgMain.jpg';
+  import bgMain from 'assets/img/index/img_bgMain.jpg';
   import label1 from 'assets/img/ic_label1.png';
   import label2 from 'assets/img/ic_label2.png';
   import label3 from 'assets/img/ic_label3.png';
@@ -11,15 +11,15 @@
   import label4Selected from 'assets/img/ic_label4_selected.png';
   
   // 버디 소개
-  import screening from 'assets/img/main/ic_screening.png';
-  import test from 'assets/img/main/ic_test.png';
-  import identification from 'assets/img/main/ic_identification.png';
+  import screening from 'assets/img/index/ic_screening.png';
+  import test from 'assets/img/index/ic_test.png';
+  import identification from 'assets/img/index/ic_identification.png';
 
   // 우푸 서비스 소개
-  import trainer from 'assets/img/main/ic_trainer.png';
-  import insurance from 'assets/img/main/ic_insurance.png';
-  import safetyZone from 'assets/img/main/ic_safetyZone.png';
-  import liveTracking from 'assets/img/main/ic_liveTracking.png';
+  import trainer from 'assets/img/index/ic_trainer.png';
+  import insurance from 'assets/img/index/ic_insurance.png';
+  import safetyZone from 'assets/img/index/ic_safetyZone.png';
+  import liveTracking from 'assets/img/index/ic_liveTracking.png';
 
   export {
     // 서비스 예약
