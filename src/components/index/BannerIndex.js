@@ -9,72 +9,80 @@ const BannerStyled = styled.article`
   margin-top: 5rem;
   width: 100%;
 
-  &__background {
+  .bannerIndex__background {
     align-items: flex-end;
-    background: $grayLighter;
+    background: ${props => props.colors.grayLighter};
     display: flex;
     height: 310px;
     justify-content: center;
     width: 100%;
-
+    
     img {
-      height: 400px;
-      width: auto;
+      width: 300px;
     }
 
-    &__text {
+    .bannerIndex__background__text {
       align-items: center;
       display: flex;
       flex-direction: column;
       height: 100%;
       padding: 3rem 0 0 3rem;
-      width: 25%;
+      width: 310px;
       
       span {
-        font-size: $font32;
+        font-size: 32px;
         margin-bottom: 2rem;
         text-align: center;
         width: 100%;
         
         strong {
-          color: $greenDark;
+          color: ${props => props.colors.greenDark};
           font-size: inherit;
         }
       }
 
       a {
-        background: $greenDark;
+        background: ${props => props.colors.greenDark};
         border-radius: 32px;
-        color: $white;
-        font-size: $font20;
+        color: ${props => props.colors.white};
+        font-size: 20px;
         padding: .8rem 1.5rem;
         text-align: center;
         width: 235px;
 
         &:hover {
-          background: $greenLight;
+          background: ${props => props.colors.greenLight};
         }
       }
     }
   }
 `;
 
-const BannerIndex = () => {
+const BannerIndex = ({ colors }) => {
   return (
-    <article className="bannerIndex">
+    <BannerStyled
+      colors={colors}
+      className="bannerIndex"
+    >
       {/* <!-- 앱 다운로드 배너 시작 --> */}
       <h2 className="bannerIndex__title nonVisible">앱 다운로드</h2>
       <div className="bannerIndex__background">
-        <img src="/src/assets/img/main/img_appPreview.png" alt="" className="bannerIndex_img" />
-        <div className="bannerIndex__background__text">
+        <img
+          src={require("../../assets/img/index/img_appPreview.png")}
+          alt=""
+          className="bannerIndex_img"
+        />
+        <div
+          className="bannerIndex__background__text"
+        >
           <span>
-            새로워진 <strong>우푸</strong>앱을 만나보세요!
+            새로워진 <strong>우푸</strong> 앱을 만나보세요!
           </span>
           <a href="/" title="앱 다운로드">앱 다운로드</a>
         </div>
       </div>
       {/* <!-- 앱 다운로드 배너 끝 --> */}
-    </article>
+    </BannerStyled>
   );
 };
 

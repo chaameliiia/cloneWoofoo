@@ -124,21 +124,21 @@ const pages = [1, 2, 3, 4, 5, 6, 7];
 const review = [
   {
     id: 1,
-    profilePic: '/img/index/review/img_reviewer1.jpg',
+    profilePic: require('../../assets/img/index/review/img_reviewer1.jpg'),
     writer: '쿠미 보호자님',
     date: '오늘',
     descript: '감사합니다.',
   },
   {
     id: 2,
-    profilePic: '/img/index/review/img_reviewer2.jpg',
+    profilePic: require('../../assets/img/index/review/img_reviewer2.jpg'),
     writer: '조이 보호자님',
     date: '오늘',
     descript: '어쩔 때는 문앞에서 먼저 기다리는데 또 다른 때는 불러도 안간다고 누워만 있을 때가 있어요ㅜㅎ 나가서 잔디 밟으면 엄청 좋아하면서 말이에요! 오늘 너무 습하고 더운데 감사함니다~',
   },
   {
     id: 3,
-    profilePic: '/img/index/review/img_reviewer3.jpg',
+    profilePic: require('../../assets/img/index/review/img_reviewer3.jpg'),
     writer: '망고 보호자님',
     date: '1일 전',
     descript: '습하고 더운데 선생님이 고생많으셨어요. 다음주에 건강하게 뵙겠습니다~',

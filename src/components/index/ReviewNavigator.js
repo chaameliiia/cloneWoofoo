@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import * as urls from 'components/common/imgUrls/IndexImgs';
+import { arrowLeft, arrowRight } from 'components/common/imgUrls/indexImgs';
 
 const NavigatorStyled = styled.div`
   align-items: center;
@@ -22,11 +22,11 @@ const NavigatorStyled = styled.div`
   }
 
   button:nth-of-type(1) {
-    background: url(${urls.arrowLeft}) center/contain no-repeat;
+    background: url(${arrowLeft}) center/contain no-repeat;
   }
 
   button:nth-of-type(2) {
-    background: url(${urls.arrowRight}) center/contain no-repeat;
+    background: url(${arrowRight}) center/contain no-repeat;
   }
 `;
 

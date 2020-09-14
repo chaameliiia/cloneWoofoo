@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import * as urls from 'components/common/imgUrls/IndexImgs';
+import * as urls from 'components/common/imgUrls/indexImgs';
 
 const DetailsStyled = styled.ul`
   width: 100%;

@@ -6,7 +6,12 @@ const Header = () => {
     <header className="header fixed">
       {/* <!-- 헤더 시작 --> */}
       <h1 className="header__logo">
-        <a href="/" title="홈페이지 바로가기"><img src="/img/img_logo.png" alt="로고" /></a>
+        <a href="/" title="홈페이지 바로가기">
+          <img
+            src={require("../../assets/img/img_logo.png")}
+            alt="로고"
+          />
+        </a>
       </h1>
       <nav className="header__gnb">
         <a href="/" title="첫 이용 할인">첫 이용 할인</a>

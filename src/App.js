@@ -5,15 +5,17 @@ import Header from 'components/common/Header';
 import Aside from 'components/common/Aside';
 import Footer from 'components/common/Footer';
 import Support from 'components/common/Support';
-import MainWrapper from 'components/common/MainWrapper';
+import IndexWrapper from 'components/index/IndexWrapper';
 
 const App = () => {
   return (
     <>
       <Header />
-      <MainWrapper
-        colors={colors}
-      />
+      <>
+        <IndexWrapper
+          colors={colors}
+        />
+      </>
       <Support />
       <Aside />
       <Footer />
