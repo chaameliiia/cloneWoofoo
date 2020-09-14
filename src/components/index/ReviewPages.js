@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ReviewPagesStyled = styled.li`
-  border: 1px solid #f00;
   ${'' /* // 소비자 후기 페이지 별 컨테이너 시작 */}
   font-size: 0;
   ${'' /* // 페이지 번호 숨김 */}
@@ -120,7 +119,7 @@ const ReviewPagesStyled = styled.li`
   }
 `;
 
-const count = [1, 2, 3, 4, 5, 6, 7];
+const pages = [1, 2, 3, 4, 5, 6, 7];
 
 const review = [
   {
@@ -146,12 +145,12 @@ const review = [
   },
 ];
 
-const ReviewGroup = ({ colors, _page }) => {
+const ReviewGroup = ({ colors, page }) => {
   return (
     <ul
-      _page={_page}
+      page={page}
       colors={colors}
-    >{_page}
+    >{page}
       {review.map(v => {
         return(
           <ReviewIndividual
@@ -205,20 +204,16 @@ const ReviewIndividual = ({
 const ReviewPages = ({ colors }) => {
   return (
     <>
-      {count.map((v, i) => {
+      {pages.map((v) => {
         return(
           <ReviewPagesStyled
+            key={v}
             colors={colors}
             className="review__contents__page"
           >
             <ReviewGroup
               colors={colors}
-            />
-            <ReviewGroup
-              colors={colors}
-            />
-            <ReviewGroup
-              colors={colors}
+              page={v}
             />
           </ReviewPagesStyled>
         )

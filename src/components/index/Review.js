@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ReviewNavigator from './ReviewNavigator';
 import ReviewPages from './ReviewPages';
 
 const ReviewStyled = styled.ul`
@@ -23,10 +24,7 @@ const Review = ({ colors }) => {
           colors={colors}
         />
       </ReviewStyled>
-      <div className="review__btn">
-        <button type="button"></button>
-        <button type="button"></button>
-      </div>
+      <ReviewNavigator />
     </>
   );
 };

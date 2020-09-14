@@ -21,6 +21,10 @@
   import safetyZone from 'assets/img/index/ic_safetyZone.png';
   import liveTracking from 'assets/img/index/ic_liveTracking.png';
 
+  // 사용자 후기
+  import arrowLeft from 'assets/img/index/ic_arrowLeft.png';
+  import arrowRight from 'assets/img/index/ic_arrowRight.png';
+
   export {
     // 서비스 예약
     bgMain,
@@ -43,4 +47,8 @@
     insurance,
     safetyZone,
     liveTracking,
+
+    // 사용자 후기
+    arrowLeft,
+    arrowRight,
   };
