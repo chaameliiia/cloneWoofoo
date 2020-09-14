@@ -6,13 +6,17 @@ import Aside from 'components/common/Aside';
 import Footer from 'components/common/Footer';
 import Support from 'components/common/Support';
 import IndexWrapper from 'components/index/IndexWrapper';
+import ServicesWrapper from 'components/services/ServicesWrapper';
 
 const App = () => {
   return (
     <>
       <Header />
       <>
-        <IndexWrapper
+        {/* <IndexWrapper
+          colors={colors}
+        /> */}
+        <ServicesWrapper
           colors={colors}
         />
       </>
