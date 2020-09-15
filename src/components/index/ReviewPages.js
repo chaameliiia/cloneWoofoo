@@ -53,6 +53,10 @@ const ReviewPagesStyled = styled.li`
                 width: 16px;
               }
             }
+
+            span:nth-of-type(2) {
+              padding-left: .3rem;
+            }
           }
         }
         /* // 프로필 정보 끝 */
@@ -184,11 +188,11 @@ const ReviewIndividual = ({
           <p>{_writer}</p>
           <div>
             <span>
-              <img src="/public/img/index/review/ic_starOn.png" alt="" />
-              <img src="/public/img/index/review/ic_starOn.png" alt="" />
-              <img src="/public/img/index/review/ic_starOn.png" alt="" />
-              <img src="/public/img/index/review/ic_starOn.png" alt="" />
-              <img src="/public/img/index/review/ic_starOn.png" alt="" />
+              <img src={require("../../assets/img/index/review/ic_starOn.png")} alt="" />
+              <img src={require("../../assets/img/index/review/ic_starOn.png")} alt="" />
+              <img src={require("../../assets/img/index/review/ic_starOn.png")} alt="" />
+              <img src={require("../../assets/img/index/review/ic_starOn.png")} alt="" />
+              <img src={require("../../assets/img/index/review/ic_starOn.png")} alt="" />
             </span>
             <span>{_date}</span>
           </div>

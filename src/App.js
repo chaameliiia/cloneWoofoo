@@ -13,12 +13,8 @@ const App = () => {
     <>
       <Header />
       <>
-        {/* <IndexWrapper
-          colors={colors}
-        /> */}
-        <ServicesWrapper
-          colors={colors}
-        />
+        <IndexWrapper colors={colors} />
+        {/* <ServicesWrapper colors={colors} /> */}
       </>
       <Support />
       <Aside />
