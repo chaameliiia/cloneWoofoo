@@ -23,6 +23,12 @@ import playTime from 'assets/img/services/img_playTime.jpg';
 import catSitting from 'assets/img/services/img_catSitting.jpg';
 import grooming from 'assets/img/services/img_grooming.jpg';
 
+// 서비스 특징 소개
+import matchBuddy from 'assets/img/services/img_matchBuddy.png';
+import chatSystem from 'assets/img/services/img_chatSystem.png';
+import liveTracking from 'assets/img/services/img_liveTracking.png';
+import journal from 'assets/img/services/img_journal.png';
+
 export {
   // 비전 소개
   bgDogWalking,
@@ -48,4 +54,10 @@ export {
   playTime,
   catSitting,
   grooming,
+
+  // 서비스 특징 소개
+  matchBuddy,
+  chatSystem,
+  liveTracking,
+  journal,
 }

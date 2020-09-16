@@ -109,9 +109,6 @@ img {
     display: flex;
     flex-direction: column;
     width: 30%; }
-    .support__descript img {
-      height: auto;
-      width: 74px; }
     .support__descript span {
       font-weight: 600;
       padding-top: 1rem;

@@ -16,7 +16,7 @@ const App = () => {
         {/* <IndexWrapper colors={colors} /> */}
         <ServicesWrapper colors={colors} />
       </>
-      <Support />
+      <Support colors={colors} />
       <Aside />
       <Footer />
     </>

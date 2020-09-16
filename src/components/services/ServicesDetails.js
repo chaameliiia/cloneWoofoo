@@ -46,8 +46,6 @@ const ContentsSteyled = styled.div`
     }
   }
 
-
-
   section:nth-of-type(1) {
     ul {
       li:nth-of-type(1) {
@@ -109,14 +107,12 @@ const ContentsSteyled = styled.div`
   }
 `;
 
-
 const ServicesDetails = () => {
   return (
     <ContentsSteyled
       className="services__contents"
     >
       <section className="dogWalking active">
-        {/* <!-- 도그워킹 서비스 소개 시작 --> */}
         <h2 className="dogWalking__title nonVisible">도그워킹</h2>
         <div className="dogWalking__descript">
           <h3>
@@ -128,22 +124,17 @@ const ServicesDetails = () => {
         </div>
         <ul className="dogWalking__figures">
           <li>
-            {/* <img src="/src/assets/img/services/dogWalking/img_walk.jpg" alt=""> */}
             <span>전문가와 함께하는 안전한 산책</span>
           </li>
           <li>
-            {/* <img src="/src/assets/img/services/dogWalking/img_feed.jpg" alt=""> */}
             <span>걱정 없이 다녀오세요! 사료 챙겨주기</span>
           </li>
           <li>
-            {/* <img src="/src/assets/img/services/dogWalking/img_course.jpg" alt=""> */}
             <span>보호자와 함께 짜는 맞춤형 산책 코스</span>
           </li>
         </ul>
-        {/* <!-- 도그워킹 서비스 소개 끝 --> */}
       </section>
       <section className="doorToDoor">
-        {/* <!-- 방문돌봄 서비스 소개 시작 --> */}
         <h2 className="doorToDoor__title nonVisible">방문돌봄</h2>
         <div className="doorToDoor__descript">
           <h3>
@@ -155,22 +146,17 @@ const ServicesDetails = () => {
         </div>
         <ul className="doorToDoor__figures">
           <li>
-            {/* <img src="/src/assets/img/services/doorToDoor/img_cleaning.jpg" alt=""> */}
             <span>혼자 있는 집도 청결하게 환경 정리</span>
           </li>
           <li>
-            {/* <img src="/src/assets/img/services/doorToDoor/img_playTime.jpg" alt=""> */}
             <span>어깨가 들썩들썩 신나는 놀이시간</span>
           </li>
           <li>
-            {/* <img src="/src/assets/img/services/doorToDoor/img_catSitting.jpg" alt=""> */}
             <span>1일 집사의 완벽한 캣시팅</span>
           </li>
         </ul>
-        {/* <!-- 방문돌봄 서비스 소개 끝 --> */}
       </section>
       <section className="privateCare">
-        {/* <!-- 프라이빗 펫시팅 서비스 소개 시작 --> */}
         <h2 className="privateCare__title nonVisible">프라이빗 펫시팅</h2>
         <div className="privateCare__descript">
           <h3>
@@ -182,22 +168,17 @@ const ServicesDetails = () => {
         </div>
         <ul className="privateCare__figures">
           <li>
-            {/* <img src="/src/assets/img/services/privateCare/img_walk.jpg" alt=""> */}
             <span>전문가와 함께하는 안전한 산책</span>
           </li>
           <li>
-            {/* <img src="/src/assets/img/services/privateCare/img_playTime.jpg" alt=""> */}
             <span>어깨가 들썩들썩 신나는 놀이시간</span>
           </li>
           <li>
-            {/* <img src="/src/assets/img/services/privateCare/img_grooming.jpg" alt=""> */}
             <span>혈액순환에 도움을 주는 그루밍</span>
           </li>
         </ul>
-        {/* <!-- 프라이빗 펫시팅 서비스 소개 끝 --> */}
       </section>
       <section className="dayCare">
-        {/* <!-- 데이케어 서비스 소개 시작 --> */}
         <h2 className="dayCare__title nonVisible">데이케어</h2>
         <div className="dayCare__descript">
           <h3>
@@ -209,19 +190,15 @@ const ServicesDetails = () => {
         </div>
         <ul className="dayCare__figures">
           <li>
-            {/* <img src="/src/assets/img/services/privateCare/img_walk.jpg" alt=""> */}
             <span>전문가와 함께하는 안전한 산책</span>
           </li>
           <li>
-            {/* <img src="/src/assets/img/services/privateCare/img_playTime.jpg" alt=""> */}
             <span>어깨가 들썩들썩 신나는 놀이시간</span>
           </li>
           <li>
-            {/* <img src="/src/assets/img/services/privateCare/img_grooming.jpg" alt=""> */}
             <span>혈액순환에 도움을 주는 그루밍</span>
           </li>
         </ul>
-        {/* <!-- 데이케어 서비스 소개 끝 --> */}
       </section>
     </ContentsSteyled>
   );
