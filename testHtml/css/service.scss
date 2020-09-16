@@ -2,7 +2,7 @@
 
 .mainBox {
   // 본문 시작
-  
+  width: 100%;
 
   .services {
     // 우푸 서비스 소개 시작
@@ -95,70 +95,7 @@
       // 서비스 카테고리 끝
     }
 
-    &__contents {
-      // 서비스별 소개 시작
-      $serviceClass: (
-        1: ".dogWalking",
-        2: ".doorToDoor",
-        3: ".privateCare",
-        4: ".dayCare",
-      );
-
-      section {
-        margin: 0 auto;
-        text-align: center;
-        width: 80%;
-      }
-
-      @each $idx, $val in $serviceClass {
-        #{$val} {
-          display: none;
-
-          &__descript {
-            font-size: $font20;
-            margin: 0 auto;
-            padding: 3rem 0;
-            white-space: pre-line;
-            width: 50%;
-            word-break: keep-all;
-
-            h3 {
-              font-size: $font32;
-              font-weight: 600;
-              padding:1rem 0 2rem;
-              white-space: pre-line;
-            }
-          }
-
-          &__figures {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-
-            li {
-              width: 32.5%;
-
-              img {
-                width: 100%;
-              }
-
-              span {
-                font-size: $font26;
-                padding: 1rem 2rem;
-                word-break: keep-all;
-              }
-            }
-          }
-
-          &.active {
-            display: block;
-          }
-        }
-      }
-      // 서비스별 소개 끝
-    }
-    // 우푸 서비스 소개 끝
-  }
+    
 
   .features {
     // 우푸 특징 소개 시작

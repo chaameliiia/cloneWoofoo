@@ -1,5 +1,8 @@
 // 비전 소개
-import bgVision from 'assets/img/services/dogWalking/img_background.jpg';
+import bgDogWalking from 'assets/img/services/img_bgDogWalking.jpg';
+import bgDoorToDoor from 'assets/img/services/img_bgDoorToDoor.jpg';
+import bgPrivateCare from 'assets/img/services/img_bgPrivateCare.jpg';
+import bgDayCare from 'assets/img/services/img_bgDayCare.jpg';
 
 // 서비스 카테고리
 import label1 from 'assets/img/ic_label1.png';
@@ -11,9 +14,21 @@ import label2_selected from 'assets/img/ic_label2_selected.png';
 import label3_selected from 'assets/img/ic_label3_selected.png';
 import label4_selected from 'assets/img/ic_label4_selected.png';
 
+// 서비스별 소개 이미지
+import walk from 'assets/img/services/img_walk.jpg';
+import feed from 'assets/img/services/img_feed.jpg';
+import course from 'assets/img/services/img_course.jpg';
+import cleaning from 'assets/img/services/img_cleaning.jpg';
+import playTime from 'assets/img/services/img_playTime.jpg';
+import catSitting from 'assets/img/services/img_catSitting.jpg';
+import grooming from 'assets/img/services/img_grooming.jpg';
+
 export {
   // 비전 소개
-  bgVision,
+  bgDogWalking,
+  bgDoorToDoor,
+  bgPrivateCare,
+  bgDayCare,
 
   // 서비스 카테고리
   label1,
@@ -24,4 +39,13 @@ export {
   label2_selected,
   label3_selected,
   label4_selected,
+
+  // 서비스별 소개 이미지
+  walk,
+  feed,
+  course,
+  cleaning,
+  playTime,
+  catSitting,
+  grooming,
 }

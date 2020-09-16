@@ -4,7 +4,7 @@ import * as urls from 'components/common/imgUrls/servicesImgs';
 
 const VisionStyled = styled.section`
   align-items: center;
-  background: url(${urls.bgVision}) top/auto 820px no-repeat;
+  background: url(${urls.bgDogWalking}) top/auto 820px no-repeat;
   display: flex;
   flex-direction: column;
   min-height: 820px;

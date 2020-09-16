@@ -18,19 +18,19 @@ const CategoryStyled = styled.ul`
   }
 
   li:nth-of-type(1) {
-    background-image: url(${urls.label1}) 50% 25%/60px no-repeat;
+    background: url(${urls.label1}) 50% 25%/60px no-repeat;
   }
 
   li:nth-of-type(2) {
-    background-image: url(${urls.label2}) 50% 25%/60px no-repeat;
+    background: url(${urls.label2}) 50% 25%/60px no-repeat;
   }
 
   li:nth-of-type(3) {
-    background-image: url(${urls.label3}) 50% 25%/60px no-repeat;
+    background: url(${urls.label3}) 50% 25%/60px no-repeat;
   }
 
   li:nth-of-type(4) {
-    background-image: url(${urls.label4}) 50% 25%/60px no-repeat;
+    background: url(${urls.label4}) 50% 25%/60px no-repeat;
   }
   
   li.active {
@@ -39,18 +39,45 @@ const CategoryStyled = styled.ul`
   }
 `;
 
+const titles = [
+  {
+    id: 1,
+    class: "active",
+    title: "도그워킹",
+  },
+  {
+    id: 2,
+    class: "",
+    title: "방문돌봄",
+  },
+  {
+    id: 3,
+    class: "",
+    title: "펫시팅",
+  },
+  {
+    id: 4,
+    class: "",
+    title: "데이케어",
+  },
+];
+
 const ServicesCategory = ({ colors }) => {
   return (
     <CategoryStyled
       colors={colors}
       className="services__category"
     >
-      {/* <!-- 서비스 카테고리 시작 --> */}
-      <li className="active">도그워킹</li>
-      <li>방문돌봄</li>
-      <li>펫시팅</li>
-      <li>데이케어</li>
-      {/* <!-- 서비스 카테고리 끝 --> */}
+      {titles.map(v => {
+        return(
+          <li
+            key={v.id}
+            className={v.class}
+          >
+            {v.title}
+          </li>
+        )
+      })}
     </CategoryStyled>
   );
 };
