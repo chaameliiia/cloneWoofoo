@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import * as urls from 'components/common/imgUrls/indexImgs';
-import IntroBuddy from './IntroBuddy';
 
 const IntroBuddyStyled = styled.section`
   margin: 0 auto;
@@ -29,8 +28,8 @@ const IntroBuddyStyled = styled.section`
       p {
         padding-top: 7.5rem;
         text-align: center;
-        white-space: pre-line;
-        width: 300px;
+        width: 250px;
+        word-break: keep-all;
       }
     }
 
@@ -54,6 +53,21 @@ const IntroBuddyStyled = styled.section`
   }
 `;
 
+const featuresDetail = [
+  {
+    id: 1,
+    descript: "10단계의 까다로운 선발 절차",
+  },
+  {
+    id: 2,
+    descript: "도그워킹, 방문돌봄 전문 교육 수료 3개의 버디 테스트 모두 통과",
+  },
+  {
+    id: 3,
+    descript: "3단계에 걸친 확실한 신원 인증",
+  },
+];
+
 const IntroBuddyWrapper = ({ colors }) => {
   return (
     <IntroBuddyStyled
@@ -62,7 +76,17 @@ const IntroBuddyWrapper = ({ colors }) => {
     >
       {/* <!-- 버디 소개 시작 --> */}
       <h2 className="introBuddy__title">믿고 맡기는 우푸 버디</h2>
-      <IntroBuddy />
+      <ul className="introBuddy__features">
+        {featuresDetail.map(v => {
+          return (
+            <li
+              key={v.id}
+            >
+              <p>{v.descript}</p>
+            </li>
+          )
+        })}
+      </ul>
       {/* <!-- 버디 소개 끝 --> */}
     </IntroBuddyStyled>
   );

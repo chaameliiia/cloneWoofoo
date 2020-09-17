@@ -4,7 +4,6 @@ import IntroWfTitles from './IntroWfTitles';
 import IntroWfDetails from './IntroWfDetails';
 
 const IntroWfStyled = styled.section`
-  // 우푸 특징 소개 시작
   margin: 0 auto;
   margin-bottom: 5rem;
   width: 70%;
@@ -12,7 +11,6 @@ const IntroWfStyled = styled.section`
   .introWoofoo__title {
     padding-bottom: 3rem;
   }
-  // 우푸 특징 소개 끝
 `;
 
 const IntroWfWrapper = ({ colors }) => {

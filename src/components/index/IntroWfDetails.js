@@ -19,7 +19,7 @@ const DetailsStyled = styled.ul`
       width: 16rem;
       word-break: keep-all;
 
-      strong {
+      h4 {
         color: ${props => props.colors.greenDark};
         font-size: 26px;
         padding-bottom: 1rem;
@@ -78,22 +78,6 @@ const detailsList = [
   },
 ];
 
-const Detail = ({
-  _class,
-  _title,
-  _descript
-}) => {
-  return (
-    <li
-      className={_class}>
-      <p>
-        <strong>{_title}</strong>
-        {_descript}
-      </p>
-    </li>
-  );
-}
-
 const IntroWfDetails = ({ colors }) => {
   return (
     <DetailsStyled
@@ -102,12 +86,15 @@ const IntroWfDetails = ({ colors }) => {
     >
       {detailsList.map(v => {
         return(
-          <Detail
+          <li
             key={v.id}
-            _class={v.class}
-            _title={v.title}
-            _descript={v.descript}
-          />
+            className={v.class}
+          >
+            <p>
+              <h4>{v.title}</h4>
+              {v.descript}
+            </p>
+          </li>
         )
       })}
     </DetailsStyled>

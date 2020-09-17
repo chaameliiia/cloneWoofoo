@@ -22,8 +22,9 @@
   import liveTracking from 'assets/img/index/ic_liveTracking.png';
 
   // 사용자 후기
-  import arrowLeft from 'assets/img/index/ic_arrowLeft.png';
-  import arrowRight from 'assets/img/index/ic_arrowRight.png';
+  import arrowL from 'assets/img/index/ic_arrowLeft.png';
+  import arrowR from 'assets/img/index/ic_arrowRight.png';
+  import starOn from 'assets/img/index/review/ic_starOn.png';
 
   export {
     // 서비스 예약
@@ -49,6 +50,7 @@
     liveTracking,
 
     // 사용자 후기
-    arrowLeft,
-    arrowRight,
+    arrowL,
+    arrowR,
+    starOn,
   };

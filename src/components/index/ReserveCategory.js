@@ -24,6 +24,30 @@ const CategoryStyled = styled.div`
         width: 100%;
       }
 
+      &:nth-of-type(1) {
+        label {
+          background-image: url(${urls.label1});
+        }
+      }
+
+      &:nth-of-type(2) {
+        label {
+          background-image: url(${urls.label2});
+        }
+      }
+
+      &:nth-of-type(3) {
+        label {
+          background-image: url(${urls.label3});
+        }
+      }
+
+      &:nth-of-type(4) {
+        label {
+          background-image: url(${urls.label4});
+        }
+      }
+
       &.nonActive {
         label {
           background-color: ${props => props.colors.grayLight};
@@ -39,32 +63,7 @@ const CategoryStyled = styled.div`
         }
       }
     }
-
-    li:nth-of-type(1) {
-      label {
-        ${'' /* background-image: url(${urls.label1}); */}
-      }
-    }
-
-    li:nth-of-type(2) {
-      label {
-        background-image: url(${urls.label2});
-      }
-    }
-
-    li:nth-of-type(3) {
-      label {
-        background-image: url(${urls.label3});
-      }
-    }
-
-    li:nth-of-type(4) {
-      label {
-        background-image: url(${urls.label4});
-      }
-    }
   }
-
 `;
 
 const services = [
@@ -98,49 +97,34 @@ const services = [
   },
 ];
 
-const Service = ({ _class, _eng, _kor, _title }) => {
-  return (
-    <li
-      className={_class}
-      title={_title}
-    >
-      <input
-        type="checkbox"
-        id={_eng}
-        name={_eng}
-        value={_kor}
-      />
-      <label for={_eng}>{_kor}</label>
-    </li>
-  );
-};
-
-const ServicesList = () => {
-  return (
-    <ul>
-      {services.map(v => {
-        return (
-          <Service
-            key={v.id}
-            _class={v.class}
-            _eng={v.eng}
-            _kor={v.kor}
-            _title={v.title}
-          />
-        )
-      })}
-    </ul>
-  );
-};
-
 const ReserveCategory = ({ colors }) => {
   return (
     <CategoryStyled
       colors={colors}
       className="reserve__box__form__category"
     >
-      <h4>서비스<strong>*</strong></h4>
-      <ServicesList />
+      <h3>서비스<strong>*</strong></h3>
+      <ul>
+        {services.map(v => {
+          return (
+            <li
+              key={v.id}
+              title={v.title}
+              className={v.class}
+            >
+              <input
+                type="checkbox"
+                id={v.eng}
+                name={v.eng}
+                value={v.kor}
+              />
+              <label for={v.eng}>
+                {v.kor}
+              </label>
+            </li>
+          )
+        })}
+      </ul>
     </CategoryStyled>
   );
 };
