@@ -4,9 +4,10 @@ import React from 'react';
 import Header from 'components/common/Header';
 import Aside from 'components/common/Aside';
 import Footer from 'components/common/Footer';
-import Support from 'components/common/Help';
+import Help from 'components/common/Help';
 import IndexWrapper from 'components/index/IndexWrapper';
 import ServicesWrapper from 'components/services/ServicesWrapper';
+import IncruitWrapper from 'components/incruit/IncruitWrapper';
 
 const App = () => {
   return (
@@ -14,9 +15,9 @@ const App = () => {
       <Header />
       <>
         {/* <IndexWrapper colors={colors} /> */}
-        <ServicesWrapper colors={colors} />
+        {/* <ServicesWrapper colors={colors} /> */}
+        <IncruitWrapper colors={colors} />
       </>
-      <Support colors={colors} />
       <Aside />
       <Footer />
     </>

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import AppBanner from './AppBanner';
 import IntroServices from './IntroServices';
 import ServicesFeatures from './ServicesFeatures';
+import Help from 'components/common/Help';
 
 const ServicesStyled = styled.div`
   width: 100%;
@@ -14,20 +15,17 @@ const ServicesStyled = styled.div`
 
 const ServicesWrapper = ({ colors }) => {
   return (
-    <ServicesStyled
-      colors={colors}
-      className="servicesWrapper"
-    >
-      <IntroServices
+    <>
+      <ServicesStyled
         colors={colors}
-      />
-      <ServicesFeatures
-        colors={colors}
-      />
-      <AppBanner
-        colors={colors}
-      />
-    </ServicesStyled>
+        className="mainWrapper"
+      >
+        <IntroServices colors={colors} />
+        <ServicesFeatures colors={colors} />
+        <AppBanner colors={colors} />
+      </ServicesStyled>
+      <Help colors={colors} />
+    </>
   );
 };
 
