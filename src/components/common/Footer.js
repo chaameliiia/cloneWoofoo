@@ -3,9 +3,10 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className="footer">
-      {/* <!-- 푸터 시작 --> */}
       <div className="footer__info">
-        <img src="/img/img_logoBottom.png" alt="" />
+        <img
+          src={require("../../assets/img/img_logoBottom.png")}
+          alt="하단 우푸 로고" />
         <ul className="footer__info__serviceTerms">
           <li><a href="/" title="이용약관">이용약관</a></li>
           |
@@ -39,7 +40,6 @@ const Footer = () => {
           <a href="/" title="인스타그램 바로가기"></a>
         </li>
       </ul>
-      {/* <!-- 푸터 끝 --> */}
     </footer>
   );
 };

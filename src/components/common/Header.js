@@ -4,12 +4,12 @@ const Header = () => {
   return (
     // <header className="header">
     <header className="header fixed">
-      {/* <!-- 헤더 시작 --> */}
+    {/* 헤더 시작 */}
       <h1 className="header__logo">
         <a href="/" title="홈페이지 바로가기">
           <img
             src={require("../../assets/img/img_logo.png")}
-            alt="로고"
+            alt="우푸 로고"
           />
         </a>
       </h1>
@@ -19,7 +19,7 @@ const Header = () => {
         <a href="/" title="고객센터">고객센터</a>
         <a href="/" title="우푸 버디 지원하기">우푸 버디 지원하기</a>
       </nav>
-      {/* <!-- 헤더 끝 --> */}
+      {/* 헤더 끝 */}
     </header>
   );
 };

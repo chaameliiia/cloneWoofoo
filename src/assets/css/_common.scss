@@ -141,7 +141,7 @@ img {
 }
 
 // --------------------- 고객센터 ---------------------
-.support {
+.help {
   // 고객센터 배너 시작
   align-items: center;
   display: flex;
@@ -156,13 +156,8 @@ img {
     flex-direction: column;
     width: 30%;
 
-    img {
-      height: auto;
-      width: 74px;
-    }
-
     span {
-      background: url(../img/ic_support.png) top/74px no-repeat;
+      background: url(../img/ic_help.png) top/74px no-repeat;
       font-weight: 600;
       padding-top: 5rem;
       text-align: center;
@@ -227,7 +222,7 @@ img {
     $quickMenuUrl: (
       1: '../img/ic_downloadApp.png',
       2: '../img/ic_applyBuddy.png',
-      3: '../img/ic_supportKakao.png',
+      3: '../img/ic_helpKakao.png',
       4: '../img/ic_goTop.png'
     );
 

@@ -1,18 +1,18 @@
 import React from 'react';
 
-const Support = () => {
+const Help = () => {
   return (
     <section
-      className="support"
+      className="help"
     >
-      <h2 className="support__title nonVisible">고객센터</h2>
-      <div className="support__descript">
+      <h2 className="help__title nonVisible">고객센터</h2>
+      <div className="help__descript">
         <span>우푸 서비스에 대한
         <br />
         궁금증을 해결해 드립니다.</span>
       </div>
       <div
-        className="support__contact"
+        className="help__contact"
       >
         <div>
           <span>1877-4166</span>
@@ -24,4 +24,4 @@ const Support = () => {
   );
 };
 
-export default Support;
+export default Help;

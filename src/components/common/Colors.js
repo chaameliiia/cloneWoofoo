@@ -1,4 +1,5 @@
 const black = '#333';
+const grayBack = '#FAFAFC';
 const grayDark = '#b1b1b3';
 const grayLight = '#EEEEEE';
 const grayLighter = '#F7F7F7';
@@ -9,6 +10,7 @@ const white = '#fff';
 
 export {
   black,
+  grayBack,
   grayDark,
   grayLight,
   grayLighter,

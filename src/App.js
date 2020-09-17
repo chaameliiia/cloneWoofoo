@@ -4,7 +4,7 @@ import React from 'react';
 import Header from 'components/common/Header';
 import Aside from 'components/common/Aside';
 import Footer from 'components/common/Footer';
-import Support from 'components/common/Support';
+import Support from 'components/common/Help';
 import IndexWrapper from 'components/index/IndexWrapper';
 import ServicesWrapper from 'components/services/ServicesWrapper';
 

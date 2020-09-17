@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import AppBanner from './AppBanner';
 import IntroServices from './IntroServices';
 import ServicesFeatures from './ServicesFeatures';
 
@@ -21,6 +22,9 @@ const ServicesWrapper = ({ colors }) => {
         colors={colors}
       />
       <ServicesFeatures
+        colors={colors}
+      />
+      <AppBanner
         colors={colors}
       />
     </ServicesStyled>
