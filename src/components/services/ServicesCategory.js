@@ -68,6 +68,7 @@ const ServicesCategory = ({ colors }) => {
       colors={colors}
       className="services__category"
     >
+      {/* 서비스 카테고리 시작 */}
       {titles.map(v => {
         return(
           <li
@@ -78,6 +79,7 @@ const ServicesCategory = ({ colors }) => {
           </li>
         )
       })}
+      {/* 서비스 카테고리 끝 */}
     </CategoryStyled>
   );
 };
