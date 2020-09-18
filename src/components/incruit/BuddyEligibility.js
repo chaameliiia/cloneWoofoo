@@ -1,11 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import 
-  {
-    quotation3,
-    quotation4,
-    check,
-  } from '../common/imgUrls/incruitBuddyImgs';
+import  { quotation3, quotation4, check } from '../common/imgUrls/incruitBuddyImgs';
 
 const EligibilityStyled = styled.section`
   background: ${props => props.colors.grayBack};
@@ -61,10 +56,7 @@ const eligibilityDetails = [
 
 const BuddyEligibility = ({ colors }) => {
   return (
-    <EligibilityStyled
-      colors={colors}
-      className="eligibility"
-    >
+    <EligibilityStyled colors={colors}>
       {/* <!-- 버디 지원 자격 시작 --> */}
       <h2 className="nonVisible">버디 지원자격</h2>
       <div className="eligibility__title">

@@ -14,8 +14,8 @@ const App = () => {
       <Header />
       <>
         {/* <IndexWrapper colors={colors} /> */}
-        <ServicesWrapper colors={colors} />
-        {/* <IncruitWrapper colors={colors} /> */}
+        {/* <ServicesWrapper colors={colors} /> */}
+        <IncruitWrapper colors={colors} />
       </>
       <Aside />
       <Footer />

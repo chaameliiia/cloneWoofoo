@@ -19,12 +19,14 @@ const IncruitWrapper = ({ colors }) => {
       {/* <!-- 본문 시작 --> */}
       <BuddyIncruit
         colors={colors}
+        className="incruitBuddy"
       />
-      <BuddyBenefits />
+      <BuddyBenefits className="benefits" />
       <BuddyEligibility
         colors={colors}
+        className="eligibility"
       />
-      <BuddyProcess />
+      <BuddyProcess className="process" />
       {/* <!-- 본문 끝 --> */}
     </IncWrapperStyled>
   );

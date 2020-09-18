@@ -43,10 +43,7 @@ const IncBuddyStyled = styled.main`
 
 const BuddyIncruit = ({ colors }) => {
   return (
-    <IncBuddyStyled
-      colors={colors}
-      className="incruitBuddy"
-    >
+    <IncBuddyStyled colors={colors}>
       {/* <!-- 버디 모집 예정 시작--> */}
       <div className="incruitBuddy__text">
         <p>

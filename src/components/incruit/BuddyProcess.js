@@ -10,7 +10,6 @@ const ProcessStyled = styled.section`
     background: 
       url(${urls.quotation1}) left top/50px no-repeat,
       url(${urls.quotation2}) right bottom/50px no-repeat;
-    font-size: 32px;
     margin: 0 auto;
     margin-bottom: 4rem;
     text-align: center;
@@ -19,10 +18,10 @@ const ProcessStyled = styled.section`
 
   .process__details {
     ${`background:
-      url(${urls.filledArrowR}) 132px 70%/10px no-repeat,
-      url(${urls.filledArrowR}) calc(132px + 160px) 70%/10px no-repeat,
-      url(${urls.filledArrowR}) calc(132px + (160px * 2)) 70%/10px no-repeat,
-      url(${urls.filledArrowR}) calc(132px + (160px * 3)) 70%/10px no-repeat;`}
+      url(${urls.filledArrowR}) 132px 50%/10px no-repeat,
+      url(${urls.filledArrowR}) calc(132px + 160px) 50%/10px no-repeat,
+      url(${urls.filledArrowR}) calc(132px + (160px * 2)) 50%/10px no-repeat,
+      url(${urls.filledArrowR}) calc(132px + (160px * 3)) 50%/10px no-repeat;`}
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -32,27 +31,28 @@ const ProcessStyled = styled.section`
       padding-top: 130px;
       text-align: center;
       width: 120px;
+    
+      &:nth-of-type(1) {
+        background: url(${urls.process1}) center top/100% no-repeat;
+      }
+
+      &:nth-of-type(2) {
+        background: url(${urls.process2}) center top/100% no-repeat;
+      }
+
+      &:nth-of-type(3) {
+        background: url(${urls.process3}) center top/100% no-repeat;
+      }
+
+      &:nth-of-type(4) {
+        background: url(${urls.process4}) center top/100% no-repeat;
+      }
+
+      &:nth-of-type(5) {
+        background: url(${urls.process5}) center top/100% no-repeat;
+      }
     }
 
-    li:nth-of-type(1) {
-      background: url(${urls.process1}) center top/100% no-repeat;
-    }
-
-    li:nth-of-type(2) {
-      background: url(${urls.process2}) center top/100% no-repeat;
-    }
-
-    li:nth-of-type(3) {
-      background: url(${urls.process3}) center top/100% no-repeat;
-    }
-
-    li:nth-of-type(4) {
-      background: url(${urls.process4}) center top/100% no-repeat;
-    }
-
-    li:nth-of-type(5) {
-      background: url(${urls.process5}) center top/100% no-repeat;
-    }
   }
 `;
 
@@ -81,7 +81,7 @@ const processDetails = [
 
 const BuddyProcess = () => {
   return (
-    <ProcessStyled className="process">
+    <ProcessStyled>
       {/* <!-- 버디 지원 절차 시작 --> */}
       <h2 className="nonVisible">버디 지원 절차</h2>
       <h3 className="process__title">

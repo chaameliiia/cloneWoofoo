@@ -13,12 +13,8 @@ const BenefitsStyled = styled.section`
       url(${urls.quotation2}) right bottom/50px no-repeat;
     margin-bottom: 4rem;
     text-align: center;
-
-    span {
-      font-size: 32px;
-      font-weight: normal;
-    }
-
+    width: 100%;
+    
     p {
       font-size: 20px;
       padding-top: .5rem;
@@ -33,41 +29,45 @@ const BenefitsStyled = styled.section`
     width: 100%;
 
     section {
-      padding-bottom: 3rem;
+      padding-bottom: 5rem;
       text-align: center;
       width: 260px;
 
       h4 {
-        font-size: $font20;
-        padding: 100px 0 1rem;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 100px 0 .5rem;
       }
 
       span {
-        font-size: $font16;
+        font-size: 16px;
+        width: 250px;
+        word-break: keep-all;
       }
-    }
-
-    section:nth-of-type(1) {
-      h4 {
-        background: url(${urls.revenue}) 50% 10px/80px no-repeat;
+    
+      &:nth-of-type(1) {
+        h4 {
+          background: url(${urls.revenue}) 50% 10px/80px no-repeat;
+        }
       }
-    }
 
-    section:nth-of-type(2) {
-      h4 {
-        background: url(${urls.supervise}) 50% 10px/80px no-repeat;
+      &:nth-of-type(2) {
+        h4 {
+          background: url(${urls.supervise}) 50% 10px/80px no-repeat;
+        }
       }
-    }
 
-    section:nth-of-type(3) {
-      h4 {
-        background: url(${urls.buddyInsurance}) 50% 10px/80px no-repeat;
+      &:nth-of-type(3) {
+        h4 {
+          background: url(${urls.buddyInsurance}) 50% 10px/80px no-repeat;
+        }
       }
-    }
 
-    section:nth-of-type(4) {
-      h4 {
-        background: url(${urls.education}) 50% 10px/80px no-repeat;
+      &:nth-of-type(4) {
+        h4 {
+          background: url(${urls.education}) 50% 10px/80px no-repeat;
+          padding-bottom: 0;
+        }
       }
     }
   }
@@ -102,9 +102,7 @@ const benefitsDetail = [
 
 const BuddyBenefits = () => {
   return (
-    <BenefitsStyled
-      className="benefits"
-    >
+    <BenefitsStyled>
       {/* <!-- 버디 활동 혜택 시작 --> */}
       <h2 className="nonVisible">버디 활동 혜택</h2>
       <div className="benefits__title">
