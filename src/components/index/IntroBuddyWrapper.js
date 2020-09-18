@@ -11,7 +11,7 @@ const IntroBuddyStyled = styled.section`
     padding: 3rem 0;
   }
 
-  .introBuddy__contents {
+  .introBuddy__features {
     border-bottom: 1px solid ${props => props.colors.grayLight};
     display: flex;
     justify-content: space-between;
@@ -31,25 +31,26 @@ const IntroBuddyStyled = styled.section`
         width: 250px;
         word-break: keep-all;
       }
-    }
+      
+      &:nth-of-type(1) {
+        p {
+          background: url(${urls.screening}) top/140px no-repeat;
+        }
+      }
 
-    li:nth-of-type(1) {
-      p {
-        background: url(${urls.screening}) top/140px no-repeat;
+      &:nth-of-type(2) {
+        p {
+          background: url(${urls.test}) top/140px no-repeat;
+        }
+      }
+
+      &:nth-of-type(3) {
+        p {
+          background: url(${urls.identification}) top/140px no-repeat;
+        }
       }
     }
 
-    li:nth-of-type(2) {
-      p {
-        background: url(${urls.test}) top/140px no-repeat;
-      }
-    }
-
-    li:nth-of-type(3) {
-      p {
-        background: url(${urls.identification}) top/140px no-repeat;
-      }
-    }
   }
 `;
 
@@ -70,10 +71,7 @@ const featuresDetail = [
 
 const IntroBuddyWrapper = ({ colors }) => {
   return (
-    <IntroBuddyStyled
-      colors={colors}
-      className="introBuddy"
-    >
+    <IntroBuddyStyled colors={colors}>
       {/* <!-- 버디 소개 시작 --> */}
       <h2 className="introBuddy__title">믿고 맡기는 우푸 버디</h2>
       <ul className="introBuddy__features">

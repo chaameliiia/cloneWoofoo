@@ -14,12 +14,30 @@ const IndexStyled = styled.div`
 const IndexWrapper = ({ colors }) => {
   return (
     <>
-      <IndexStyled colors={colors} className="MainWrapper">
-        <ReserveWrapper colors={colors} />
-        <IntroBuddyWrapper colors={colors} />
-        <IntroWfWrapper colors={colors} />
-        <ReviewWrapper colors={colors} />
-        <BannerIndex colors={colors} />
+      <IndexStyled
+        colors={colors}
+        className="MainWrapper"
+      >
+        <ReserveWrapper
+          colors={colors}
+          className="reserve"
+        />
+        <IntroBuddyWrapper
+          colors={colors}
+          className="introBuddy"
+        />
+        <IntroWfWrapper
+          colors={colors}
+          className="introWoofoo"
+        />
+        <ReviewWrapper
+          colors={colors}
+          className="review"
+        />
+        <BannerIndex
+          colors={colors}
+          className="bannerIndex"
+        />
       </IndexStyled>
       <Help colors={colors} />
     </>

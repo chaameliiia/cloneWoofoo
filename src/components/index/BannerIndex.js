@@ -17,11 +17,11 @@ const BannerStyled = styled.article`
     justify-content: center;
     width: 100%;
     
-    img {
+    .bannerIndex__img {
       width: 300px;
     }
 
-    .bannerIndex__background__text {
+    .bannerIndex__text {
       align-items: center;
       display: flex;
       flex-direction: column;
@@ -60,20 +60,17 @@ const BannerStyled = styled.article`
 
 const BannerIndex = ({ colors }) => {
   return (
-    <BannerStyled
-      colors={colors}
-      className="bannerIndex"
-    >
+    <BannerStyled colors={colors}>
       {/* <!-- 앱 다운로드 배너 시작 --> */}
       <h2 className="bannerIndex__title nonVisible">앱 다운로드</h2>
       <div className="bannerIndex__background">
         <img
           src={require("../../assets/img/index/img_appPreview.png")}
           alt=""
-          className="bannerIndex_img"
+          className="bannerIndex__img"
         />
         <div
-          className="bannerIndex__background__text"
+          className="bannerIndex__text"
         >
           <span>
             새로워진 <strong>우푸</strong> 앱을 만나보세요!

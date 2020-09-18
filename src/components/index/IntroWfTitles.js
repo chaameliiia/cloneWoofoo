@@ -46,10 +46,7 @@ const titlesList = [
 
 const IntroWfTitles = ({ colors }) => {
   return (
-    <TitlesStyled
-      colors={colors}
-      className="introWoofoo__category"
-    >
+    <TitlesStyled colors={colors}>
       {titlesList.map(v => {
         return(
           <li

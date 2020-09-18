@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import ReviewDetails from './ReviewDetails';
+import { _reviews } from './reviews';
+
 
 const ReviewPageStyled = styled.ul`
   margin: 0 auto;
@@ -10,7 +12,6 @@ const ReviewPageStyled = styled.ul`
   width: 960px;
 
   .review__contents__page {
-    font-size: 0;
     position: relative;
     vertical-align: top;
     width: 100%;
@@ -66,21 +67,22 @@ const ReviewPageStyled = styled.ul`
   }
 `;
 
-const pages = [1, 2, 3, 4, 5, 6, 7];
-
 const ReviewPages = ({ colors }) => {
   return (
     <ReviewPageStyled
-      className="review__contents"
+      colors={colors}
     >
-      {pages.map((v) => {
+      {_reviews.map((v, i) => {
         return(
           <li
-            key={v}
+            key={i}
             className="review__contents__page"
           >
-            {v}
-            <ReviewDetails colors={colors} />
+            {i}
+            <ReviewDetails
+              colors={colors}
+              reviews={v}
+            />
           </li>
         )
       })}

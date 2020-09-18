@@ -45,10 +45,12 @@ const ReserveForm = ({ colors }) => {
         action="/"
         method="post"
         colors={colors}
-        className="reserve__box__form"
         id="reservation"
       >
-        <ReserveCategory colors={colors} />
+        <ReserveCategory
+          colors={colors}
+          className="reserve__box__form__category"
+        />
         <ReserveInputs colors={colors} />
         <input
           type="submit"

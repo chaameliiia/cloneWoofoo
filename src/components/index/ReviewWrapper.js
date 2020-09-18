@@ -54,15 +54,19 @@ const btnList = [
 
 const ReviewWrapper = ({ colors }) => {
   return (
-    <ReviewStyled className="review">
+    <ReviewStyled>
       {/* <!-- 소비자 후기 시작 --> */}
       <h2 className="review__title">믿고 맡기는 100% 리얼 후기</h2>
-      <ReviewPages colors={colors} />
+      <ReviewPages
+        colors={colors}
+        className="review__contents"
+      />
       <div className="review__btn">
         {btnList.map(v => {
           return (
             <button
               type="button"
+              key={v.id}
               className={`review__btn__${v.class}`}
             >
             </button>

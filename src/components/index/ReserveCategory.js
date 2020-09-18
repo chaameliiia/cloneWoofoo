@@ -99,10 +99,7 @@ const services = [
 
 const ReserveCategory = ({ colors }) => {
   return (
-    <CategoryStyled
-      colors={colors}
-      className="reserve__box__form__category"
-    >
+    <CategoryStyled colors={colors}>
       <h3>서비스<strong>*</strong></h3>
       <ul>
         {services.map(v => {
@@ -118,7 +115,7 @@ const ReserveCategory = ({ colors }) => {
                 name={v.eng}
                 value={v.kor}
               />
-              <label for={v.eng}>
+              <label htmlFor={v.eng}>
                 {v.kor}
               </label>
             </li>

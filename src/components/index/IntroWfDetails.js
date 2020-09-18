@@ -9,47 +9,45 @@ const DetailsStyled = styled.ul`
     align-items: center;
     border-bottom: 1px solid ${props => props.colors.grayLight};
     display: none;
-    ${'' /* display: flex; */}
     height: 22.5rem;
     justify-content: flex-end;
     width: 100%;
+
+    h4 {
+      color: ${props => props.colors.greenDark};
+      font-size: 26px;
+      padding-bottom: 1rem;
+      width: 100%;
+    }
 
     p {
       margin-bottom: 5rem;
       width: 16rem;
       word-break: keep-all;
-
-      h4 {
-        color: ${props => props.colors.greenDark};
-        font-size: 26px;
-        padding-bottom: 1rem;
-        width: 100%;
-      }
     }
 
     &.active {
       display: flex;
     }
+    
+    &:nth-of-type(1){
+      background: url(${urls.trainer}) left top/499px no-repeat;
+    }
+
+    &:nth-of-type(2){
+      background: url(${urls.insurance}) left top/499px no-repeat;
+    }
+
+    &:nth-of-type(3){
+      background: url(${urls.safetyZone}) left top/499px no-repeat;
+    }
+
+    &:nth-of-type(4){
+      background: url(${urls.liveTracking}) left top/499px no-repeat;
+    }
   }
 
-  li:nth-of-type(1){
-    background: url(${urls.trainer}) left top/499px no-repeat;
-  }
-
-  li:nth-of-type(2){
-    background: url(${urls.insurance}) left top/499px no-repeat;
-  }
-
-  li:nth-of-type(3){
-    background: url(${urls.safetyZone}) left top/499px no-repeat;
-  }
-
-  li:nth-of-type(4){
-    background: url(${urls.liveTracking}) left top/499px no-repeat;
-  }
 `;
-
-
 
 const detailsList = [
   {
@@ -80,18 +78,15 @@ const detailsList = [
 
 const IntroWfDetails = ({ colors }) => {
   return (
-    <DetailsStyled
-      colors={colors}
-      className="introWoofoo__details"
-    >
+    <DetailsStyled colors={colors}>
       {detailsList.map(v => {
         return(
           <li
             key={v.id}
             className={v.class}
           >
+            <h4>{v.title}</h4>
             <p>
-              <h4>{v.title}</h4>
               {v.descript}
             </p>
           </li>

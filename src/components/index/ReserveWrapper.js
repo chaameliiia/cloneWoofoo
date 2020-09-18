@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import * as urls from 'components/common/imgUrls/indexImgs';
+import { bgMain } from 'components/common/imgUrls/indexImgs';
 import ReserveForm from './ReserveForm';
 
 const ReserveStyled = styled.main`
-  background: url(${urls.bgMain}) center/auto 960px no-repeat;
+  background: url(${bgMain}) center/auto 960px no-repeat;
   min-height: 960px;
   width: 100%;
 
@@ -31,10 +31,7 @@ const ReserveStyled = styled.main`
 
 const ReserveWrapper = ({ colors }) => {
   return (
-    <ReserveStyled
-      colors={colors}
-      className="reserve"
-    >
+    <ReserveStyled colors={colors}>
       {/* <!-- 서비스 예약 시작 --> */}
       <section className="reserve__box" >
         <h2 className="reserve__box__title">
@@ -42,7 +39,10 @@ const ReserveWrapper = ({ colors }) => {
           <br />
           맞춤 펫시터를 만나보세요!
         </h2>
-       <ReserveForm colors={colors} />
+       <ReserveForm
+          colors={colors}
+          className="reserve__box__form"
+        />
       </section>
     {/* <!-- 서비스 예약 끝 --> */}
     </ReserveStyled>
