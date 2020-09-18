@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import * as urls from '../common/imgUrls/servicesImgs';
 
-const IntroVisionStyled = styled.section`
+const IntrVisionStyled = styled.main`
   align-items: center;
   background: url(${urls.bgDogWalking}) top/auto 820px no-repeat;
   display: flex;
@@ -50,9 +50,8 @@ const IntroVisionStyled = styled.section`
 
 const IntroServicesVision = ({ colors }) => {
   return (
-    <IntroVisionStyled
+    <IntrVisionStyled
       colors={colors}
-      className="services__vision"
     >
       {/* 우푸 비전 소개 시작 */}
       <h2 className="nonVisible">우푸 소개</h2>
@@ -70,7 +69,7 @@ const IntroServicesVision = ({ colors }) => {
       </div>
       <button type="button">첫 이용 할인</button>
       {/* 우푸 비전 소개 끝 */}
-    </IntroVisionStyled>
+    </IntrVisionStyled>
   );
 };
 

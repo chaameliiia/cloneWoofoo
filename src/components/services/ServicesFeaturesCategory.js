@@ -13,8 +13,8 @@ const CategoryStyled = styled.ul`
     cursor: pointer;
     font-size: 24px;
     line-height: 1.25em;
-    margin: 0;
-    padding: .5rem 1.25rem 0rem;
+    margin: 0 1.25rem;
+    padding-top: .5rem;
 
     &.active {
       border-bottom: 8px solid ${props => props.colors.greenLight};
@@ -26,12 +26,12 @@ const CategoryStyled = styled.ul`
 const categories = [
   {
     id: 1,
-    class: "active",
+    class: "",
     title: '맞춤 버디 찾기',
   },
   {
     id: 2,
-    class: "",
+    class: "active",
     title: '채팅방 문의',
   },
   {
@@ -50,7 +50,6 @@ const FeaturesCategory = ({ colors }) => {
   return (
     <CategoryStyled
       colors={colors}
-      className="features__category"
     >
       {categories.map(v => {
         return(

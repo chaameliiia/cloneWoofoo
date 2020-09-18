@@ -5,8 +5,8 @@ import * as urls from 'components/common/imgUrls/servicesImgs';
 const CategoryStyled = styled.ul`
   border-bottom: 1px solid ${props => props.colors.grayDark};
   display: flex;
-  justify-content: center;
   font-size: 0;
+  justify-content: center;
   width: 100%;
 
   li {
@@ -14,40 +14,45 @@ const CategoryStyled = styled.ul`
     cursor: pointer;
     font-size: 24px;
     height: 160px;
-    padding: 5.5rem 3.5rem 0;
-  }
-
-  li:nth-of-type(1) {
-    background: url(${urls.label1}) 50% 25%/60px no-repeat;
-  }
-
-  li:nth-of-type(2) {
-    background: url(${urls.label2}) 50% 25%/60px no-repeat;
-  }
-
-  li:nth-of-type(3) {
-    background: url(${urls.label3}) 50% 25%/60px no-repeat;
-  }
-
-  li:nth-of-type(4) {
-    background: url(${urls.label4}) 50% 25%/60px no-repeat;
-  }
+    margin-right: 1.5rem;
+    padding-top: 5.5rem;
+    text-align: center;
+    width: 150px;
   
-  li.active {
-    background: url(${urls.label1_selected}) 50% 25%/ 60px no-repeat;
-    color: ${props => props.colors.greenDark};
+    &:nth-of-type(1) {
+      background: url(${urls.label1}) 50% 25%/60px no-repeat;
+    }
+
+    &:nth-of-type(2) {
+      background: url(${urls.label2}) 50% 25%/60px no-repeat;
+    }
+
+    &:nth-of-type(3) {
+      background: url(${urls.label3}) 50% 25%/60px no-repeat;
+    }
+
+    &:nth-of-type(4) {
+      background: url(${urls.label4}) 50% 25%/60px no-repeat;
+      margin-right: 0;
+    }
+    
+    &.active {
+      background: url(${urls.label2_selected}) 50% 25%/ 60px no-repeat;
+      color: ${props => props.colors.greenDark};
+    }
   }
+
 `;
 
 const titles = [
   {
     id: 1,
-    class: "active",
+    class: "",
     title: "도그워킹",
   },
   {
     id: 2,
-    class: "",
+    class: "active",
     title: "방문돌봄",
   },
   {
@@ -66,7 +71,6 @@ const ServicesCategory = ({ colors }) => {
   return (
     <CategoryStyled
       colors={colors}
-      className="services__category"
     >
       {/* 서비스 카테고리 시작 */}
       {titles.map(v => {
