@@ -11,12 +11,13 @@ const IndexStyled = styled.div`
   width: 100%;
 `;
 
-const IndexWrapper = ({ colors }) => {
+const IndexWrapper = ({ colors, onClick }) => {
   return (
     <>
       <IndexStyled
         colors={colors}
         className="MainWrapper"
+        onClick={onClick}
       >
         <ReserveWrapper
           colors={colors}

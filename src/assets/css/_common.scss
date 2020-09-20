@@ -1,6 +1,5 @@
 @import "_variables"; // 변수 파일
 @import "_atRules"; // @ 규칙 파일
-
 // @font-face { // 한글틀고딕 > 서버 이상
 //   font-family: 'HangultuelGothic';
 //   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_ten@1.10/HangultuelGothic.woff') format('woff');
@@ -8,6 +7,13 @@
 //   font-style: normal;
 // }
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap'); // noto sans kr
+
+@font-face {
+  font-family: 'CookieRunOTF-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   box-sizing: border-box;

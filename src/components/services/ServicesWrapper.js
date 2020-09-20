@@ -8,12 +8,13 @@ const ServicesStyled = styled.div`
   width: 100%;
 `;
 
-const ServicesWrapper = ({ colors }) => {
+const ServicesWrapper = ({ colors, onClick }) => {
   return (
     <>
       <ServicesStyled
         colors={colors}
         className="mainWrapper"
+        onClick={onClick}
       >
         <IntroServices colors={colors} />
         <AppBanner colors={colors} />

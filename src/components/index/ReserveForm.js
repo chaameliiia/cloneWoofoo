@@ -39,13 +39,14 @@ const ReserveFormStyled = styled.form`
   }
 `;
 
-const ReserveForm = ({ colors }) => {
+const ReserveForm = ({ colors, onClick }) => {
   return (
      <ReserveFormStyled
         action="/"
         method="post"
         colors={colors}
         id="reservation"
+        onSubmit={onClick}
       >
         <ReserveCategory
           colors={colors}

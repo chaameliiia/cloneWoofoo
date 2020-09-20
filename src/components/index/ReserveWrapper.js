@@ -29,11 +29,15 @@ const ReserveStyled = styled.main`
   }
 `;
 
-const ReserveWrapper = ({ colors }) => {
+const ReserveWrapper = ({ colors, onClick }) => {
   return (
-    <ReserveStyled colors={colors}>
+    <ReserveStyled
+      colors={colors}
+    >
       {/* <!-- 서비스 예약 시작 --> */}
-      <section className="reserve__box" >
+      <section
+        className="reserve__box"
+      >
         <h2 className="reserve__box__title">
           반려동물 힐링케어 <strong>우푸!</strong>
           <br />

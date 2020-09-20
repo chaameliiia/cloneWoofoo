@@ -1,8 +1,11 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer = ({ onClick }) => {
   return (
-    <footer className="footer">
+    <footer
+      onClick={onClick}
+      className="footer"
+    >
       <div className="footer__info">
         <img
           src={require("../../assets/img/img_logoBottom.png")}

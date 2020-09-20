@@ -5,6 +5,7 @@ const grayLight = '#EEEEEE';
 const grayLighter = '#F7F7F7';
 const greenDark = '#24B570';
 const greenLight = '#5FC997';
+const marker = 'rgba(255,239,157,.5)';
 const pointColor = '#FE6F65';
 const white = '#fff';
 
@@ -16,6 +17,7 @@ export {
   grayLighter,
   greenDark,
   greenLight,
+  marker,
   pointColor,
   white,
 };
