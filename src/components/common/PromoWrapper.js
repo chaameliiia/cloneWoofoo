@@ -113,27 +113,23 @@ const PromoWrapperStyled = styled.article`
 `;
 
 const icCheckStyle = {
-  cursor: 'pointer',
-  fill: '#B1B1B3',
+  fontSize: '24px',
   marginRight: '.25rem',
 };
 
 const icCloseStyle = {
-  cursor: 'pointer',
-  fill: '#B1B1B3',
+  fontSize: '28px',
   right: '1rem',
   position: 'absolute',
   top: '1rem',
 };
 
 const PromoWrapper = ({ colors }) => {
-  console.log('event');
+  console.log('promo');
   return (
-    <>
       <PromoWrapperStyled
         colors={colors}
-        className="promoWrapper"
-        // className="promoWrapper active"
+        // className="subPromotion active"
       >
         <h2 className="nonVisible">첫 이용 할인</h2>
         <div className="promoBox">
@@ -173,11 +169,9 @@ const PromoWrapper = ({ colors }) => {
               <label htmlFor="agreedSms">
                 <>
                   <MdRadioButtonUnchecked
-                    size={24}
                     style={icCheckStyle}
                   />
                   {/* <MdRadioButtonChecked
-                    size={24}
                     style={icCheckStyle}
                   /> */}
                 </>
@@ -189,12 +183,10 @@ const PromoWrapper = ({ colors }) => {
             </p>
           </form>
           <MdClose
-            size={28}
             style={icCloseStyle}
           />
         </div>
       </PromoWrapperStyled>
-    </>
   );
 };
 

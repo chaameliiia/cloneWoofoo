@@ -88,6 +88,11 @@ img {
   vertical-align: middle;
 }
 
+svg {
+  cursor: pointer;
+  fill: $grayDark;
+}
+
 .nonVisible {
   display: none;
   font-size: 0;

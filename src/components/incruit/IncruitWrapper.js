@@ -14,7 +14,6 @@ const IncruitWrapper = ({ colors, onClick }) => {
   return (
     <IncWrapperStyled
       colosr={colors}
-      className="mainWrapper"
       onClick={onClick}
     >
       {/* <!-- 본문 시작 --> */}

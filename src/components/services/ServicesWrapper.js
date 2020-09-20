@@ -13,7 +13,6 @@ const ServicesWrapper = ({ colors, onClick }) => {
     <>
       <ServicesStyled
         colors={colors}
-        className="mainWrapper"
         onClick={onClick}
       >
         <IntroServices colors={colors} />

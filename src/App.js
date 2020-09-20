@@ -9,15 +9,13 @@ import ServicesWrapper from 'components/services/ServicesWrapper';
 import IncruitWrapper from 'components/incruit/IncruitWrapper';
 import PromoWrapper from 'components/common/PromoWrapper';
 
+
 const App = () => {
-  const stopClick = e => {
+  const _onClick = e => {
     e.preventDefault();
     console.log('stopped');
+    console.log(e.target.className);
   };
-
-  const clickPromotion = () => {
-    
-  }
 
   const [_subPage, _setSubPage] = useState([
     {
@@ -46,26 +44,30 @@ const App = () => {
     <>
       <Header
         subPage={_subPage}
-        onClick={stopClick}
+        onClick={_onClick}
       />
-      <>
-        {/* <IndexWrapper
+      <div className="contentsWrapper">
+        <IndexWrapper
           colors={colors}
-          onClick={stopClick}
-        /> */}
+          onClick={_onClick}
+          className="indexPage"
+        />
         {/* <ServicesWrapper
           colors={colors}
-          onClick={stopClick}
+          onClick={_onClick}
+          className="subServices"
         /> */}
-        <IncruitWrapper
+        {/* <IncruitWrapper
           colors={colors}
-          onClick={stopClick}
-        />
-      </>
-      {/* <Aside onClick={stopClick} /> */}
-      {/* <Footer onClick={stopClick} /> */}
+          onClick={_onClick}
+          className="subIncruit"
+        /> */}
+      </div>
+      <Aside onClick={_onClick} />
+      <Footer onClick={_onClick} />
       <PromoWrapper
         colors={colors}
+        className="subPromotion"
       />
     </>
   );

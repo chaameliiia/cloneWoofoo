@@ -16,7 +16,6 @@ const IndexWrapper = ({ colors, onClick }) => {
     <>
       <IndexStyled
         colors={colors}
-        className="MainWrapper"
         onClick={onClick}
       >
         <ReserveWrapper
