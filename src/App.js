@@ -7,7 +7,7 @@ import Footer from 'components/common/Footer';
 import IndexWrapper from 'components/index/IndexWrapper';
 import ServicesWrapper from 'components/services/ServicesWrapper';
 import IncruitWrapper from 'components/incruit/IncruitWrapper';
-import Promotion from 'components/common/Promotion';
+import PromoWrapper from 'components/common/PromoWrapper';
 
 const App = () => {
   const stopClick = e => {
@@ -64,7 +64,9 @@ const App = () => {
       </>
       {/* <Aside onClick={stopClick} /> */}
       {/* <Footer onClick={stopClick} /> */}
-      <Promotion colors={colors}/>
+      <PromoWrapper
+        colors={colors}
+      />
     </>
   );
 };

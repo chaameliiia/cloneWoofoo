@@ -43,9 +43,9 @@ const ReserveForm = ({ colors, onClick }) => {
   return (
      <ReserveFormStyled
         action="/"
+        id="reservation"
         method="post"
         colors={colors}
-        id="reservation"
         onSubmit={onClick}
       >
         <ReserveCategory
