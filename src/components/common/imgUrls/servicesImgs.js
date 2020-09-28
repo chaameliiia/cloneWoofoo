@@ -29,10 +29,6 @@ import chatSystem from 'assets/img/services/img_chatSystem.png';
 import liveTracking from 'assets/img/services/img_liveTracking.png';
 import journal from 'assets/img/services/img_journal.png';
 
-// 앱다운로드 배너
-import playStore from 'assets/img/ic_playStore.png';
-import appStore from 'assets/img/ic_appStore.png';
-
 export {
   // 비전 소개
   bgDogWalking,
@@ -65,7 +61,4 @@ export {
   liveTracking,
   journal,
 
-  // 앱 다운로드 배너
-  playStore,
-  appStore,
 }

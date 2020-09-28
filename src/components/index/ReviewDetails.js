@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { ColorContext } from 'contexts/ColorContext';
 import { starOn } from '../common/imgUrls/indexImgs';
 
 const ReviewDetailStyled = styled.ul`
@@ -55,7 +56,6 @@ const ReviewDetailStyled = styled.ul`
               padding-left: .3rem;
             }
           }
-
         }
       }
     }
@@ -67,7 +67,9 @@ const ReviewDetailStyled = styled.ul`
   }
 `;
 
-const ReviewDetails = ({ colors, reviews }) => {
+const ReviewDetails = ({ reviews }) => {
+  const colors = useContext(ColorContext);
+  
   return (
     <ReviewDetailStyled
       colors={colors}

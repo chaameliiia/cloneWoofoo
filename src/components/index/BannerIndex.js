@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import {playStore, appStore} from '../common/imgUrls/commonImgs.js';
+import { Link } from 'react-router-dom';
 
 const BannerStyled = styled.article`
   display: flex;
@@ -25,13 +27,14 @@ const BannerStyled = styled.article`
       align-items: center;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       height: 100%;
-      padding: 3rem 0 0 3rem;
+      padding-left: 3rem;
       width: 310px;
       
       span {
         font-size: 32px;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         text-align: center;
         width: 100%;
         
@@ -40,21 +43,18 @@ const BannerStyled = styled.article`
           font-size: inherit;
         }
       }
-
-      a {
-        background: ${props => props.colors.greenDark};
-        border-radius: 32px;
-        color: ${props => props.colors.white};
-        font-size: 20px;
-        padding: .8rem 1.5rem;
-        text-align: center;
-        width: 235px;
-
-        &:hover {
-          background: ${props => props.colors.greenLight};
-        }
-      }
     }
+  }
+`;
+
+const AppDownloadLink = styled(Link)`
+  background-color: ${props => props.colors.greenLight};
+  border-radius: 32px;
+  color:${props => props.colors.white};
+  padding: .8rem 1.2rem;
+
+  &:hover {
+    background-color: ${props => props.colors.greenDark};
   }
 `;
 
@@ -75,7 +75,14 @@ const BannerIndex = ({ colors }) => {
           <span>
             새로워진 <strong>우푸</strong> 앱을 만나보세요!
           </span>
-          <a href="/" title="앱 다운로드">앱 다운로드</a>
+          <div>
+            <AppDownloadLink 
+              to="/"
+              colors={colors}
+            >
+              플레이 스토어 바로가기
+            </AppDownloadLink>
+          </div>
         </div>
       </div>
       {/* <!-- 앱 다운로드 배너 끝 --> */}

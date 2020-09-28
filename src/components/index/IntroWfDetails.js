@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { ColorContext } from 'contexts/ColorContext';
 import * as urls from 'components/common/imgUrls/indexImgs';
 
 const DetailsStyled = styled.ul`
@@ -76,7 +77,9 @@ const detailsList = [
   },
 ];
 
-const IntroWfDetails = ({ colors }) => {
+const IntroWfDetails = () => {
+  const colors = useContext(ColorContext);
+  
   return (
     <DetailsStyled colors={colors}>
       {detailsList.map(v => {

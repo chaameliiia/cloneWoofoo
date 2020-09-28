@@ -13,17 +13,15 @@ const IntroWfStyled = styled.section`
   }
 `;
 
-const IntroWfWrapper = ({ colors }) => {
+const IntroWfWrapper = () => {
   return (
-    <IntroWfStyled colors={colors}>
+    <IntroWfStyled>
       {/* <!-- 우푸 특징 소개 시작 --> */}
       <h2 className="introWoofoo__title">언제나 안심되는 우푸 서비스</h2>
       <IntroWfTitles
-        colors={colors}
         className="introWoofoo__category"
       />
       <IntroWfDetails
-        colors={colors}
         className="introWoofoo__details"
       />  
       {/* <!-- 우푸 특징 소개 끝 --> */}

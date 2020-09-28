@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { ColorContext } from 'contexts/ColorContext';
 import { bgMain } from 'components/common/imgUrls/indexImgs';
 import ReserveForm from './ReserveForm';
 
@@ -29,7 +30,8 @@ const ReserveStyled = styled.main`
   }
 `;
 
-const ReserveWrapper = ({ colors, onClick }) => {
+const ReserveWrapper = ({ onClick }) => {
+  const colors = useContext(ColorContext);
   return (
     <ReserveStyled
       colors={colors}

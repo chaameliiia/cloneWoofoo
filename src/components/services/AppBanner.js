@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { playStore, appStore } from '../common/imgUrls/servicesImgs.js';
+import { playStore, appStore } from '../common/imgUrls/commonImgs.js';
 
 const AppBannerStyled = styled.article`
   background: ${props => props.colors.grayBack};
@@ -50,6 +51,8 @@ const AppBannerStyled = styled.article`
 `;
 
 const AppBanner = ({ colors }) => {
+  const playStoreLink = "https://play.google.com/store/apps/details?id=net.walkydoggy.walkydoggytest";
+  const appStoreLink = "https://apps.apple.com/kr/app/%EC%9A%B0%ED%91%B8-%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC-%EC%82%B0%EC%B1%85-%EB%B0%A9%EB%AC%B8%EB%8F%8C%EB%B4%84-%ED%8E%AB%EC%8B%9C%ED%84%B0/id1261747950";
   return (
     <AppBannerStyled
       colors={colors}
@@ -60,8 +63,8 @@ const AppBanner = ({ colors }) => {
         단 1분만에 예약하는 방법! 앱을 이용해 간편하게 예약하세요.
       </strong>
       <div className="bannerBox__btn">
-        <button type="button">플레이 스토어 바로가기</button>
-        <button type="button">앱 스토어 바로가기</button>
+        <Link to={playStoreLink}>플레이 스토어 바로가기</Link>
+        <Link to={appStoreLink}>앱 스토어 바로가기</Link>
       </div>
     </AppBannerStyled>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = ({ onClick }) => {
   return (
@@ -11,9 +12,23 @@ const Footer = ({ onClick }) => {
           src={require("../../assets/img/img_logoBottom.png")}
           alt="하단 우푸 로고" />
         <ul className="footer__info__serviceTerms">
-          <li><a href="/" title="이용약관">이용약관</a></li>
+          <li>
+            <Link
+              to="/PolicyTerms" 
+              itle="이용약관"
+            >
+              이용약관
+            </Link>
+          </li>
           |
-          <li><a href="/" title="개인정보 처리방침">개인정보 처리방침</a></li>
+          <li>
+            <Link
+              to="/policyPrivacy"
+              title="개인정보 처리방침"
+            >
+              개인정보 처리방침
+            </Link>
+          </li>
         </ul>
         <p className="footer__info__company">
           (주) 워키도기
@@ -34,13 +49,19 @@ const Footer = ({ onClick }) => {
       </div>
       <ul className="footer__socialChannels">
         <li>
-          <a href="/" title="네이버 블로그 바로가기"></a>
+          <Link
+            to="/"
+            title="네이버 블로그 바로가기" />
         </li>
         <li>
-          <a href="/" title="페이스북 바로가기"></a>
+          <Link
+            to="/"
+            title="페이스북 바로가기" />
         </li>
         <li>
-          <a href="/" title="인스타그램 바로가기"></a>
+          <Link
+            to="/"
+            title="인스타그램 바로가기" />
         </li>
       </ul>
     </footer>

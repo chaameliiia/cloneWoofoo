@@ -124,11 +124,9 @@ const icCloseStyle = {
   top: '1rem',
 };
 
-const PromoWrapper = ({ colors }) => {
-  console.log('promo');
+const PromoWrapper = () => {
   return (
       <PromoWrapperStyled
-        colors={colors}
         // className="subPromotion active"
       >
         <h2 className="nonVisible">첫 이용 할인</h2>

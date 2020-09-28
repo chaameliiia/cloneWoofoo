@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import * as urls from 'components/common/imgUrls/indexImgs';
+import { ColorContext } from 'contexts/ColorContext';
 
 const IntroBuddyStyled = styled.section`
   margin: 0 auto;
@@ -69,7 +70,9 @@ const featuresDetail = [
   },
 ];
 
-const IntroBuddyWrapper = ({ colors }) => {
+const IntroBuddyWrapper = () => {
+  const colors = useContext(ColorContext);
+  
   return (
     <IntroBuddyStyled colors={colors}>
       {/* <!-- 버디 소개 시작 --> */}

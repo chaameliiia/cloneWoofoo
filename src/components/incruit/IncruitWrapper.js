@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import * as _colors from 'components/common/Colors';
 import BuddyBenefits from './BuddyBenefits';
 import BuddyEligibility from './BuddyEligibility';
 import BuddyIncruit from './BuddyIncruit';
@@ -10,7 +11,8 @@ const IncWrapperStyled = styled.div`
   width: 100%;
 `;
 
-const IncruitWrapper = ({ colors, onClick }) => {
+const IncruitWrapper = ({ onClick }) => {
+  const colors = _colors
   return (
     <IncWrapperStyled
       colosr={colors}

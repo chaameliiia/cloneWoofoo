@@ -67,11 +67,9 @@ const ReviewPageStyled = styled.ul`
   }
 `;
 
-const ReviewPages = ({ colors }) => {
+const ReviewPages = () => {
   return (
-    <ReviewPageStyled
-      colors={colors}
-    >
+    <ReviewPageStyled>
       {_reviews.map((v, i) => {
         return(
           <li
@@ -80,7 +78,6 @@ const ReviewPages = ({ colors }) => {
           >
             {i}
             <ReviewDetails
-              colors={colors}
               reviews={v}
             />
           </li>

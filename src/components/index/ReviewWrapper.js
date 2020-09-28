@@ -52,13 +52,12 @@ const btnList = [
   },
 ];
 
-const ReviewWrapper = ({ colors }) => {
+const ReviewWrapper = () => {
   return (
     <ReviewStyled>
       {/* <!-- 소비자 후기 시작 --> */}
       <h2 className="review__title">믿고 맡기는 100% 리얼 후기</h2>
       <ReviewPages
-        colors={colors}
         className="review__contents"
       />
       <div className="review__btn">

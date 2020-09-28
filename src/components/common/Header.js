@@ -1,53 +1,53 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import IndexWrapper from 'components/index/IndexWrapper';
 
-const Header = ({ onClick }) => {
+const Header = () => {
   return (
     // <header className="header" onClick={onClick}>
     <header
-      onClick={onClick}
       className="header fixed"
     >
     {/* 헤더 시작 */}
       <h1 className="header__logo">
-        <a
-          href="/"
+        <Link
+          to="/index"
           title="홈페이지 바로가기"
-          className="indexPage"
+          className="index"
         >
           <img
             src={require("../../assets/img/img_logo.png")}
             alt="우푸 로고"
           />
-        </a>
+        </Link>
       </h1>
       <nav className="header__gnb">
-        <a
-          href="/"
+        <button
           title="첫 이용 할인"
-          className="subPromotion"
+          className="popPromotion"
         >첫 이용 할인
-        </a>
-        <a
-          href="/"
+        </button>
+        <Link
+          to="/subServices"
           title="서비스 소개"
           className="subServices"
         >
           서비스 소개
-        </a>
-        <a
-          href="/"
+        </Link>
+        <Link
+          to="/subHelp"
           title="고객센터"
           className="subHelpP"
         >
           고객센터
-        </a>
-        <a
-          href="/"
+        </Link>
+        <Link
+          to="/subIncruit"
           title="우푸 버디 지원하기"
           className="subIncruit"
         >
           우푸 버디 지원하기
-        </a>
+        </Link>
       </nav>
       {/* 헤더 끝 */}
     </header>

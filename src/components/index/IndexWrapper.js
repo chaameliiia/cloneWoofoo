@@ -11,35 +11,19 @@ const IndexStyled = styled.div`
   width: 100%;
 `;
 
-const IndexWrapper = ({ colors, onClick }) => {
+const IndexWrapper = ({ onClick }) => {
   return (
     <>
       <IndexStyled
-        colors={colors}
         onClick={onClick}
       >
-        <ReserveWrapper
-          colors={colors}
-          className="reserve"
-        />
-        <IntroBuddyWrapper
-          colors={colors}
-          className="introBuddy"
-        />
-        <IntroWfWrapper
-          colors={colors}
-          className="introWoofoo"
-        />
-        <ReviewWrapper
-          colors={colors}
-          className="review"
-        />
-        <BannerIndex
-          colors={colors}
-          className="bannerIndex"
-        />
+        <ReserveWrapper className="reserve" />
+        <IntroBuddyWrapper className="introBuddy" />
+        <IntroWfWrapper className="introWoofoo" />
+        <ReviewWrapper className="review" />
+        <BannerIndex className="bannerIndex" />
       </IndexStyled>
-      <Help colors={colors} />
+      <Help />
     </>
   );
 };

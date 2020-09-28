@@ -1,12 +1,11 @@
 import React from 'react';
 
-const Aside = ({ onClick }) => {
+const Aside = () => {
   return (
     <aside
-      onClick={onClick}
+      // className="quickMenu"
       className="quickMenu hover"
     >
-    {/* <aside className="quickMenu hover"> */}
       {/* <!-- 퀵메뉴 시작 --> */}
       <ul className="quickMenu__box">
         <li><button type="button">앱 다운로드</button></li>
