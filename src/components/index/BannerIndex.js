@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
-import {playStore, appStore} from '../common/imgUrls/commonImgs.js';
+import { ColorContext } from 'contexts/ColorContext';
 import { Link } from 'react-router-dom';
 
 const BannerStyled = styled.article`
@@ -58,7 +58,9 @@ const AppDownloadLink = styled(Link)`
   }
 `;
 
-const BannerIndex = ({ colors }) => {
+const BannerIndex = () => {
+  const colors = useContext(ColorContext);
+
   return (
     <BannerStyled colors={colors}>
       {/* <!-- 앱 다운로드 배너 시작 --> */}

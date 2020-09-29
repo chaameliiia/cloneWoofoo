@@ -30,8 +30,9 @@ const ReserveStyled = styled.main`
   }
 `;
 
-const ReserveWrapper = ({ onClick }) => {
+const ReserveWrapper = () => {
   const colors = useContext(ColorContext);
+
   return (
     <ReserveStyled
       colors={colors}

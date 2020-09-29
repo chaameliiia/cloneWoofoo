@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { ColorContext } from 'contexts/ColorContext';
 
@@ -25,36 +25,46 @@ const TitlesStyled = styled.ul`
 const titlesList = [
   {
     id: 1,
-    class: "active",
     descript: "전문 훈련사 출동 서비스",
   },
   {
     id: 2,
-    class: "",
     descript: "반려동물 안전 보험",
   },
   {
     id: 3,
-    class: "",
     descript: "안심존 케어",
   },
   {
     id: 4,
-    class: "",
     descript: "라이브 트래킹",
   },
 ];
 
 const IntroWfTitles = () => {
   const colors = useContext(ColorContext);
+  const wooFooTitle = useRef(null);
+  useEffect(() => {
+    wooFooTitle.current.children[0].classList.add('active');
+  }, []);
+  const selectList = (e) => {
+    for(let i = 0; i < wooFooTitle.current.children.length; i++) {
+      wooFooTitle.current.children[i].classList.remove('active');
+    }
+    e.target.classList.add('active');
+  };
   
   return (
-    <TitlesStyled colors={colors}>
+    <TitlesStyled
+      colors={colors}
+      ref={wooFooTitle}
+    >
       {titlesList.map(v => {
         return(
           <li
             key={v.id}
             colors={colors}
+            onClick={selectList}
             className={v.class}
           >
             {v.descript}

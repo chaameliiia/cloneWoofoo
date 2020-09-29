@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { ColorContext } from 'contexts/ColorContext';
 
 const InputsStyled = styled.input`
   border: 1px solid ${props => props.colors.grayLight};
@@ -24,7 +25,9 @@ const reserveInputDetails = [
 ];
 
 
-const ReserveInputs = ({ colors }) => {
+const ReserveInputs = () => {
+  const colors = useContext(ColorContext);
+
   return (
     <>
       {reserveInputDetails.map(v => {

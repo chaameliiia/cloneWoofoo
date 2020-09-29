@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { ColorContext } from 'contexts/ColorContext';
 import { promoImg, promoFavicon } from '../common/imgUrls/commonImgs';
 import {
   MdRadioButtonUnchecked,
@@ -29,7 +30,7 @@ const PromoWrapperStyled = styled.article`
     }
 
     .promoBox__details {
-      padding-bottom: 5rem;
+      padding-bottom: 4rem;
       mark {
         background: ${props => props.colors.marker};
         font-size: 20px;
@@ -125,9 +126,16 @@ const icCloseStyle = {
 };
 
 const PromoWrapper = () => {
+  const colors = useContext(ColorContext);
+  const closeModal = () => {
+    document.querySelector('.popPromotion').classList.remove('active')
+  };
+
   return (
       <PromoWrapperStyled
-        // className="subPromotion active"
+        className="popPromotion"
+        // className="popPromotion active"
+        colors={colors}
       >
         <h2 className="nonVisible">첫 이용 할인</h2>
         <div className="promoBox">
@@ -182,6 +190,7 @@ const PromoWrapper = () => {
           </form>
           <MdClose
             style={icCloseStyle}
+            onClick={closeModal}
           />
         </div>
       </PromoWrapperStyled>

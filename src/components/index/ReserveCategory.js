@@ -1,6 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import * as urls from 'components/common/imgUrls/indexImgs';
+import React, { useContext } from "react";
+import styled from "styled-components";
+import { ColorContext } from "contexts/ColorContext";
+import * as urls from "components/common/imgUrls/indexImgs";
 
 const CategoryStyled = styled.div`
   ul {
@@ -10,116 +11,134 @@ const CategoryStyled = styled.div`
 
     li {
       width: 23%;
-    
+
+      input {
+        display: none;
+      }
+
       label {
         background-position: 50% 20%;
         background-repeat: no-repeat;
         background-size: 28px;
-        border: 1px solid ${props => props.colors.grayLight};
+        border: 1px solid ${(props) => props.colors.grayLight};
         border-radius: 4px;
         cursor: pointer;
+        filter: grayscale(1);
         font-size: 16px;
-        padding: 2.5rem 0 .5rem;
+        padding: 2.5rem 0 0.5rem;
         text-align: center;
         width: 100%;
       }
 
       &:nth-of-type(1) {
         label {
-          background-image: url(${urls.label1});
+          background-image: url(${urls.label1Selected});
         }
       }
 
       &:nth-of-type(2) {
         label {
-          background-image: url(${urls.label2});
+          background-image: url(${urls.label2Selected});
         }
       }
 
       &:nth-of-type(3) {
         label {
-          background-image: url(${urls.label3});
+          background-image: url(${urls.label3Selected});
         }
       }
 
       &:nth-of-type(4) {
         label {
-          background-image: url(${urls.label4});
+          background-image: url(${urls.label4Selected});
         }
       }
 
       &.nonActive {
         label {
-          background-color: ${props => props.colors.grayLight};
-          color: ${props => props.colors.grayDark};
+          background-color: ${(props) => props.colors.grayLight};
+          color: ${(props) => props.colors.grayDark};
           cursor: default;
         }
       }
 
       &.active {
         label {
-          background-image: url(${urls.label1Selected});
-          border: 1px solid ${props => props.colors.greenDark};
+          border: 1px solid ${(props) => props.colors.greenDark};
+          filter: grayscale(0);
         }
       }
     }
   }
 `;
 
-const services = [
+const activeServices = [
   {
     id: 1,
-    class: "active",
     eng: "dogWalking",
     kor: "도그워킹",
     title: "",
   },
   {
     id: 2,
-    class: "",
     eng: "doorToDoor",
     kor: "방문돌봄",
     title: "",
   },
+];
+
+const nonActiveServices = [
   {
     id: 3,
-    class: "nonActive",
     eng: "privateCare",
     kor: "펫시팅",
     title: "서비스 예정입니다.",
   },
   {
     id: 4,
-    class: "nonActive",
     eng: "dayCare",
     kor: "데이케어",
     title: "서비스 예정입니다.",
   },
 ];
 
-const ReserveCategory = ({ colors }) => {
+const ReserveCategory = () => {
+  const colors = useContext(ColorContext);
+  const toggleClass = (e) => {
+    e.preventDefault();
+    for (let i = 0; i < activeServices.length; i++) {
+      document.querySelectorAll("ul li")[i].classList.remove("active");
+    }
+    e.target.parentNode.classList.add("active");
+    console.log(e.target);
+  };
+
   return (
     <CategoryStyled colors={colors}>
-      <h3>서비스<strong>*</strong></h3>
+      <h3>
+        서비스<strong>*</strong>
+      </h3>
       <ul>
-        {services.map(v => {
+        {activeServices.map((v) => {
           return (
             <li
               key={v.id}
               title={v.title}
-              className={v.class}
+              onClick={toggleClass}
+              className={v.eng}
             >
-              <input
-                type="checkbox"
-                id={v.eng}
-                name={v.eng}
-                value={v.kor}
-              />
-              <label htmlFor={v.eng}>
-                {v.kor}
-              </label>
+              <input type="checkbox" id={v.eng} name={v.eng} value={v.kor} />
+              <label htmlFor={v.eng}>{v.kor}</label>
             </li>
-          )
+          );
+        })}
+        {nonActiveServices.map((v) => {
+          return (
+            <li key={v.id} title={v.title} className={`${v.eng} nonActive`}>
+              <input type="checkbox" id={v.eng} name={v.eng} value={v.kor} />
+              <label htmlFor={v.eng}>{v.kor}</label>
+            </li>
+          );
         })}
       </ul>
     </CategoryStyled>

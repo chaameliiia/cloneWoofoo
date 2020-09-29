@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { ColorContext } from 'contexts/ColorContext';
 import ReserveCategory from './ReserveCategory';
 import ReserveInputs from './ReserveInputs';
 
@@ -39,7 +40,9 @@ const ReserveFormStyled = styled.form`
   }
 `;
 
-const ReserveForm = ({ colors, onClick }) => {
+const ReserveForm = ({ onClick }) => {
+  const colors = useContext(ColorContext);
+
   return (
      <ReserveFormStyled
         action="/"
