@@ -3,8 +3,8 @@ import React from 'react';
 const Aside = () => {
   return (
     <aside
-      // className="quickMenu"
-      className="quickMenu hover"
+      className="quickMenu"
+      // className="quickMenu hover"
     >
       {/* <!-- 퀵메뉴 시작 --> */}
       <ul className="quickMenu__box">

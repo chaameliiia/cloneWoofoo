@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { ColorContext } from 'contexts/ColorContext';
+import { ReviewContext } from "contexts/ReviewContext";
 import { starOn } from '../common/imgUrls/indexImgs';
 
 const ReviewDetailStyled = styled.ul`
@@ -67,12 +68,14 @@ const ReviewDetailStyled = styled.ul`
   }
 `;
 
-const ReviewDetails = ({ reviews }) => {
+const ReviewDetails = () => {
   const colors = useContext(ColorContext);
+  const reviews = useContext(ReviewContext);
   
   return (
     <ReviewDetailStyled
       colors={colors}
+      reviews={reviews}
     >
       {reviews.map(v => {
         return(
