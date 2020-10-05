@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { ColorContext } from 'contexts/ColorContext';
 import { playStore, appStore } from '../common/imgUrls/commonImgs.js';
 
 const AppBannerStyled = styled.article`
@@ -50,9 +51,11 @@ const AppBannerStyled = styled.article`
   }
 `;
 
-const AppBanner = ({ colors }) => {
+const AppBanner = () => {
+  const colors = useContext(ColorContext);
   const playStoreLink = "https://play.google.com/store/apps/details?id=net.walkydoggy.walkydoggytest";
   const appStoreLink = "https://apps.apple.com/kr/app/%EC%9A%B0%ED%91%B8-%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC-%EC%82%B0%EC%B1%85-%EB%B0%A9%EB%AC%B8%EB%8F%8C%EB%B4%84-%ED%8E%AB%EC%8B%9C%ED%84%B0/id1261747950";
+
   return (
     <AppBannerStyled
       colors={colors}

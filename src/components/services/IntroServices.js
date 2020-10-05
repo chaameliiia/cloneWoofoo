@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import IntroServicesVision from './IntroServicesVision';
-import ServicesCategory from './ServicesCategory';
 import ServicesDetails from './ServicesDetails';
 import ServicesFeatures from './ServicesFeatures';
 
@@ -9,26 +8,19 @@ const IntrServicesStyled = styled.section`
   width: 100%;
 `;
 
-const IntroServices = ({ colors }) => {
+const IntroServices = (e) => {
+  const selectCategory = value => {
+    console.log(value);
+  };
   return (
     <IntrServicesStyled
-      colors={colors}
       className="services"
+      onClick={selectCategory}
     >
       <h2 className="nonVisible">우푸 서비스 소개</h2>
-      <IntroServicesVision
-        colors={colors}
-        className="services__vision"
-      />
-      <ServicesCategory
-        colors={colors}
-        className="services__category"
-      />
+      <IntroServicesVision className="services__vision" />
       <ServicesDetails className="services__contents" />
-      <ServicesFeatures
-        colors={colors}
-        className="services__features"
-      />
+      <ServicesFeatures className="services__features" />
     </IntrServicesStyled>
   );
 };

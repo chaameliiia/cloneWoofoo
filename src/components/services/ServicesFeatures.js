@@ -8,16 +8,11 @@ const FeaturesStyled = styled.section`
   width: 930px;
 `;
 
-const ServicesFeatures = ({ colors }) => {
+const ServicesFeatures = () => {
   return (
-    <FeaturesStyled
-      colors={colors}
-    >
+    <FeaturesStyled>
       {/* <!-- 우푸 서비스 특징 소개 시작 --> */}
-      <ServicesFeaturesCategory
-        colors={colors}
-        className="features__category"
-      />
+      <ServicesFeaturesCategory className="features__category" />
       <ServicesFeaturesDetail
         className="features__details"
       />

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import * as urls from '../common/imgUrls/servicesImgs';
+import { ColorContext } from 'contexts/ColorContext';
 
 const IntrVisionStyled = styled.main`
   align-items: center;
@@ -48,7 +49,9 @@ const IntrVisionStyled = styled.main`
   }
 `;
 
-const IntroServicesVision = ({ colors }) => {
+const IntroServicesVision = () => {
+  const colors = useContext(ColorContext);
+
   return (
     <IntrVisionStyled
       colors={colors}

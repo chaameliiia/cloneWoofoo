@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { ColorContext } from 'contexts/ColorContext';
 
 const CategoryStyled = styled.ul`
   display: flex;
@@ -46,7 +47,9 @@ const categories = [
   },
 ];
 
-const FeaturesCategory = ({ colors }) => {
+const FeaturesCategory = () => {
+  const colors = useContext(ColorContext);
+  
   return (
     <CategoryStyled
       colors={colors}
