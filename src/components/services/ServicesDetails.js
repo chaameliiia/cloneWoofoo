@@ -20,7 +20,7 @@ const CategoryStyled = styled.form`
     margin-right: 1.5rem;
     padding-top: 5.5rem;
     text-align: center;
-    width: 150px;
+    width: 160px;
   
     &:nth-of-type(1) {
       background: url(${urls.label1_selected}) 50% 25%/60px no-repeat;
@@ -234,6 +234,7 @@ const ServicesDetails = () => {
     setSelectCategory = {
       value: e.target.className,
     };
+    this.onSubmit(selectedCategory);
   }
   
   return (

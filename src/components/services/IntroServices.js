@@ -12,14 +12,15 @@ const IntroServices = (e) => {
   const selectCategory = value => {
     console.log(value);
   };
+  
   return (
-    <IntrServicesStyled
-      className="services"
-      onClick={selectCategory}
-    >
+    <IntrServicesStyled className="services" >
       <h2 className="nonVisible">우푸 서비스 소개</h2>
       <IntroServicesVision className="services__vision" />
-      <ServicesDetails className="services__contents" />
+      <ServicesDetails
+        onClick={selectCategory}
+        className="services__contents"
+      />
       <ServicesFeatures className="services__features" />
     </IntrServicesStyled>
   );
