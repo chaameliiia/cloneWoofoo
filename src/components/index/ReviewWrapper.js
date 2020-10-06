@@ -1,74 +1,8 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import ReviewDetails from './ReviewDetails';
+import ReviewPages from './ReviewPages';
 import { arrowL, arrowR } from '../common/imgUrls/indexImgs';
-import Reviews from "../../contexts/ReviewContext";
-
-const ReviewPageStyled = styled.ul`
-  border: 1px solid #f00;
-  margin: 0 auto;
-  min-height: 350px;
-  /* overflow: hidden; */
-  position: relative;
-  transition: .5s;
-  width: 960px;
-
-  .review__contents__page {
-    border: 1px solid #00f;
-    position: relative;
-    vertical-align: top;
-    width: 100%;
-
-    &:nth-of-type(1) {
-      left: 0;
-      position: absolute;
-      top: 0;
-      transform: translate(calc(100% * 0), 0);
-    }
-    
-    &:nth-of-type(2) {
-      left: 0;
-      position: absolute;
-      top: 0;
-      transform: translate(calc(100% * 1), 0);
-    }
-    
-    &:nth-of-type(3) {
-      left: 0;
-      position: absolute;
-      top: 0;
-      transform: translate(calc(100% * 2), 0);
-    }
-    
-    &:nth-of-type(4) {
-      left: 0;
-      position: absolute;
-      top: 0;
-      transform: translate(calc(100% * 3), 0);
-    }
-    
-    &:nth-of-type(5) {
-      left: 0;
-      position: absolute;
-      top: 0;
-      transform: translate(calc(100% * 4), 0);
-    }
-    
-    &:nth-of-type(6) {
-      left: 0;
-      position: absolute;
-      top: 0;
-      transform: translate(calc(100% * 5), 0);
-    }
-    
-    &:nth-of-type(7) {
-      left: 0;
-      position: absolute;
-      top: 0;
-      transform: translate(calc(100% * 6), 0);
-    }
-  }
-`;
+import Reviews, { ReviewContext } from "../../contexts/ReviewContext";
 
 const ReviewStyled = styled.section`
   padding: 0 12% 2rem;
@@ -126,28 +60,7 @@ const ReviewWrapper = (e) => {
       <ReviewStyled>
         {/* <!-- 소비자 후기 시작 --> */}
         <h2 className="review__title">믿고 맡기는 100% 리얼 후기</h2>
-        <ReviewPageStyled
-          className="review__contents"
-        >
-          <li 
-            key="0"
-            className="review__contents__slide"
-          >
-            <ReviewDetails />
-          </li>
-          <li 
-            key="1"
-            className="review__contents__slide"
-          >
-            <ReviewDetails />
-          </li>
-          <li 
-            key="2"
-            className="review__contents__slide"
-          >
-            <ReviewDetails />
-          </li>
-        </ReviewPageStyled>
+        <ReviewPages className="review__contents" />
         <div className="review__btn">
           <button
             type="button"

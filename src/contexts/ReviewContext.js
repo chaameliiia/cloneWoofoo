@@ -3,8 +3,7 @@ import React, { createContext } from 'react';
 export const ReviewContext = createContext();
 
 const Reviews = (props) => {
-  const reviews =
-  [
+  const reviews = [
     [{
       id: 0,
       profilePic: require('../assets/img/index/review/img_reviewer1.jpg'),

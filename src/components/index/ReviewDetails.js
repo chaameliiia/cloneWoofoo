@@ -77,9 +77,10 @@ const ReviewDetails = () => {
       colors={colors}
       reviews={reviews}
     >
-      {reviews.map(v => {
+      {reviews.map((v, i) => {
+        console.log(v[i]);
         return(
-          <li
+          {/* <li
             key={v.id}
           >
             <div className="profile">
@@ -99,7 +100,7 @@ const ReviewDetails = () => {
             <p className="descript">
               {v.descript}
             </p>
-          </li>
+          </li> */}
         )
       })}
     </ReviewDetailStyled>

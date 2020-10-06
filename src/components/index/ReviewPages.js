@@ -1,8 +1,7 @@
-import React from 'react';
+import { ReviewContext } from 'contexts/ReviewContext';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import ReviewDetails from './ReviewDetails';
-import { _reviews } from './reviews';
-
 
 const ReviewPageStyled = styled.ul`
   margin: 0 auto;
@@ -68,9 +67,11 @@ const ReviewPageStyled = styled.ul`
 `;
 
 const ReviewPages = () => {
+  const reviews = useContext(ReviewContext);
+  
   return (
     <ReviewPageStyled>
-      {_reviews.map((v, i) => {
+      {reviews.map((v, i) => {
         return(
           <li
             key={i}
