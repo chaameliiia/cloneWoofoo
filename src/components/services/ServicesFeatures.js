@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import ServicesFeaturesCategory from './ServicesFeaturesCategory';
 import ServicesFeaturesDetail from './ServicesFeaturesDetail';
 
 const FeaturesStyled = styled.section`
@@ -12,10 +11,7 @@ const ServicesFeatures = () => {
   return (
     <FeaturesStyled>
       {/* <!-- 우푸 서비스 특징 소개 시작 --> */}
-      <ServicesFeaturesCategory className="features__category" />
-      <ServicesFeaturesDetail
-        className="features__details"
-      />
+      <ServicesFeaturesDetail className="features__details" />
       {/* <!-- 우푸 서비스 특징 소개 끝 --> */}
     </FeaturesStyled>
   );
