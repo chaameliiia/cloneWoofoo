@@ -68,9 +68,8 @@ const ReviewDetailStyled = styled.ul`
   }
 `;
 
-const ReviewDetails = () => {
+const ReviewDetails = ({ reviews }) => {
   const colors = useContext(ColorContext);
-  const reviews = useContext(ReviewContext);
   
   return (
     <ReviewDetailStyled
@@ -78,13 +77,14 @@ const ReviewDetails = () => {
       reviews={reviews}
     >
       {reviews.map((v, i) => {
-        console.log(v[i]);
         return(
-          {/* <li
-            key={v.id}
+          <li
+            key={i}
           >
-            <div className="profile">
-              {v.id}
+            <div
+              key={v.id}
+              className="profile"
+            >
               <img
                 src={v.profilePic}
                 alt=""
@@ -100,7 +100,7 @@ const ReviewDetails = () => {
             <p className="descript">
               {v.descript}
             </p>
-          </li> */}
+          </li>
         )
       })}
     </ReviewDetailStyled>
