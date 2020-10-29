@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { ColorContext } from 'contexts/ColorContext';
-import { ReviewContext } from "contexts/ReviewContext";
 import { starOn } from '../common/imgUrls/indexImgs';
 
 const ReviewDetailStyled = styled.ul`
@@ -10,7 +9,8 @@ const ReviewDetailStyled = styled.ul`
   justify-content: space-between;
   width: 100%;
 
-  li {
+  > li {
+    background: ${props => props.colors.white};
     border: 1px solid ${props => props.colors.grayDark};
     border-radius: 4px;
     min-height: 350px;
