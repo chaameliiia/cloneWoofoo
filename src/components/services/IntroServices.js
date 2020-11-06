@@ -8,20 +8,13 @@ const IntrServicesStyled = styled.section`
   width: 100%;
 `;
 
-const IntroServices = (e) => {
-  const selectCategory = value => {
-    console.log(value);
-  };
-  
+const IntroServices = () => {
   return (
     <IntrServicesStyled className="services" >
       <h2 className="nonVisible">우푸 서비스 소개</h2>
-      <IntroServicesVision className="services__vision" />
-      <ServicesDetails
-        onClick={selectCategory}
-        className="services__contents"
-      />
-      <ServicesFeatures className="services__features" />
+      <IntroServicesVision />
+      <ServicesDetails />
+      <ServicesFeatures />
     </IntrServicesStyled>
   );
 };

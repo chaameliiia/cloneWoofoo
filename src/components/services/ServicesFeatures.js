@@ -9,7 +9,7 @@ const FeaturesStyled = styled.section`
 
 const ServicesFeatures = () => {
   return (
-    <FeaturesStyled>
+    <FeaturesStyled className="services__features">
       {/* <!-- 우푸 서비스 특징 소개 시작 --> */}
       <ServicesFeaturesDetail className="features__details" />
       {/* <!-- 우푸 서비스 특징 소개 끝 --> */}

@@ -53,7 +53,10 @@ const IntroServicesVision = () => {
   const colors = useContext(ColorContext);
 
   return (
-    <IntrVisionStyled colors={colors}>
+    <IntrVisionStyled
+      colors={colors}
+      className="services__vision"
+    >
       {/* 우푸 비전 소개 시작 */}
       <h2 className="nonVisible">우푸 소개</h2>
       <div className="services__vision__detail">
