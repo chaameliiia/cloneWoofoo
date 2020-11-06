@@ -1,17 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 import { ColorContext } from 'contexts/ColorContext';
 import { promoImg, promoFavicon } from '../common/imgUrls/commonImgs';
-import {
-  MdRadioButtonUnchecked,
-  MdRadioButtonChecked,
-  MdClose
-} from 'react-icons/md';
+import { MdClose } from 'react-icons/md';
+import RadioStyle from './RadioStyle';
 
 const PromoWrapperStyled = styled.article`
   display: none;
 
-  .promoBox{
+  .promoBox {
     background-color: ${props => props.colors.white};
     background-image: url(${promoFavicon}), url(${promoImg});
     background-position: 58% 61%, 85% 1.5rem;
@@ -41,17 +38,17 @@ const PromoWrapperStyled = styled.article`
 
   .promoBox__download {
     width: 100%;
-    
+
     legend {
       color: ${props => props.colors.greenDark};
       font-size: 18px;
-      padding: .5rem 0;
+      padding: 0.5rem 0;
     }
-    
+
     .promoBox__download__tel {
       width: 100%;
-      
-      input[type=tel] {
+
+      input[type='tel'] {
         border: 1px solid ${props => props.colors.grayDark};
         border-bottom-left-radius: 4px;
         border-top-left-radius: 4px;
@@ -81,7 +78,7 @@ const PromoWrapperStyled = styled.article`
       padding: 1rem 0;
       width: 100%;
 
-      input[type=radio] {
+      input[type='radio'] {
         display: none;
       }
 
@@ -96,10 +93,10 @@ const PromoWrapperStyled = styled.article`
       border-top: 1px dotted ${props => props.colors.grayDark};
       color: ${props => props.colors.grayDark};
       font-size: 14px;
-      padding-top: .5rem;
+      padding-top: 0.5rem;
     }
   }
-  
+
   &.active {
     align-items: center;
     background: ${props => props.colors.blackAlpha};
@@ -113,11 +110,6 @@ const PromoWrapperStyled = styled.article`
   }
 `;
 
-const icCheckStyle = {
-  fontSize: '24px',
-  marginRight: '.25rem',
-};
-
 const icCloseStyle = {
   fontSize: '28px',
   right: '1rem',
@@ -126,74 +118,63 @@ const icCloseStyle = {
 };
 
 const PromoWrapper = () => {
+  const [checked, setChecked] = useState(false);
   const colors = useContext(ColorContext);
   const closeModal = () => {
-    document.querySelector('.popPromotion').classList.remove('active')
+    document.querySelector('.popPromotion').classList.remove('active');
+  };
+
+  const toggleTF = () => {
+    checked === false ? setChecked(true) : setChecked(false);
+
+    return checked;
   };
 
   return (
-      <PromoWrapperStyled
-        className="popPromotion"
-        // className="popPromotion active"
-        colors={colors}
-      >
-        <h2 className="nonVisible">첫 이용 할인</h2>
-        <div className="promoBox">
-          <p className="promoBox__title">
-            APP
-            <br />
-            다운로드
-          </p>
-          <p className="promoBox__details">
-            새로워진 우푸 APP에서
-            <br />
-            <mark>최대 1만원 할인</mark>받고
-            <br />
-            산책, 돌봄 서비스 이용하자!
-          </p>
-          <form
-            action="/"
-            id="agree"
-            method="post"
-            className="promoBox__download"
-          >
-            <legend>문자로 앱 다운로드 링크 받기!</legend>
-            <div className="promoBox__download__tel">
-              <input
-                placeholder="휴대폰 번호 11자리를 입력하세요. (- 제외)"
-                type="tel"
-              />
-              <button type="submit">SMS 받기</button>
-            </div>
-            <div className="promoBox__download__agree">
-              <input
-                id="agreeSms"
-                name="agreeSms"
-                type="radio"
-                value="agreed"
-              />
-              <label htmlFor="agreedSms">
-                <>
-                  <MdRadioButtonUnchecked
-                    style={icCheckStyle}
-                  />
-                  {/* <MdRadioButtonChecked
-                    style={icCheckStyle}
-                  /> */}
-                </>
-                SNS 발송 및 부정이용 방지를 위한 개인정보 수집/이용에 동의합니다.
-              </label>
-            </div>
-            <p>
-              ※ 한 개의 휴대폰 번호로 하루 최대 3번까지 전송이 가능합니다.
-            </p>
-          </form>
-          <MdClose
-            style={icCloseStyle}
-            onClick={closeModal}
-          />
-        </div>
-      </PromoWrapperStyled>
+    <PromoWrapperStyled
+      className="popPromotion"
+      colors={colors}
+    >
+      <h2 className="nonVisible">첫 이용 할인</h2>
+      <div className="promoBox">
+        <p className="promoBox__title">
+          APP
+          <br />
+          다운로드
+        </p>
+        <p className="promoBox__details">
+          새로워진 우푸 APP에서
+          <br />
+          <mark>최대 1만원 할인</mark>받고
+          <br />
+          산책, 돌봄 서비스 이용하자!
+        </p>
+        <form
+          action="/"
+          id="agree"
+          method="post"
+          className="promoBox__download"
+        >
+          <legend>문자로 앱 다운로드 링크 받기!</legend>
+          <div className="promoBox__download__tel">
+            <input
+              placeholder="휴대폰 번호 11자리를 입력하세요. (- 제외)"
+              type="tel"
+            />
+            <button type="submit">SMS 받기</button>
+          </div>
+          <div className="promoBox__download__agree">
+            <input id="agreeSms" name="agreeSms" type="radio" value="agreed" />
+            <label htmlFor="agreedSms" onClick={toggleTF}>
+              <RadioStyle isChecked={checked} />
+              SNS 발송 및 부정이용 방지를 위한 개인정보 수집/이용에 동의합니다.
+            </label>
+          </div>
+          <p>※ 한 개의 휴대폰 번호로 하루 최대 3번까지 전송이 가능합니다.</p>
+        </form>
+        <MdClose style={icCloseStyle} onClick={closeModal} />
+      </div>
+    </PromoWrapperStyled>
   );
 };
 
