@@ -1,12 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { arrowL, arrowR } from '../common/imgUrls/indexImgs';
-import { ReviewContext } from 'contexts/ReviewContext';
 
 const StyledButton = styled.div`
   align-items: center;
   display: flex;
-  height: 350px;
+  min-height: 350px;
   justify-content: space-between;
   left: 0;
   padding: 0 5%;
@@ -20,7 +19,7 @@ const StyledButton = styled.div`
     height: 80px;
     padding: 0;
     width: 80px;
-    
+
     &:nth-of-type(1) {
       background: url(${arrowL}) center/contain no-repeat;
     }
@@ -31,7 +30,7 @@ const StyledButton = styled.div`
   }
 `;
 
-const ReviewButtons = ({ clickPrev, clickNext}) => {
+const ReviewButtons = ({ clickPrev, clickNext }) => {
   return (
     <StyledButton className="review__btn">
       <button
