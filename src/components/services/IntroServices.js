@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import IntroServicesVision from './IntroServicesVision';
 import ServicesDetails from './ServicesDetails';
@@ -8,12 +8,16 @@ const IntrServicesStyled = styled.section`
   width: 100%;
 `;
 
-const IntroServices = () => {
+const IntroServices = (e) => {
+  const [category, setCategory] = useState('');
+  const _onSubmit = (value) => {
+    setCategory(value);
+  };
   return (
-    <IntrServicesStyled className="services" >
+    <IntrServicesStyled className="services">
       <h2 className="nonVisible">우푸 서비스 소개</h2>
-      <IntroServicesVision />
-      <ServicesDetails />
+      <IntroServicesVision selected={category} />
+      <ServicesDetails onSubmit={_onSubmit} />
       <ServicesFeatures />
     </IntrServicesStyled>
   );

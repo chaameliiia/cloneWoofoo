@@ -5,7 +5,7 @@ import { ColorContext } from 'contexts/ColorContext';
 
 const IntrVisionStyled = styled.main`
   align-items: center;
-  background: url(${urls.bgDogWalking}) top/auto 820px no-repeat;
+  background: url(${urls.dogWalking}) top/auto 820px no-repeat;
   display: flex;
   flex-direction: column;
   min-height: 820px;
@@ -49,8 +49,9 @@ const IntrVisionStyled = styled.main`
   }
 `;
 
-const IntroServicesVision = () => {
+const IntroServicesVision = ({ selected }) => {
   const colors = useContext(ColorContext);
+  console.log(selected);
 
   return (
     <IntrVisionStyled

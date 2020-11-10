@@ -1,8 +1,8 @@
 // 비전 소개
-import bgDogWalking from 'assets/img/services/img_bgDogWalking.jpg';
-import bgDoorToDoor from 'assets/img/services/img_bgDoorToDoor.jpg';
-import bgPrivateCare from 'assets/img/services/img_bgPrivateCare.jpg';
-import bgDayCare from 'assets/img/services/img_bgDayCare.jpg';
+import dogWalking from 'assets/img/services/img_bgDogWalking.jpg';
+import doorToDoor from 'assets/img/services/img_bgDoorToDoor.jpg';
+import privateCare from 'assets/img/services/img_bgPrivateCare.jpg';
+import dayCare from 'assets/img/services/img_bgDayCare.jpg';
 
 // 서비스 카테고리
 import label1_selected from 'assets/img/ic_label1_selected.png';
@@ -27,10 +27,10 @@ import journal from 'assets/img/services/img_journal.png';
 
 export {
   // 비전 소개
-  bgDogWalking,
-  bgDoorToDoor,
-  bgPrivateCare,
-  bgDayCare,
+  dogWalking,
+  doorToDoor,
+  privateCare,
+  dayCare,
 
   // 서비스 카테고리
   label1_selected,

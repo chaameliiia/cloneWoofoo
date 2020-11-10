@@ -9,6 +9,7 @@ const CategoryStyled = styled.form`
   display: flex;
   font-size: 0;
   justify-content: center;
+  padding-top: 0.5rem;
   width: 100%;
 
   button {
@@ -156,10 +157,10 @@ const ContentsSteyled = styled.div`
 `;
 
 const ServicesDetails = ({ onSubmit }) => {
+  const [selectedCategory, setSelectedCategory] = useState('');
   const colors = useContext(ColorContext);
   const serviceTitle = useRef(null);
   const serviceDetail = useRef(null);
-  const [selectedCategory, setSelectedCategory] = useState('');
   let dNum = 0;
 
   useEffect(() => {
@@ -179,11 +180,11 @@ const ServicesDetails = ({ onSubmit }) => {
     serviceTitle.current.children[dNum].classList.add('active');
     serviceDetail.current.children[dNum].classList.add('active');
 
-    setSelectedCategory(e.target.className.split(' ')[0]);
+    setSelectedCategory(e.target.classList.value.split(' ')[0]);
   };
 
-  const _onSubmit = () => {
-    console.log('oooo');
+  const formSubmit = category => {
+    onSubmit(category);
   };
 
   return (
@@ -192,8 +193,8 @@ const ServicesDetails = ({ onSubmit }) => {
         colors={colors}
         ref={serviceTitle}
         action="/subServices"
-        method="post"
-        onSubmit={_onSubmit}
+        method="get"
+        onSubmit={formSubmit(selectedCategory)}
         className="services__contents"
       >
         {/* 서비스 카테고리 시작 */}
@@ -202,6 +203,7 @@ const ServicesDetails = ({ onSubmit }) => {
             <button
               type="submit"
               key={v.id}
+              name={v.eng}
               data-num={v.id}
               onClick={clickCategory}
               className={v.eng}

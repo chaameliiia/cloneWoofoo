@@ -40,8 +40,11 @@ const ReserveFormStyled = styled.form`
   }
 `;
 
-const ReserveForm = ({ onClick }) => {
+const ReserveForm = () => {
   const colors = useContext(ColorContext);
+  const reserveSubmit = e => {
+    e.preventDefault();
+  };
 
   return (
      <ReserveFormStyled
@@ -49,7 +52,7 @@ const ReserveForm = ({ onClick }) => {
         id="reservation"
         method="post"
         colors={colors}
-        onSubmit={onClick}
+        onSubmit={reserveSubmit}
       >
         <ReserveCategory
           colors={colors}

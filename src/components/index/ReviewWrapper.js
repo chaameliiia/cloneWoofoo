@@ -21,8 +21,7 @@ const ReviewWrapper = e => {
 
   const _nextBtn = () => {
     pageWrapper = document.querySelector('.review__contents');
-
-    if (bln) {
+    if (bln && pageWrapper) {
       bln = false;
       pageWrapper.append(pageWrapper.firstChild);
       pageWrapper.style.transition = 'all 0s ease 0s';
@@ -41,7 +40,7 @@ const ReviewWrapper = e => {
 
   const _prevBtn = () => {
     pageWrapper = document.querySelector('.review__contents');
-    if (bln) {
+    if (bln && pageWrapper) {
       bln = false;
       pageWrapper.prepend(pageWrapper.lastChild);
       pageWrapper.style.transition = 'all 0s ease 0s';
@@ -57,7 +56,7 @@ const ReviewWrapper = e => {
       }, 500);
     }
   };
-  
+
   const startLoof = () => {
     listLoof = setInterval(() => {
       _nextBtn();

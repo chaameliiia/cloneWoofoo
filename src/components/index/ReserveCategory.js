@@ -110,7 +110,6 @@ const ReserveCategory = () => {
       document.querySelectorAll("ul li")[i].classList.remove("active");
     }
     e.target.parentNode.classList.add("active");
-    console.log(e.target);
   };
 
   return (
