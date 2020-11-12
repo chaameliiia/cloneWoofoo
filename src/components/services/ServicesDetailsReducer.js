@@ -1,4 +1,10 @@
-import React, { useContext, useEffect, useState, useRef } from 'react';
+import React, {
+  useContext,
+  useEffect,
+  useState,
+  useReducer,
+  useRef,
+} from 'react';
 import styled from 'styled-components';
 import { ColorContext } from 'contexts/ColorContext';
 import * as urls from '../common/imgUrls/servicesImgs';
@@ -156,35 +162,37 @@ const ContentsSteyled = styled.div`
   }
 `;
 
-const ServicesDetails = ({ onSubmit }) => {
-  const [selectedCategory, setSelectedCategory] = useState('');
+function reducer(state, action) {
+  switch (
+    action.type // action.type에 따라 다른 작업 수행
+  ) {
+    case 'dogWalking':
+      return console.log(state);
+    case 'doorToDoor':
+      return console.log(state);
+    case 'privateCare':
+      return console.log(state);
+    case 'dayCare':
+      return console.log(state);
+    default:
+      // 아무것도 해당되지 않을 때 기존 상태 반환
+      return state;
+  }
+}
+
+const ServicesDetailsReducer = () => {
   const colors = useContext(ColorContext);
+  const [state, dispatch] = useReducer(reducer, { value: '' });
   const serviceTitle = useRef(null);
   const serviceDetail = useRef(null);
-  let dNum = 0;
-
-  useEffect(() => {
-    serviceTitle.current.children[0].classList.add('active');
-    serviceDetail.current.children[0].classList.add('active');
-  }, []);
+  let selectedCategory;
 
   const clickCategory = e => {
     e.preventDefault();
-    dNum = e.target.dataset.num;
-
-    for (let i = 0; i < serviceTitle.current.children.length; i++) {
-      serviceTitle.current.children[i].classList.remove('active');
-      serviceDetail.current.children[i].classList.remove('active');
-    }
-
-    serviceTitle.current.children[dNum].classList.add('active');
-    serviceDetail.current.children[dNum].classList.add('active');
-
-    setSelectedCategory(e.target.classList.value.split(' ')[0]);
-  };
-
-  const formSubmit = category => {
-    onSubmit(category);
+    const categoryBtns = document.querySelectorAll('button');
+    selectedCategory = e.target.classList.value.split(' ')[0];
+    // console.log(selectedCategory);
+    dispatch({ type: selectedCategory });
   };
 
   return (
@@ -194,7 +202,6 @@ const ServicesDetails = ({ onSubmit }) => {
         ref={serviceTitle}
         action="/subServices"
         method="get"
-        onSubmit={formSubmit(selectedCategory)}
         className="services__contents"
       >
         {/* 서비스 카테고리 시작 */}
@@ -240,4 +247,4 @@ const ServicesDetails = ({ onSubmit }) => {
   );
 };
 
-export default ServicesDetails;
+export default ServicesDetailsReducer;

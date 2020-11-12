@@ -49,9 +49,10 @@ const IntrVisionStyled = styled.main`
   }
 `;
 
-const IntroServicesVision = ({ selected }) => {
+// const IntroServicesVision = ({ selected }) => {
+const IntroServicesVision = () => {
+  // console.log(selected);
   const colors = useContext(ColorContext);
-  console.log(selected);
 
   return (
     <IntrVisionStyled
