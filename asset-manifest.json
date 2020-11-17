@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/cloneWoofoo/static/css/main.e4fff033.chunk.css",
-    "main.js": "/cloneWoofoo/static/js/main.9fc577cc.chunk.js",
-    "main.js.map": "/cloneWoofoo/static/js/main.9fc577cc.chunk.js.map",
+    "main.css": "/cloneWoofoo/static/css/main.7358e4f7.chunk.css",
+    "main.js": "/cloneWoofoo/static/js/main.36f7f5ac.chunk.js",
+    "main.js.map": "/cloneWoofoo/static/js/main.36f7f5ac.chunk.js.map",
     "runtime-main.js": "/cloneWoofoo/static/js/runtime-main.9544162c.js",
     "runtime-main.js.map": "/cloneWoofoo/static/js/runtime-main.9544162c.js.map",
-    "static/js/2.1325b2bc.chunk.js": "/cloneWoofoo/static/js/2.1325b2bc.chunk.js",
-    "static/js/2.1325b2bc.chunk.js.map": "/cloneWoofoo/static/js/2.1325b2bc.chunk.js.map",
+    "static/js/2.ee8ec682.chunk.js": "/cloneWoofoo/static/js/2.ee8ec682.chunk.js",
+    "static/js/2.ee8ec682.chunk.js.map": "/cloneWoofoo/static/js/2.ee8ec682.chunk.js.map",
     "index.html": "/cloneWoofoo/index.html",
-    "precache-manifest.c0b81ddcc69618a978b9bb7e011c57d4.js": "/cloneWoofoo/precache-manifest.c0b81ddcc69618a978b9bb7e011c57d4.js",
+    "precache-manifest.625e8a10c189512f7e207f46213dcbcc.js": "/cloneWoofoo/precache-manifest.625e8a10c189512f7e207f46213dcbcc.js",
     "service-worker.js": "/cloneWoofoo/service-worker.js",
-    "static/css/main.e4fff033.chunk.css.map": "/cloneWoofoo/static/css/main.e4fff033.chunk.css.map",
-    "static/js/2.1325b2bc.chunk.js.LICENSE.txt": "/cloneWoofoo/static/js/2.1325b2bc.chunk.js.LICENSE.txt",
+    "static/css/main.7358e4f7.chunk.css.map": "/cloneWoofoo/static/css/main.7358e4f7.chunk.css.map",
+    "static/js/2.ee8ec682.chunk.js.LICENSE.txt": "/cloneWoofoo/static/js/2.ee8ec682.chunk.js.LICENSE.txt",
     "static/media/_common.scss": "/cloneWoofoo/static/media/ic_helpKakao.1c94f667.png",
     "static/media/ic_buddyInsurance.png": "/cloneWoofoo/static/media/ic_buddyInsurance.363422c9.png",
     "static/media/ic_education.png": "/cloneWoofoo/static/media/ic_education.e5c06929.png",
@@ -51,12 +51,15 @@
     "static/media/img_matchBuddy.png": "/cloneWoofoo/static/media/img_matchBuddy.101b2e8c.png",
     "static/media/img_playTime.jpg": "/cloneWoofoo/static/media/img_playTime.6d924362.jpg",
     "static/media/img_promo.png": "/cloneWoofoo/static/media/img_promo.5de35fb1.png",
+    "static/media/img_reviewer1.jpg": "/cloneWoofoo/static/media/img_reviewer1.8bb04a8a.jpg",
+    "static/media/img_reviewer2.jpg": "/cloneWoofoo/static/media/img_reviewer2.58d8c3a0.jpg",
+    "static/media/img_reviewer3.jpg": "/cloneWoofoo/static/media/img_reviewer3.977e15b1.jpg",
     "static/media/img_walk.jpg": "/cloneWoofoo/static/media/img_walk.deebabb3.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.9544162c.js",
-    "static/js/2.1325b2bc.chunk.js",
-    "static/css/main.e4fff033.chunk.css",
-    "static/js/main.9fc577cc.chunk.js"
+    "static/js/2.ee8ec682.chunk.js",
+    "static/css/main.7358e4f7.chunk.css",
+    "static/js/main.36f7f5ac.chunk.js"
   ]
 }
