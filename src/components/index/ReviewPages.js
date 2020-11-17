@@ -29,7 +29,6 @@ const ReviewPages = ({ nextBtn, prevBtn }) => {
         {reviews.map((v, i) => {
           return (
             <li key={i} className="review__contents__page">
-              {i}
               <ReviewDetails reviews={v} />
             </li>
           );
