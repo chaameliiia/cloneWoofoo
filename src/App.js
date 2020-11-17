@@ -1,14 +1,14 @@
-import "assets/css/_common.scss";
+import 'assets/css/_common.scss';
 // import * as colors from 'components/common/Colors';
-import React from "react";
-import Header from "components/common/Header";
-import Aside from "components/common/Aside";
-import Footer from "components/common/Footer";
-import IndexWrapper from "./components/index/IndexWrapper";
-import ServicesWrapper from "./components/services/ServicesWrapper";
-import IncruitWrapper from "./components/incruit/IncruitWrapper";
-import { Route, Switch } from "react-router-dom";
-import Colors from "./contexts/ColorContext";
+import React from 'react';
+import Header from 'components/common/Header';
+import Aside from 'components/common/Aside';
+import Footer from 'components/common/Footer';
+import IndexWrapper from './components/index/IndexWrapper';
+import ServicesWrapper from './components/services/ServicesWrapper';
+import IncruitWrapper from './components/incruit/IncruitWrapper';
+import { Route, Switch } from 'react-router-dom';
+import Colors from './contexts/ColorContext';
 
 const App = () => {
   return (
